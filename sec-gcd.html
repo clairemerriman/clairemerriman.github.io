@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Friday, January 26: Quiz 1, Induction, Greatest Common Divisors</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Number Theory">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_oscarlevin.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="root--1-2.html"><span class="title">Number Theory:</span> <span class="subtitle">MAT-255 Spring 2024</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-primes.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-week3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\nequiv}{\not\equiv}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week1.html" class="internal"><span class="codenumber">1</span> <span class="title">Week 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Wednesday, January 17: Introduction and Divisibility</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intro.html#sec-intro-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intro.html#sec-intro-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Mathematical definitions, mathematical notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intro.html#sec-intro-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Divisibility</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-truthTable.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Friday, January 19: Logic, proof by contradiction, and biconditionals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-truthTable.html#rqs-logic" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-truthTable.html#exercises-read-jan19" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-truthTable.html#sec-truthTable-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Reminders and Homework Guide Review</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-truthTable.html#sec-truthTable-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Logic, proof by contradiction, and biconditionals</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-week2.html" class="internal"><span class="codenumber">2</span> <span class="title">Week 2</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-DivisionAlg.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Monday, January 22: Division algorithm and quantifiers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-DivisionAlg.html#rqs-divAlg" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-DivisionAlg.html#exercises-read-jan19" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-DivisionAlg.html#sec-DivisionAlg-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Division Algorithm</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-primes.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Wedneday, January 24: Primes and Greatest Common Divisor</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-primes.html#sec-primes-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-primes.html#rqs-primes" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primes.html#sec-primes-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Primes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primes.html#sec-primes-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Greatest common divisor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec-gcd.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Friday, January 26: Quiz 1, Induction, Greatest Common Divisors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-gcd.html#sec-gcd-3" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gcd.html#rqs-gcd" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gcd.html#sec-gcd-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Quiz (10 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gcd.html#sec-gcd-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Greatest common divisor (25 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gcd.html#sec-gcd-6" class="internal"><span class="codenumber">2.3.4</span> <span class="title">More induction</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week3.html" class="internal"><span class="codenumber">3</span> <span class="title">Week 3</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-floor.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Monday, January 29: More algebraic proofs and the Euclidean Algorithm</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-floor.html#sec-floor-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-floor.html#rqs-floor" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-floor.html#sec-floor-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Example of proof like the floor function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-floor.html#sec-floor-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">The Euclidean Algorithm</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-FTA.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Wednesday, January 31: Practice with the Euclidean Algorithm and the Fundamental Theorem of Arithmetic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-FTA.html#sec-FTA-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-FTA.html#rqs-FTA" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-FTA.html#sec-FTA-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Announcements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-FTA.html#sec-FTA-5" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Practice with the Euclidean Algorithm (15 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-FTA.html#sec-FTA-6" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Fundamental Theorem of Arithmetic</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gcd-general.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Friday, February 2: Quiz 2, Greatest Common Divisors and Diophantine Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-gcd-general.html#rqs-feb2" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gcd-general.html#rqs-diophantine" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gcd-general.html#sec-gcd-general-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Quiz (10 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gcd-general.html#sec-gcd-general-5" class="internal"><span class="codenumber">3.3.3</span> <span class="title">More greatest common divisor (40 min)</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week4.html" class="internal"><span class="codenumber">4</span> <span class="title">Week 4</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-3dioph.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Monday February 5: More facts about greatest common divisor and linear Diophantine equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-3dioph.html#rqs-3dioph" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3dioph.html#rqs-FTA-again" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3dioph.html#sec-3dioph-4" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Greatest common divisor and Diophantine equations (30 minutes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-arthProgress.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Wednesday February 7: Arithmetic progressions and introduction to equivalence relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-arthProgress.html#rqs-arthProgress" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-arthProgress.html#rqs-equiv" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arthProgress.html#sec-arthProgress-4" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Practice with gcd proofs</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arthProgress.html#sec-arthProgress-5" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Prime factorizations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arthProgress.html#sec-arthProgress-6" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Equivalence Relation Practice</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-modDef.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Friday, February 9: Modular arithmetic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-modDef.html#sec-modDef-3" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-modDef.html#rqs-modIntro" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modDef.html#sec-modDef-4" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Quiz (10 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modDef.html#sec-modDef-5" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Definitions and examples of <span class="process-math">\(\pmod m\)</span> (20 minutes)</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week4.html" class="internal"><span class="codenumber">5</span> <span class="title">Week 5</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-modIntro.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Monday, February 12: Peer review and introduction to congruences</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modIntro.html#sec-modIntro-3" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Proposition and examples of <span class="process-math">\(\pmod m\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modIntro.html#sec-modIntro-4" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Peer review Chapter 1 Exercise 83 (20 minutes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-week4-3.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Wednesday, February 14: More congruence facts</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week4-3.html#ch-week4-3-3" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Basic facts of working modulo <span class="process-math">\(m\)</span></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-week4-4.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Friday, February 16: Linear congruences in one variable</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week4-4.html#ch-week4-4-3" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Quiz (10 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week4-4.html#ch-week4-4-4" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Linear congruences in one variable</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week4.html" class="internal"><span class="codenumber">6</span> <span class="title">Week 6</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-CRT.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Monday, February 19: Chinese Remainder Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-CRT.html#sec-CRT-3" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-CRT.html#sec-CRT-4" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Multiplicative inverses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-CRT.html#sec-CRT-5" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Simultaneous Linear congruences in one variable (30 min)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-wilson.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Wednesday, February 21: Wilson’s Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-wilson.html#sec-wilson-3" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-wilson.html#rqs-willson" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-wilson.html#sec-wilson-4" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Wilson’s Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-FlT.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Friday, February 23: Euler’s Theorem and Fermat’s Little Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-FlT.html#sec-FlT-3" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-FlT.html#rqs-FlT" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-FlT.html#sec-FlT-4" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Quiz (10 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-FlT.html#sec-FlT-5" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Euler’s Generalization of Fermat’s Little Theorem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="rubrics.html" class="internal"><span class="codenumber">A</span> <span class="title">Homework Rubrics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="r-hw1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Homework 1 Rubrics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="r-hw2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Homework 2 Rubrics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="r-hw3.html" class="internal"><span class="codenumber">A.3</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="forCrossRefrence.html" class="internal"><span class="codenumber">B</span> <span class="title">Other Results from Strayer</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-additional-div.html" class="internal"><span class="codenumber">B.1</span> <span class="title">Divisibility facts</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-additional-primes.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Prime facts</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="forCrossRefrence-4.html" class="internal"><span class="codenumber">B.3</span> <span class="title">Diophantine equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">C</span> <span class="title">Notation list</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-gcd"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.3</span><span class="space"> </span><span class="title">Friday, January 26: Quiz 1, Induction, Greatest Common Divisors</span>
+</h2>
+<article class="objectives goal-like" id="sec-gcd-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ul class="disc">
+<li id="sec-gcd-2-1-1"><div class="para" id="p-derived-sec-gcd-2-1-1">Understand induction</div></li>
+<li id="sec-gcd-2-1-2"><div class="para" id="p-derived-sec-gcd-2-1-2">basic facts about the greatest common divisor</div></li>
+</ul></article><section class="reading-questions" id="sec-gcd-3"><h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="space"> </span><span class="title">Reading Questions</span>
+</h3>
+<section class="introduction" id="sec-gcd-3-1"><div class="para" id="sec-gcd-3-1-1">Read Strayer Appendix A.1: The First Principle of Mathematical Induction  or Ernst <a class="external" href="https://danaernst.com/IBL-IntroToProof/pretext/sec_Intro_to_Induction.html" target="_blank">Section 4.1</a><a class="xref" id="sec-gcd-3-1-1-2" href="" data-knowl="./knowl/fn/sec-gcd-3-1-1-2.html" title="Footnote 2.3.1"><sup> 1 </sup></a> and <a class="external" href="https://danaernst.com/IBL-IntroToProof/pretext/sec_More_on_Induction.html" target="_blank">Section 4.2</a><a class="xref" id="sec-gcd-3-1-1-4" href="" data-knowl="./knowl/fn/sec-gcd-3-1-1-4.html" title="Footnote 2.3.2"><sup> 2 </sup></a>
+</div></section><section class="exercises" id="rqs-gcd"><h4 class="heading hide-type">
+<span class="type">Turn In</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Turn In</span>
+</h4>
+<details id="rqs-gcd-1" class="exercise exercise-like born-hidden-knowl"><summary><h5 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Strayer Exercise Set A, Exercise 1a.</span>
+</h5></summary><article class="exercise exercise-like"><div class="para logical" id="rqs-gcd-1-2-1">
+<div class="para">If <span class="process-math">\(n\)</span> is a positive integer, then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1^2+2^2+3^2+\cdots+n^2=\frac{n(n+1)(2n+1)}{6}.
+\end{equation*}
+</div>
+</div>
+<div class="solutions"><details id="rqs-gcd-1-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="rqs-gcd-1-3-1">We proceed by induction. The base case is <span class="process-math">\(n=1\text{.}\)</span> Since <span class="process-math">\(1^2=\frac{1(1+1)(2*1+1)}{6},\)</span> we are done.</div> <div class="para logical" id="rqs-gcd-1-3-2">
+<div class="para">Now assume that if <span class="process-math">\(k \geq 1\)</span> and <span class="process-math">\(n = k,\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1^2+2^2+3^2+\cdots+k^2=\frac{k(k+1)(2k+1)}{6}.
+\end{equation*}
+</div>
+<div class="para">Adding <span class="process-math">\((k+1)^2\)</span> to both sides gives,</div>
+<div class="displaymath process-math" id="rqs-gcd-1-3-2-5">
+\begin{align*}
+1^2+2^2+3^2+\cdots+k^2+(k+1)^2\amp =\frac{k(k+1)(2k+1)}{6}+(k+1)^2\\
+\amp =\frac{k(k+1)(2k+1)+6(k+1)^2}{6}\\
+\amp =\frac{(k+1)[k(2k+1)+6(k+1)]}{6}\\
+\amp =\frac{(k+1)[2k^2+k+6k+6]}{6}\\
+\amp =\frac{(k+1)(k+2)(2k+3)}{6}.
+\end{align*}
+</div>
+<div class="para">So the desired statement is true for <span class="process-math">\(n = k + 1\text{.}\)</span> By the first principle of mathematical induction, the desired statement is true for all positive integers, and the proof is complete.</div>
+</div>
+</div></details></div></article></details></section></section><section class="subsection" id="sec-gcd-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="space"> </span><span class="title">Quiz (10 minutes)</span>
+</h3></section><section class="subsection" id="sec-gcd-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="space"> </span><span class="title">Greatest common divisor (25 min)</span>
+</h3>
+<article class="definition definition-like" id="sec-gcd-5-2"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">24</span><span class="period">.</span>
+</h4>
+<div class="para" id="sec-gcd-5-2-1">If <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(a\mid c\)</span> then <span class="process-math">\(a\)</span> is a <dfn class="terminology">common divisor</dfn> of <span class="process-math">\(b\)</span> and <span class="process-math">\(c\text{.}\)</span>
+</div> <div class="para" id="sec-gcd-5-2-2">If at least one of <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> is not <span class="process-math">\(0\text{,}\)</span> the greatest (positive) number among their common divisors  is called the <dfn class="terminology">greatest common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span></dfn> and is denoted <span class="process-math">\(gcd(a,b)\)</span> or just <span class="process-math">\((a,b)\text{.}\)</span>
+</div> <div class="para" id="sec-gcd-5-2-3">If <span class="process-math">\(gcd(a,b)=1\text{,}\)</span> we say that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are <dfn class="terminology">relatively prime</dfn>.</div> <div class="para" id="sec-gcd-5-2-4">If we want the greatest common divisor of several integers at once we denote that by <span class="process-math">\(\gcd(b_1,b_2,b_3,\dots,b_n)\text{.}\)</span>
+</div></article><div class="para" id="sec-gcd-5-3">For example, <span class="process-math">\(\gcd(4,8)\)</span> is <span class="process-math">\(4\)</span> but <span class="process-math">\(\gcd(4,6,8)\)</span> is <span class="process-math">\(2\text{.}\)</span>
+</div>
+<div class="para" id="sec-gcd-5-4">The GCD always exists when at least one of the integers is nonzero. How to show this: <span class="process-math">\(1\)</span> is always a divisor, and no divisor can be larger than the maximum of <span class="process-math">\(|a|,|b|\text{.}\)</span> So there is a finite number of divisors, thus there is a maximum.</div>
+<article class="proposition theorem-like" id="Bezout"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">25</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Proposition 1.11.</span>
+</h4>
+<div class="para logical" id="Bezout-2-1">
+<div class="para">Let <span class="process-math">\(a, b\in \Z\)</span> with <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> not both zero. Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a,b)=\min \{ma+nb : m,n\in\Z, ma+nb&gt;0\}.
+\end{equation*}
+</div>
+</div></article><div class="para" id="sec-gcd-5-6">This proof brings together definitions (of gcd), previous results (<a href="" class="xref" data-knowl="./knowl/xref/div-alg.html" title="Theorem 12: Division Algorithm">Division Algorithm</a>, factors of <a href="" class="xref" data-knowl="./knowl/xref/lem-linear-combo.html" title="Lemma 98: Proposition 1.2">Proposition 1.2</a>), the well-ordering principle, and some methods for minimum and maximum/greatest.</div>
+<details id="sec-gcd-5-7" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical" id="sec-gcd-5-7-1">
+<div class="para">Since <span class="process-math">\(a,b\in\Z\)</span> are not both zero, at least one of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1a+0b, -1a+0b, 0a+1b, 0a+(-1)b
+\end{equation*}
+</div>
+<div class="para">is in <span class="process-math">\(\{ ma+nb:m,n\in\Z, ma+nb \gt 0\}\text{.}\)</span> Therefore, the set is nonempty and has a minimal element by the well-ordering principle. Call this element <span class="process-math">\(d\text{,}\)</span> and <span class="process-math">\(d=xa+yb\)</span> for some <span class="process-math">\(x,y\in \Z\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="sec-gcd-5-7-2">
+<div class="para">First we will show that <span class="process-math">\(d\mid a\text{.}\)</span> By the <a href="" class="xref" data-knowl="./knowl/xref/div-alg.html" title="Theorem 12: Division Algorithm">Division Algorithm</a>, there exist unique <span class="process-math">\(q,r\in\Z\)</span> such that <span class="process-math">\(a=qd+r\)</span> with <span class="process-math">\(0\leq r \lt d\text{.}\)</span> Then,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/div-alg.html">
+\begin{equation*}
+r=a-qd=a-q(xa+yb)=(1-qx)a-qyb,
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(r\)</span> is an integral linear combination of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>  Since <span class="process-math">\(d\)</span> is the least positive such integer, <span class="process-math">\(r=0\)</span> and <span class="process-math">\(d\mid a\text{.}\)</span> Similarly, <span class="process-math">\(d\mid b\text{.}\)</span>
+</div>
+</div> <div class="para" id="sec-gcd-5-7-3">It remains to show that <span class="process-math">\(d\)</span> is the <em class="emphasis">greatest</em> common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> Let <span class="process-math">\(c\)</span> be any common divisor of <span class="process-math">\(a\)</span>  and <span class="process-math">\(b\text{.}\)</span> Then <span class="process-math">\(c\mid ax+by=d\text{,}\)</span> so <span class="process-math">\(c\mid d\text{.}\)</span>
+</div></article></details><div class="para" id="sec-gcd-5-8">Since we assume <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are not both zero, we could also simplify the first sentence using <em class="emphasis">without loss of generality</em>. Since there is no difference between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> we can assume <span class="process-math">\(a\neq0\text{.}\)</span>
+</div></section><section class="subsection" id="sec-gcd-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="space"> </span><span class="title">More induction</span>
+</h3>
+<details id="sec-gcd-6-2" class="activity project-like born-hidden-knowl"><summary><h4 class="heading">
+<span class="type">In Class Activity</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span>
+</h4></summary><article class="activity project-like"><div class="introduction" id="sec-gcd-6-2-1"><div class="para" id="sec-gcd-6-2-1-1">In Ernst <a class="external" href="https://danaernst.com/IBL-IntroToProof/pretext/sec_Intro_to_Induction.html" target="_blank">Section 4.1</a><a class="xref" id="sec-gcd-6-2-1-1-2" href="" data-knowl="./knowl/fn/sec-gcd-6-2-1-1-2.html" title="Footnote 2.3.3"><sup> 3 </sup></a>
+</div></div> <article class="problem example-like" id="sec-gcd-6-2-2"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">26</span><span class="period">.</span><span class="space"> </span><span class="title">Prove Ernst Theorem 4.5.</span>
+</h5>
+<div class="para" id="sec-gcd-6-2-2-2-1">For all <span class="process-math">\(n\in\mathbb{N}\text{,}\)</span> 3 divides <span class="process-math">\(4^{n}-1\text{.}\)</span>
+</div>
+<div class="solutions"><details id="sec-gcd-6-2-2-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="sec-gcd-6-2-2-3-1">We proceed by induction.  When <span class="process-math">\(n=1,\)</span> <span class="process-math">\(3\mid 4^n-1=3\text{.}\)</span> Thus, the statement is true for <span class="process-math">\(n=1.\)</span>
+</div> <div class="para logical" id="sec-gcd-6-2-2-3-2">
+<div class="para">Now assume <span class="process-math">\(k\geq 1\)</span> and the desired statement is true for <span class="process-math">\(n=k\text{.}\)</span> Then the induction hypothesis is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3\mid 4^k-1.
+\end{equation*}
+</div>
+<div class="para">By the definition of divisible, there exists <span class="process-math">\(m\in\Z\)</span> such that <span class="process-math">\(3m=4^k-1.\)</span> In other words, <span class="process-math">\(3m+1=4^k\text{.}\)</span> Multiplying both sides by <span class="process-math">\(4\)</span> gives <span class="process-math">\(12m+4=4^{k+1}\text{.}\)</span> Rewriting this equation gives <span class="process-math">\(3(4m+1)=4^{k+1}-1\text{.}\)</span> Thus, <span class="process-math">\(3\mid 4^{k+1}-1\text{,}\)</span> and the desired statement is true for <span class="process-math">\(n=k+1\text{.}\)</span> By the (first) principle of mathematical induction, the statement is true for all positive integers, and the proof is complete.</div>
+</div>
+</div></details></div></article> <article class="problem example-like" id="sec-gcd-6-2-3"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">27</span><span class="period">.</span><span class="space"> </span><span class="title">Ernst Theorem 4.7.</span>
+</h5>
+<div class="para" id="sec-gcd-6-2-3-2-1">Let <span class="process-math">\(p_{1}, p_{2}, \ldots, p_{n}\)</span> be <span class="process-math">\(n\)</span> distinct points arranged on a circle.  Then the number of line segments joining all pairs of points is <span class="process-math">\(\frac{n^{2}-n}{2}\text{.}\)</span>
+</div>
+<div class="solutions"><details id="sec-gcd-6-2-3-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="sec-gcd-6-2-3-3-1">We proceed by induction. When <span class="process-math">\(n=1\text{,}\)</span> there is only one point, so there are no lines connecting pairs of points. Additionally, <span class="process-math">\(\frac{1^2-1}{2}=0\text{.}\)</span>
+</div>
+<aside class="aside aside-like" id="sec-gcd-6-2-3-3-2"></aside> <div class="para logical" id="sec-gcd-6-2-3-3-3">
+<div class="para">Now assume <span class="process-math">\(k\geq 1\)</span> and the desired statement is true for <span class="process-math">\(n=k\text{.}\)</span> Then the induction hypothesis is for <span class="process-math">\(k\)</span> distinct points arranged in a circle, the number of line segments joining all pairs of points is <span class="process-math">\(\frac{k^{2}-k}{2}\text{.}\)</span> Adding a <span class="process-math">\((k+1)^{st}\)</span> point on the circle will add an additional <span class="process-math">\(k\)</span> line segments joining pairs of points, one for each existing point. Note that</div>
+<div class="displaymath process-math" id="sec-gcd-6-2-3-3-3-7">
+\begin{align*}
+\frac{k^{2}-k}{2}+k\amp
+=\frac{k^{2}+k}{2}\\
+\amp =
+\frac{k^2+k+k+1-(k+1)}{2}\\
+\amp =\frac{(k+1)^{2}-(k+1)}{2}
+\end{align*}
+</div>
+</div>
+</div></details></div></article> <article class="problem example-like" id="sec-gcd-6-2-4"><h5 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">28</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Appendix A, Exercise 1.</span>
+</h5> <div class="para logical" id="sec-gcd-6-2-4-2">
+<div class="para">Use the first principle of mathematical induction to prove each statement.</div>
+<ul class="disc">
+<li id="sec-gcd-6-2-4-2-1-1"><div class="para" id="p-derived-sec-gcd-6-2-4-2-1-1">(b) If <span class="process-math">\(n\)</span> is a positive integer, then<div class="displaymath process-math">
+\begin{equation*}
+1^3+2^3+3^3+\cdots+n^3=\frac{n^2(n+1)^2}{4}.
+\end{equation*}
+</div>
+<details id="sec-gcd-6-2-4-2-1-1-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="sec-gcd-6-2-4-2-1-1-3-1">We proceed by induction.  When <span class="process-math">\(n=1,\)</span> <span class="process-math">\(1^3=\frac{1^2(1+1)^2}{4}\text{.}\)</span> Thus, the statement is true for <span class="process-math">\(n=1.\)</span>
+</div> <div class="para logical" id="sec-gcd-6-2-4-2-1-1-3-2">
+<div class="para">Now assume <span class="process-math">\(k\geq 1\)</span> and the desired statement is true for <span class="process-math">\(n=k\text{.}\)</span> Then the induction hypothesis is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1^3+2^3+3^3+\cdots+k^3=\frac{k^2(k+1)^2}{4}
+\end{equation*}
+</div>
+<div class="para">Adding <span class="process-math">\((k+1)^3\)</span> to both sides gives</div>
+<div class="displaymath process-math" id="sec-gcd-6-2-4-2-1-1-3-2-5">
+\begin{align*}
+1^3+2^3+3^3+\cdots+k^3+(k+1)^3 \amp=\frac{k^2(k+1)^2+4(k+1)^3}{4}\\
+\amp= \frac{(k+1)^2(k^2+4(k+1))}{4}\\
+\amp= \frac{(k+1)^2(k+2)^2}{4}
+\end{align*}
+</div>
+</div> <div class="para" id="sec-gcd-6-2-4-2-1-1-3-3">Thus, the desired statement is true for <span class="process-math">\(n=k+1\text{.}\)</span> By the (first) principle of mathematical induction, the statement is true for all positive integers, and the proof is complete.</div>
+</div></details>
+</div></li>
+<li id="sec-gcd-6-2-4-2-1-2"><div class="para" id="p-derived-sec-gcd-6-2-4-2-1-2">(c) If <span class="process-math">\(n\)</span> is an integer with <span class="process-math">\(n\geq 5,\)</span> then<div class="displaymath process-math">
+\begin{equation*}
+2^n\gt n^2.
+\end{equation*}
+</div>
+<details id="sec-gcd-6-2-4-2-1-2-4" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="sec-gcd-6-2-4-2-1-2-4-1">We proceed by induction with base case <span class="process-math">\(n=5\text{.}\)</span> When <span class="process-math">\(n=5, 32=2^5\gt 5^2=25\text{.}\)</span> Thus, the statement is true for <span class="process-math">\(n=1.\)</span>
+</div> <div class="para logical" id="sec-gcd-6-2-4-2-1-2-4-2">
+<div class="para">Now assume <span class="process-math">\(k\geq 1\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2^k\gt k^2
+\end{equation*}
+</div>
+<div class="para">is true for <span class="process-math">\(n=k\text{.}\)</span> Multiplying both sides of the inequality by <span class="process-math">\(2\)</span> gives <span class="process-math">\(2^{k+1} \gt 2k^2.\)</span> Notice that <span class="process-math">\(2k^2 \gt k^2 +2k+1\)</span> when <span class="process-math">\((k-1)^2\gt 0\text{,}\)</span> which is true for all <span class="process-math">\(k\geq 5\text{.}\)</span> Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2^{k+1} \gt 2k^2 \gt (k+1)^2\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus, the desired statement is true for <span class="process-math">\(n=k+1\text{.}\)</span> By the (first) principle of mathematical induction, the statement is true for all positive integers, and the proof is complete.</div>
+</div>
+</div></details>
+</div></li>
+</ul>
+</div></article></article></details></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-primes.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-week3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
