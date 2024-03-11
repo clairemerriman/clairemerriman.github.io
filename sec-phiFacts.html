@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Wednesday, January 17: Introduction and Divisibility</title>
+<title>Friday, March 1: The \phi- function and a preview of primitive roots</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -94,7 +94,7 @@ window.MathJax = {
 <h1 class="heading"><a href="root--1-2.html"><span class="title">Number Theory:</span> <span class="subtitle">MAT-255 Spring 2024</span></a></h1>
 <p class="byline"></p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-week1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week1.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-truthTable.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-phiIntro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="rubrics.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\C}{\mathbb C}
@@ -113,10 +113,10 @@ window.MathJax = {
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-week1.html" class="internal"><span class="codenumber">1</span> <span class="title">Week 1</span></a></div>
-<ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section active">
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Wednesday, January 17: Introduction and Divisibility</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intro.html#sec-intro-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Introduction</span></a></div></li>
@@ -309,9 +309,9 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-week7.html" class="internal"><span class="codenumber">7</span> <span class="title">Week 7</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-modReduce.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Monday, February 26: Modular arithmetic calculations</span></a></div>
 <ul class="structural toc-item-list">
@@ -326,7 +326,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-phiIntro.html#sec-phi-start" class="internal"><span class="codenumber">7.2.2</span> <span class="title">The Euler <span class="process-math">\(\phi\)</span>-function (20 min)</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
+<li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="sec-phiFacts.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Friday, March 1: The <span class="process-math">\(\phi-\)</span> function and a preview of primitive roots</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-phiFacts.html#sec-phiFacts-3" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Quiz (10 min)</span></a></div></li>
@@ -353,84 +353,86 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">C</span> <span class="title">Notation list</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-intro"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Wednesday, January 17: Introduction and Divisibility</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-phiFacts"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">7.3</span><span class="space"> </span><span class="title">Friday, March 1: The <span class="process-math">\(\phi-\)</span> function and a preview of primitive roots</span>
 </h2>
-<article class="objectives goal-like" id="sec-intro-2"><h3 class="heading"><span class="type">Objectives</span></h3>
-<ul class="disc">
-<li id="sec-intro-2-1-1"><div class="para" id="p-derived-sec-intro-2-1-1">Understand the course structure</div></li>
-<li id="sec-intro-2-1-2"><div class="para" id="p-derived-sec-intro-2-1-2">Formally define even and odd</div></li>
-<li id="sec-intro-2-1-3"><div class="para" id="p-derived-sec-intro-2-1-3">Formally define ``divides"</div></li>
-<li id="sec-intro-2-1-4"><div class="para" id="p-derived-sec-intro-2-1-4">Complete basic algebraic proofs</div></li>
-</ul></article><section class="subsection" id="sec-intro-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="space"> </span><span class="title">Introduction</span>
+<article class="objectives goal-like" id="sec-phiFacts-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ul class="disc"><li id="sec-phiFacts-2-1-1"><div class="para" id="p-derived-sec-phiFacts-2-1-1">Prove that <span class="process-math">\(\phi(m)\phi(n)=\phi(mn)\)</span> when <span class="process-math">\((m,n)=1\)</span>
+</div></li></ul></article><section class="subsection" id="sec-phiFacts-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.3.1</span><span class="space"> </span><span class="title">Quiz (10 min)</span>
+</h3></section><section class="subsection" id="sec-phiFacts-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="space"> </span><span class="title">Euler <span class="process-math">\(\phi\)</span>-function (20 min)</span>
 </h3>
-<div class="para" id="sec-intro-3-2">What is number theory?</div>
-<div class="para" id="sec-intro-3-3">Elementary number theory is the study of integers, especially the positive integers. A lot of the course focuses on prime numbers, which are the multiplicative building blocks of the integers. Another big topic in number theory is integer solutions to equations such as the Pythagorean triples <span class="process-math">\(x^2+y^2=z^2\)</span> or the generalization <span class="process-math">\(x^n+y^n=z^n\text{.}\)</span> Proving that there are no integer solutions when <span class="process-math">\(n&gt;2\)</span> was an open problem for close to 400 years</div>
-<div class="para" id="sec-intro-3-4">The first part of this course reproves facts about divisibility and prime numbers that you are probably familiar with. There are two purposes to this: 1) formalizing definitions and 2) starting with the situation you understand before moving to the new material.</div>
-<div class="para" id="sec-intro-3-5">Go over syllabus highlights: Deadlines, make-up policy, in-class work, reading assignments.</div></section><section class="subsection" id="sec-intro-4"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="space"> </span><span class="title">Mathematical definitions, mathematical notation</span>
-</h3>
-<article class="definition definition-like" id="def-number-systems"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span><span class="space"> </span><span class="title">Number Systems.</span>
-</h4>   <div class="para logical" id="def-number-systems-5-1">
-<div class="para">We will use the following number systems and abbreviations:</div>
-<ul class="disc">
-<li id="def-number-systems-5-1-1-1"><div class="para" id="p-derived-def-number-systems-5-1-1-1">The <dfn class="terminology">integers,</dfn> written <span class="process-math">\(\Z\text{,}\)</span> is the set <span class="process-math">\(\{\dots,-3,-2,-1,0,1,2,3,\dots\}\text{.}\)</span>
-</div></li>
-<li id="def-number-systems-5-1-1-2"><div class="para" id="p-derived-def-number-systems-5-1-1-2">The <dfn class="terminology">positive integers</dfn> are <span class="process-math">\(\{1,2,3,\dots\}\text{,}\)</span> while the <dfn class="terminology">nonnegative integers</dfn> are <span class="process-math">\(\{0,1,2,3,\dots\}\text{.}\)</span>
-</div></li>
-<li id="def-number-systems-5-1-1-3"><div class="para" id="p-derived-def-number-systems-5-1-1-3">The <dfn class="terminology">natural numbers,</dfn> written <span class="process-math">\(\N\text{.}\)</span> Most elementary number theory texts either define <span class="process-math">\(\N\)</span> to be the positive integers or avoid using <span class="process-math">\(\N\text{.}\)</span> Some mathematicians include <span class="process-math">\(0\)</span> in <span class="process-math">\(\N\text{,}\)</span> especially logicians.</div></li>
-<li id="def-number-systems-5-1-1-4"><div class="para" id="p-derived-def-number-systems-5-1-1-4">The <dfn class="terminology">real numbers,</dfn> written <span class="process-math">\(\R\text{.}\)</span>
-</div></li>
-<li id="def-number-systems-5-1-1-5"><div class="para" id="p-derived-def-number-systems-5-1-1-5">The <dfn class="terminology">integers modulo <span class="process-math">\(n\text{,}\)</span></dfn> written <span class="process-math">\(\Z_n\text{.}\)</span> We will define this set in Strayer Chapter 2, although Strayer does not use this notation.</div></li>
-</ul>
-</div> <div class="para logical" id="def-number-systems-5-2">
-<div class="para">We will also use the following notation:</div>
-<ul class="disc"><li id="def-number-systems-5-2-1-1"><div class="para" id="p-derived-def-number-systems-5-2-1-1">The symbol <span class="process-math">\(\in\)</span> means ``element of" or ``in." For example, <span class="process-math">\(x\in\Z\)</span> means ``<span class="process-math">\(x\)</span> is an element of the integers" or ``<span class="process-math">\(x\)</span> in the integers."</div></li></ul>
-</div></article><div class="para" id="sec-intro-4-3">This first section will cover results in both Strayer and Ernst.</div>
-<article class="definition definition-like" id="def-even-odd-form"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span><span class="space"> </span><span class="title">Ernst, Definition 2.1.</span>
-</h4> <div class="para" id="def-even-odd-form-2-1">An integer <span class="process-math">\(n\)</span> is <dfn class="terminology">even</dfn> if <span class="process-math">\(n=2k\)</span> for some <span class="process-math">\(k\in\Z\text{.}\)</span> An integer <span class="process-math">\(n\)</span> is odd if <span class="process-math">\(n=2k+1\)</span> for some <span class="process-math">\(k\in\Z\text{.}\)</span>
-</div></article><div class="para" id="sec-intro-4-5">Now, this definition is standard in an introduction to proofs course, but it is not the only definition of even/odd.</div>
-<article class="definition definition-like" id="def-even-odd-divides"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer, Definition 4.</span>
-</h4> <div class="para" id="def-even-odd-divides-2-1">Let <span class="process-math">\(n\in\Z\text{.}\)</span> Then <span class="process-math">\(n\)</span> is said to be <dfn class="terminology">even</dfn> if <span class="process-math">\(2\)</span> divides <span class="process-math">\(n\)</span> and <span class="process-math">\(n\)</span> is said to be <dfn class="terminology">odd</dfn> if <span class="process-math">\(2\)</span> does not divide <span class="process-math">\(n\text{.}\)</span>
-</div></article><div class="para" id="sec-intro-4-7">Note that we need to define <dfn class="terminology">divides</dfn> in order to use Strayer’s definition. We will formally prove that these definitions are <dfn class="terminology">equivalent,</dfn> but for now, let’s use Ernst definition.</div>
-<article class="theorem theorem-like" id="thm-even-sq"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span><span class="space"> </span><span class="title">Ernst, Theorem 2.2.</span>
+<div class="para" id="sec-phiFacts-4-2">We will use <a href="" class="xref" data-knowl="./knowl/xref/br-multiplicative-proof.html" title="In Class Activity 14"></a> as an outline to prove</div>
+<article class="theorem theorem-like" id="thm-phi-multiplicative"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">95</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem 3.2.</span>
 </h4>
-<div class="para" id="thm-even-sq-2-1">If <span class="process-math">\(n\)</span> is an even integer, then <span class="process-math">\(n^2\)</span> is even.</div></article><article class="problem example-like" id="sec-intro-4-9"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span>
-</h4>
-<div class="para" id="sec-intro-4-9-1-1">Prove this theorem.</div>
-<div class="solutions"><details id="sec-intro-4-9-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="sec-intro-4-9-2-1">
-<div class="para">If <span class="process-math">\(n\)</span> is an even integer, then by definition, there is some <span class="process-math">\(k\in\Z\)</span> such that <span class="process-math">\(n=2k\text{.}\)</span> Then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-n^2=(2k)^2=2(2k^2).
-\end{equation*}
-</div>
-<div class="para">Since <span class="process-math">\(2(k^2)\)</span> is an integer, we have written <span class="process-math">\(n^2\)</span> in the desired form. Thus, <span class="process-math">\(n^2\)</span> is even.</div>
-</div></div></details></div></article><article class="theorem theorem-like" id="thm-sum-odd"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span><span class="space"> </span><span class="title">Ernst, Theorem 2.3.</span>
-</h4>
-<div class="para" id="thm-sum-odd-2-1">The sum of two consecutive integers in odd.</div></article><div class="para" id="sec-intro-4-11">For this problem, we need to figure out how to write two consecutive integers.</div>
-<details id="sec-intro-4-12" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="sec-intro-4-12-1">Let <span class="process-math">\(n,n+1\)</span> be two consecutive integers. Then their sum is <span class="process-math">\(n+n+1=2n+1,\)</span> which is odd by definition.</div></article></details></section><section class="subsection" id="sec-intro-5"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="space"> </span><span class="title">Divisibility</span>
-</h3>
-<div class="para" id="sec-intro-5-2">The goal of this chapter is to review basic facts about divisibility, get comfortable with the new notation, and solve some basic linear equations.</div>
-<div class="para" id="sec-intro-5-3">We will also use this material as an opportunity to get used to the course.</div>
-<div class="para" id="sec-intro-5-4">
-<em class="emphasis">Ask</em>: what is a definition for ``a divides b’’?</div>
-<article class="definition definition-like" id="def-divides"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(a\)</span> divides <span class="process-math">\(b\)</span>.</span>
-</h4>  <div class="para" id="def-divides-3-1">Let <span class="process-math">\(a,b\in \Z\text{.}\)</span> Then <dfn class="terminology"><span class="process-math">\(a\)</span> divides <span class="process-math">\(b\)</span></dfn>, denoted <span class="process-math">\(a\mid b\text{,}\)</span>  if there exists an integer <span class="process-math">\(c\)</span> such that <span class="process-math">\(b=ac\text{.}\)</span> If <span class="process-math">\(a\mid b\text{,}\)</span> then <span class="process-math">\(a\)</span> is said to be a <dfn class="terminology">divisor</dfn> or <dfn class="terminology">factor of <span class="process-math">\(b\)</span></dfn>. The notation <span class="process-math">\(a\nmid b\)</span> means <span class="process-math">\(a\)</span> does not divide <span class="process-math">\(b\text{.}\)</span>
-</div></article><div class="para" id="sec-intro-5-6">Note that 0 is not a divisor of any integer other than itself, since <span class="process-math">\(b=0c\)</span> implies <span class="process-math">\(a=0\text{.}\)</span> Also all integers are divisors of 0, as odd as that sounds at first. This is because for any <span class="process-math">\(a\in\Z\text{,}\)</span> <span class="process-math">\(0=a0\text{.}\)</span>
-</div>
-<div class="para" id="sec-intro-5-7">Reminding students about the reading for Friday.</div></section></section></div>
+<div class="para" id="thm-phi-multiplicative-2-1">Let <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> be positive integers where <span class="process-math">\((m,n)=1\text{.}\)</span> Then <span class="process-math">\(\phi(mn)=\phi(m)\phi(n).\)</span>
+</div></article><details id="thm-phi-multiplicative-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="thm-phi-multiplicative-3-1">First, we note that an integer <span class="process-math">\(a\)</span> is relatively prime to <span class="process-math">\(mn\)</span> if and only if it is relatively prime to <span class="process-math">\(m\)</span> and <span class="process-math">\(n,\)</span> since <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> (together) have the same prime divisors as <span class="process-math">\(mn\text{.}\)</span>
+</div> <div class="para" id="thm-phi-multiplicative-3-2">We can partition the positive integers less that <span class="process-math">\(mn\)</span> into <figure class="table table-like" id="thm-phi-multiplicative-3-2-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">96<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(0  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(m  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2m \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((n-1)m\pmod{m}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(m + 1  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2m + 1 \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((n-1)m + 1\pmod{m}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(m + 2  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2m + 2 \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((n-1)m + 2\pmod{m}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(m-1  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2m - 1  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3m -1 \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cdots  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(nm - 1\pmod{m}\)</span></td>
+</tr>
+</table></div></figure>
+</div> <div class="para" id="thm-phi-multiplicative-3-3">For any <span class="process-math">\(b\)</span> in the range <span class="process-math">\(0,1,2,\dots,m-1\text{,}\)</span> define <span class="process-math">\(s_b\)</span> to be the number of integers <span class="process-math">\(a\)</span> in the range <span class="process-math">\(0,1,2,\dots, mn-1\)</span> such that <span class="process-math">\(a\equiv b \pmod{m}\)</span> and <span class="process-math">\(\gcd(a,mn)=1\text{.}\)</span> For each equivalence class <span class="process-math">\(b,\)</span> <span class="process-math">\(\gcd(b,m)\mid km +b\)</span> by linear combination. Thus, <span class="process-math">\(s_b={0}\)</span> if <span class="process-math">\((b,m)\gt 1.\)</span> If <span class="process-math">\(\gcd(b,m)=1\text{,}\)</span> the arithmetic progression, \{b, m + b, 2m + b, \dots, (n-1)m+ b\} contains <span class="process-math">\(n\)</span> elements. By \autoref{br-arithmetic-progression}, the arithmetic progression is a \nameref{defn:complete-residue} modulo <span class="process-math">\(n,\)</span> so <span class="process-math">\(\phi(n)\)</span> elements are relatively prime to <span class="process-math">\(n\)</span> and thus <span class="process-math">\(mn.\)</span>
+</div> <div class="para" id="thm-phi-multiplicative-3-4">Thus, can see that when <span class="process-math">\((b,m)=1\text{,}\)</span> <span class="process-math">\(s_b=\phi(n)\)</span> and when <span class="process-math">\((b,m)\gt 1\text{,}\)</span> <span class="process-math">\(s_b={0}\text{.}\)</span>
+</div> <div class="para" id="thm-phi-multiplicative-3-5">Since all of the positive integers less than or equal to <span class="process-math">\(mn\)</span> is in exactly one of the congruence classes above and t he <span class="process-math">\(s_i\)</span> count how many integers in each congruence class are relatively prime to <span class="process-math">\(mn\text{,}\)</span> <span class="process-math">\(phi(mn)=s_0+s_1+\cdots +s_{m-1}.\)</span>
+</div> <div class="para" id="thm-phi-multiplicative-3-6">Since <span class="process-math">\(\phi(m)\)</span> of the <span class="process-math">\(s_i=\phi(n)\)</span> and the rest are 0, <span class="process-math">\(\phi(mn)=s_0+s_1+\cdots +s_{m-1}=\phi(m)\phi(n).\)</span>
+</div></article></details></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="ch-week1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-truthTable.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-phiIntro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="rubrics.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Wednesday, January 17: Introduction and Divisibility</title>
+<title>Wednesday, February 28: Modular arithmetic calculations and the \phi- function</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -94,7 +94,7 @@ window.MathJax = {
 <h1 class="heading"><a href="root--1-2.html"><span class="title">Number Theory:</span> <span class="subtitle">MAT-255 Spring 2024</span></a></h1>
 <p class="byline"></p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-week1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week1.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-truthTable.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-modReduce.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-phiFacts.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\C}{\mathbb C}
@@ -113,10 +113,10 @@ window.MathJax = {
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-week1.html" class="internal"><span class="codenumber">1</span> <span class="title">Week 1</span></a></div>
-<ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section active">
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Wednesday, January 17: Introduction and Divisibility</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intro.html#sec-intro-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Introduction</span></a></div></li>
@@ -309,9 +309,9 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-week7.html" class="internal"><span class="codenumber">7</span> <span class="title">Week 7</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-modReduce.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Monday, February 26: Modular arithmetic calculations</span></a></div>
 <ul class="structural toc-item-list">
@@ -319,7 +319,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modReduce.html#sec-modReduce-4" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Finding least nonnegative residue Fermat’s Little Theorem</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
+<li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="sec-phiIntro.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Wednesday, February 28: Modular arithmetic calculations and the <span class="process-math">\(\phi-\)</span> function</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-phiIntro.html#sec-phiIntro-3" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Multiplicative inverses using Euler’s Extension of Fermat’s Little Theorem (30 min)</span></a></div></li>
@@ -353,84 +353,164 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">C</span> <span class="title">Notation list</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-intro"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Wednesday, January 17: Introduction and Divisibility</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-phiIntro"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">7.2</span><span class="space"> </span><span class="title">Wednesday, February 28: Modular arithmetic calculations and the <span class="process-math">\(\phi-\)</span> function</span>
 </h2>
-<article class="objectives goal-like" id="sec-intro-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<article class="objectives goal-like" id="sec-phiIntro-2"><h3 class="heading"><span class="type">Objectives</span></h3>
 <ul class="disc">
-<li id="sec-intro-2-1-1"><div class="para" id="p-derived-sec-intro-2-1-1">Understand the course structure</div></li>
-<li id="sec-intro-2-1-2"><div class="para" id="p-derived-sec-intro-2-1-2">Formally define even and odd</div></li>
-<li id="sec-intro-2-1-3"><div class="para" id="p-derived-sec-intro-2-1-3">Formally define ``divides"</div></li>
-<li id="sec-intro-2-1-4"><div class="para" id="p-derived-sec-intro-2-1-4">Complete basic algebraic proofs</div></li>
-</ul></article><section class="subsection" id="sec-intro-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="space"> </span><span class="title">Introduction</span>
+<li id="sec-phiIntro-2-1-1"><div class="para" id="p-derived-sec-phiIntro-2-1-1">Use Euler’s Theorem to find the least nonnegative residue modulo a composite</div></li>
+<li id="sec-phiIntro-2-1-2"><div class="para" id="p-derived-sec-phiIntro-2-1-2">Use Euler’s Theorem to find the multiplicative inverse of an integer modulo <span class="process-math">\(m\)</span>
+</div></li>
+<li id="sec-phiIntro-2-1-3"><div class="para" id="p-derived-sec-phiIntro-2-1-3">Prove <span class="process-math">\(\phi(4)\phi(5)=\phi(20)\)</span> using an outline that mirrors the proof that <span class="process-math">\(\phi(m)\phi(n)=\phi(mn)\)</span> when <span class="process-math">\((m,n)=1\)</span>
+</div></li>
+</ul></article><section class="subsection" id="sec-phiIntro-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="space"> </span><span class="title">Multiplicative inverses using Euler’s Extension of Fermat’s Little Theorem (30 min)</span>
 </h3>
-<div class="para" id="sec-intro-3-2">What is number theory?</div>
-<div class="para" id="sec-intro-3-3">Elementary number theory is the study of integers, especially the positive integers. A lot of the course focuses on prime numbers, which are the multiplicative building blocks of the integers. Another big topic in number theory is integer solutions to equations such as the Pythagorean triples <span class="process-math">\(x^2+y^2=z^2\)</span> or the generalization <span class="process-math">\(x^n+y^n=z^n\text{.}\)</span> Proving that there are no integer solutions when <span class="process-math">\(n&gt;2\)</span> was an open problem for close to 400 years</div>
-<div class="para" id="sec-intro-3-4">The first part of this course reproves facts about divisibility and prime numbers that you are probably familiar with. There are two purposes to this: 1) formalizing definitions and 2) starting with the situation you understand before moving to the new material.</div>
-<div class="para" id="sec-intro-3-5">Go over syllabus highlights: Deadlines, make-up policy, in-class work, reading assignments.</div></section><section class="subsection" id="sec-intro-4"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="space"> </span><span class="title">Mathematical definitions, mathematical notation</span>
-</h3>
-<article class="definition definition-like" id="def-number-systems"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span><span class="space"> </span><span class="title">Number Systems.</span>
-</h4>   <div class="para logical" id="def-number-systems-5-1">
-<div class="para">We will use the following number systems and abbreviations:</div>
-<ul class="disc">
-<li id="def-number-systems-5-1-1-1"><div class="para" id="p-derived-def-number-systems-5-1-1-1">The <dfn class="terminology">integers,</dfn> written <span class="process-math">\(\Z\text{,}\)</span> is the set <span class="process-math">\(\{\dots,-3,-2,-1,0,1,2,3,\dots\}\text{.}\)</span>
-</div></li>
-<li id="def-number-systems-5-1-1-2"><div class="para" id="p-derived-def-number-systems-5-1-1-2">The <dfn class="terminology">positive integers</dfn> are <span class="process-math">\(\{1,2,3,\dots\}\text{,}\)</span> while the <dfn class="terminology">nonnegative integers</dfn> are <span class="process-math">\(\{0,1,2,3,\dots\}\text{.}\)</span>
-</div></li>
-<li id="def-number-systems-5-1-1-3"><div class="para" id="p-derived-def-number-systems-5-1-1-3">The <dfn class="terminology">natural numbers,</dfn> written <span class="process-math">\(\N\text{.}\)</span> Most elementary number theory texts either define <span class="process-math">\(\N\)</span> to be the positive integers or avoid using <span class="process-math">\(\N\text{.}\)</span> Some mathematicians include <span class="process-math">\(0\)</span> in <span class="process-math">\(\N\text{,}\)</span> especially logicians.</div></li>
-<li id="def-number-systems-5-1-1-4"><div class="para" id="p-derived-def-number-systems-5-1-1-4">The <dfn class="terminology">real numbers,</dfn> written <span class="process-math">\(\R\text{.}\)</span>
-</div></li>
-<li id="def-number-systems-5-1-1-5"><div class="para" id="p-derived-def-number-systems-5-1-1-5">The <dfn class="terminology">integers modulo <span class="process-math">\(n\text{,}\)</span></dfn> written <span class="process-math">\(\Z_n\text{.}\)</span> We will define this set in Strayer Chapter 2, although Strayer does not use this notation.</div></li>
-</ul>
-</div> <div class="para logical" id="def-number-systems-5-2">
-<div class="para">We will also use the following notation:</div>
-<ul class="disc"><li id="def-number-systems-5-2-1-1"><div class="para" id="p-derived-def-number-systems-5-2-1-1">The symbol <span class="process-math">\(\in\)</span> means ``element of" or ``in." For example, <span class="process-math">\(x\in\Z\)</span> means ``<span class="process-math">\(x\)</span> is an element of the integers" or ``<span class="process-math">\(x\)</span> in the integers."</div></li></ul>
-</div></article><div class="para" id="sec-intro-4-3">This first section will cover results in both Strayer and Ernst.</div>
-<article class="definition definition-like" id="def-even-odd-form"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span><span class="space"> </span><span class="title">Ernst, Definition 2.1.</span>
-</h4> <div class="para" id="def-even-odd-form-2-1">An integer <span class="process-math">\(n\)</span> is <dfn class="terminology">even</dfn> if <span class="process-math">\(n=2k\)</span> for some <span class="process-math">\(k\in\Z\text{.}\)</span> An integer <span class="process-math">\(n\)</span> is odd if <span class="process-math">\(n=2k+1\)</span> for some <span class="process-math">\(k\in\Z\text{.}\)</span>
-</div></article><div class="para" id="sec-intro-4-5">Now, this definition is standard in an introduction to proofs course, but it is not the only definition of even/odd.</div>
-<article class="definition definition-like" id="def-even-odd-divides"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer, Definition 4.</span>
-</h4> <div class="para" id="def-even-odd-divides-2-1">Let <span class="process-math">\(n\in\Z\text{.}\)</span> Then <span class="process-math">\(n\)</span> is said to be <dfn class="terminology">even</dfn> if <span class="process-math">\(2\)</span> divides <span class="process-math">\(n\)</span> and <span class="process-math">\(n\)</span> is said to be <dfn class="terminology">odd</dfn> if <span class="process-math">\(2\)</span> does not divide <span class="process-math">\(n\text{.}\)</span>
-</div></article><div class="para" id="sec-intro-4-7">Note that we need to define <dfn class="terminology">divides</dfn> in order to use Strayer’s definition. We will formally prove that these definitions are <dfn class="terminology">equivalent,</dfn> but for now, let’s use Ernst definition.</div>
-<article class="theorem theorem-like" id="thm-even-sq"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span><span class="space"> </span><span class="title">Ernst, Theorem 2.2.</span>
+<article class="example example-like" id="ex-euler-solve-cong"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">91</span><span class="period">.</span>
 </h4>
-<div class="para" id="thm-even-sq-2-1">If <span class="process-math">\(n\)</span> is an even integer, then <span class="process-math">\(n^2\)</span> is even.</div></article><article class="problem example-like" id="sec-intro-4-9"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span>
-</h4>
-<div class="para" id="sec-intro-4-9-1-1">Prove this theorem.</div>
-<div class="solutions"><details id="sec-intro-4-9-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="sec-intro-4-9-2-1">
-<div class="para">If <span class="process-math">\(n\)</span> is an even integer, then by definition, there is some <span class="process-math">\(k\in\Z\)</span> such that <span class="process-math">\(n=2k\text{.}\)</span> Then</div>
+<div class="para logical" id="ex-euler-solve-cong-1"><ol class="decimal">
+<li id="ex-euler-solve-cong-1-1-1"><div class="para" id="p-derived-ex-euler-solve-cong-1-1-1">Find the least nonnegative residue of <span class="process-math">\(29^{202}\)</span> modulo <span class="process-math">\(20\text{.}\)</span> <details id="ex-euler-solve-cong-1-1-1-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="ex-euler-solve-cong-1-1-1-3-1">
+<div class="para">The integers <span class="process-math">\(1,3,7,9,11,13,17,19\)</span> are relatively prime to <span class="process-math">\(20.\)</span> Thus <span class="process-math">\(\phi(20)=8.\)</span> Also note that <span class="process-math">\(29\equiv 9\pmod{20}\)</span> and <span class="process-math">\(202=8(25)+2,\)</span> so</div>
 <div class="displaymath process-math">
 \begin{equation*}
-n^2=(2k)^2=2(2k^2).
+29^{202}\equiv 9^{202}
+\equiv(9^8)^{25} 9^2
+\equiv 1^{25} 9^2\equiv 1\pmod{20}
 \end{equation*}
 </div>
-<div class="para">Since <span class="process-math">\(2(k^2)\)</span> is an integer, we have written <span class="process-math">\(n^2\)</span> in the desired form. Thus, <span class="process-math">\(n^2\)</span> is even.</div>
-</div></div></details></div></article><article class="theorem theorem-like" id="thm-sum-odd"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span><span class="space"> </span><span class="title">Ernst, Theorem 2.3.</span>
-</h4>
-<div class="para" id="thm-sum-odd-2-1">The sum of two consecutive integers in odd.</div></article><div class="para" id="sec-intro-4-11">For this problem, we need to figure out how to write two consecutive integers.</div>
-<details id="sec-intro-4-12" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="sec-intro-4-12-1">Let <span class="process-math">\(n,n+1\)</span> be two consecutive integers. Then their sum is <span class="process-math">\(n+n+1=2n+1,\)</span> which is odd by definition.</div></article></details></section><section class="subsection" id="sec-intro-5"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="space"> </span><span class="title">Divisibility</span>
-</h3>
-<div class="para" id="sec-intro-5-2">The goal of this chapter is to review basic facts about divisibility, get comfortable with the new notation, and solve some basic linear equations.</div>
-<div class="para" id="sec-intro-5-3">We will also use this material as an opportunity to get used to the course.</div>
-<div class="para" id="sec-intro-5-4">
-<em class="emphasis">Ask</em>: what is a definition for ``a divides b’’?</div>
-<article class="definition definition-like" id="def-divides"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(a\)</span> divides <span class="process-math">\(b\)</span>.</span>
-</h4>  <div class="para" id="def-divides-3-1">Let <span class="process-math">\(a,b\in \Z\text{.}\)</span> Then <dfn class="terminology"><span class="process-math">\(a\)</span> divides <span class="process-math">\(b\)</span></dfn>, denoted <span class="process-math">\(a\mid b\text{,}\)</span>  if there exists an integer <span class="process-math">\(c\)</span> such that <span class="process-math">\(b=ac\text{.}\)</span> If <span class="process-math">\(a\mid b\text{,}\)</span> then <span class="process-math">\(a\)</span> is said to be a <dfn class="terminology">divisor</dfn> or <dfn class="terminology">factor of <span class="process-math">\(b\)</span></dfn>. The notation <span class="process-math">\(a\nmid b\)</span> means <span class="process-math">\(a\)</span> does not divide <span class="process-math">\(b\text{.}\)</span>
-</div></article><div class="para" id="sec-intro-5-6">Note that 0 is not a divisor of any integer other than itself, since <span class="process-math">\(b=0c\)</span> implies <span class="process-math">\(a=0\text{.}\)</span> Also all integers are divisors of 0, as odd as that sounds at first. This is because for any <span class="process-math">\(a\in\Z\text{,}\)</span> <span class="process-math">\(0=a0\text{.}\)</span>
+</div></div></details>
+</div></li>
+<li id="ex-euler-solve-cong-1-1-2"><div class="para" id="p-derived-ex-euler-solve-cong-1-1-2">Find the least nonnegative residue of <span class="process-math">\(71^{71}\)</span> modulo <span class="process-math">\(16\text{.}\)</span> <details id="ex-euler-solve-cong-1-1-2-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical" id="ex-euler-solve-cong-1-1-2-3-1">
+<div class="para">The integers <span class="process-math">\(1,3,5,7,9,11,13,15\)</span> are relatively prime to <span class="process-math">\(16.\)</span> Thus <span class="process-math">\(\phi(16)=8.\)</span> Also note that <span class="process-math">\(71\equiv 7\pmod{16}\)</span> and <span class="process-math">\(71=8(8)+7,\)</span> so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+71^{71}\equiv 7^{71}
+\equiv(7^8)^{8} 7^7
+\equiv 1^{8} 7^7\pmod{16}
+\end{equation*}
 </div>
-<div class="para" id="sec-intro-5-7">Reminding students about the reading for Friday.</div></section></section></div>
+<div class="para">Since <span class="process-math">\(7^8\equiv 7^7 7\equiv 1\pmod{16},\)</span> <span class="process-math">\(7^7\)</span> is the multiplicative inverse of <span class="process-math">\(7\)</span> modulo <span class="process-math">\(16.\)</span>
+</div>
+</div> <div class="para logical" id="ex-euler-solve-cong-1-1-2-3-2">
+<div class="para">Using the Euclidean algorithm,</div>
+<div class="displaymath process-math" id="ex-euler-solve-cong-1-1-2-3-2-1">
+\begin{align*}
+16 \amp mp  = 7(2) + 2,\amp 2\amp =16+7(-2)\\
+7 \amp = 2(3) + 1,
+\amp 1\amp =7-2(3)=7-(16+7(-2))(3)=16(-3)+7(7)
+\end{align*}
+</div>
+<div class="para">Thus, <span class="process-math">\(7(7)\equiv 1\pmod{16},\)</span> and <span class="process-math">\(7^7\equiv 7\pmod{16}.\)</span>
+</div>
+</div>
+</div></details>
+</div></li>
+</ol></div></article><article class="corollary theorem-like" id="cor-inv-euler"><h4 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">92</span><span class="period">.</span><span class="space"> </span><span class="title">Corollary 2.19.</span>
+</h4>
+<div class="para" id="cor-inv-euler-2-1">Let <span class="process-math">\(a,m\in\Z\)</span> with <span class="process-math">\(m\gt 0.\)</span>  If <span class="process-math">\((a,m)=1,\)</span> then <span class="process-math">\(a^{\phi(m)-1}\)</span> is the multiplicative inverse of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(m\text{.}\)</span>
+</div></article><article class="example example-like" id="sec-phiIntro-3-4"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">93</span><span class="period">.</span>
+</h4>
+<div class="para" id="sec-phiIntro-3-4-1">Find all incongruent solutions to <span class="process-math">\(9x\equiv 21\pmod{25}\text{.}\)</span>
+</div> <details id="sec-phiIntro-3-4-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="sec-phiIntro-3-4-2-1">The only positive integers less than <span class="process-math">\(25\)</span> that are <em class="emphasis">not</em> relatively prime to <span class="process-math">\(25\)</span> are <span class="process-math">\(5,10,15,20\text{.}\)</span> Thus, <span class="process-math">\(\phi(25)=24-4=20.\)</span>
+</div> <div class="para" id="sec-phiIntro-3-4-2-2">Since <span class="process-math">\((9,25)=1,\)</span> there is only one  incongruent solution  modulo <span class="process-math">\(25.\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/cor-inv-euler.html" title="Corollary 92: Corollary 2.19">Corollary 2.19</a>, <span class="process-math">\(9^{19}\)</span> is the multiplicative inverse of <span class="process-math">\(9\)</span> modulo <span class="process-math">\({25}\text{.}\)</span> Thus, <span class="process-math">\(x\equiv 21(9^{19})\pmod{25.}\)</span>
+</div> <div class="para" id="sec-phiIntro-3-4-2-3">Alternately, <span class="process-math">\(3^{18}\)</span> is the multiplicative inverse of <span class="process-math">\(3^2\)</span> modulo <span class="process-math">\({25},\)</span> so <span class="process-math">\(x\equiv 21(3^{18})\equiv  (3^{19})7\pmod{25}.\)</span>
+</div>
+</div></details></article><div class="para" id="sec-phiIntro-3-5">The previous example does not ask for the least nonnegative residue, but let’s find it anyway.</div>
+<article class="example example-like" id="sec-phiIntro-3-6"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">94</span><span class="period">.</span>
+</h4>
+<div class="para" id="sec-phiIntro-3-6-1">Find the least nonnegative residue of <span class="process-math">\((9^{19})21\)</span> modulo <span class="process-math">\(25\text{.}\)</span>
+</div> <details id="sec-phiIntro-3-6-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="sec-phiIntro-3-6-2-1">
+<div class="para">First, note that <span class="process-math">\((9^{19})21=(3^2)^19(21)\text{.}\)</span> From here there are two options:</div>
+<dl class="description-list">
+<dt id="sec-phiIntro-3-6-2-1-2-1">Factor <span class="process-math">\(21\text{:}\)</span>
+</dt>
+<dd>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-euler-FlT.html ./knowl/xref/cor-inv-euler.html">
+\begin{equation*}
+(9^{19})21\equiv (3^2)^19(3)(7)
+\equiv (3^{39})(7)
+\equiv (3^{20})(3^{19})(7) \pmod{25}
+\end{equation*}
+</div>By <a href="" class="xref" data-knowl="./knowl/xref/thm-euler-FlT.html" title="Theorem 81: Euler’s Generalization of Fermat’s Little Theorem">Euler’s Generalization of Fermat’s Little Theorem</a>, <span class="process-math">\(3^{20}\equiv 1\pmod{25}\)</span> and by <a href="" class="xref" data-knowl="./knowl/xref/cor-inv-euler.html" title="Corollary 92: Corollary 2.19">Corollary 2.19</a>, <span class="process-math">\(3^{19}\)</span> is the multiplicative inverse of <span class="process-math">\(3\)</span> moddulo <span class="process-math">\(25.\)</span> Since <span class="process-math">\(3(-8)\equiv -24\equiv 1\pmod{25},\)</span> <span class="process-math">\(3^{19}\equiv -8\pmod{25.}\)</span> Thus,<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-euler-FlT.html ./knowl/xref/cor-inv-euler.html">
+\begin{equation*}
+(9^{19})21\equiv (-8)(7)\equiv -56\equiv 19 \pmod{25}.
+\end{equation*}
+</div>
+</dd>
+<dt id="sec-phiIntro-3-6-2-1-2-2">Using <span class="process-math">\(21\equiv -4\pmod{25}\text{:}\)</span>
+</dt>
+<dd>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-euler-FlT.html">
+\begin{equation*}
+(9^{19})21\equiv (3^2)^19(-4)
+\equiv (3^{38})(-4)
+\equiv (3^{20})(3^{18})(-4) \pmod{25}
+\end{equation*}
+</div>Since <span class="process-math">\(3^{20}=3^{18}(3^2)\equiv 1\pmod{25}\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/thm-euler-FlT.html" title="Theorem 81: Euler’s Generalization of Fermat’s Little Theorem">Euler’s Generalization of Fermat’s Little Theorem</a>, <span class="process-math">\(3^{18}\)</span> is the multiplicative inverse of <span class="process-math">\(3^2=9\)</span> modulo <span class="process-math">\(25.\)</span> Since <span class="process-math">\(9(-11)\equiv -99\equiv 1\pmod{25},\)</span> we have <span class="process-math">\(3^{18}\equiv -11\pmod{25}.\)</span> Thus,<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-euler-FlT.html">
+\begin{equation*}
+(9^{19})21\equiv (-11)(-4)\equiv 44 \equiv 19 \pmod{25}.
+\end{equation*}
+</div>
+</dd>
+</dl>
+</div></div></details></article><details id="br-modpq" class="activity project-like born-hidden-knowl"><summary><h4 class="heading">
+<span class="type">In Class Activity</span><span class="space"> </span><span class="codenumber">13</span><span class="period">.</span>
+</h4></summary><article class="activity project-like"><div class="para" id="br-modpq-1">Let <span class="process-math">\(p,q\)</span> be distinct primes. Prove that <span class="process-math">\(p^{q-1}+q^{p-1}\equiv 1 \pmod{pq}.\)</span>
+</div> <details id="br-modpq-2" class="hiddenproof born-hidden-knowl"><summary><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof"><div class="para" id="br-modpq-2-1">Let <span class="process-math">\(p,q\)</span> be distinct primes. Then <details id="br-modpq-2-1-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="br-modpq-2-1-2-1"><span class="process-math">\({q^{p-1}\equiv 1}\pmod{p}\)</span></div></div></details> and  <details id="br-modpq-2-1-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="br-modpq-2-1-3-1"><span class="process-math">\({p^{q-1}\equiv 1}\pmod{q}\)</span></div></div></details> by Fermat’s Little Theorem, and <details id="br-modpq-2-1-4" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="br-modpq-2-1-4-1"><span class="process-math">\({p^{q-1}\equiv 1}\equiv0\pmod{p}\)</span></div></div></details> and <details id="br-modpq-2-1-5" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="br-modpq-2-1-5-1"><span class="process-math">\({q^{p-1}\equiv 1}\equiv 0\pmod{q}\)</span></div></div></details> by <details id="br-modpq-2-1-6" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="br-modpq-2-1-6-1">definition.</div></div></details>
+</div> <div class="para" id="br-modpq-2-2">Thus, <details id="br-modpq-2-2-1" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="br-modpq-2-2-1-1"><span class="process-math">\(p^{q-1}+q^{p-1}\equiv \{1} \pmod{p}\)</span></div></div></details> and <details id="br-modpq-2-2-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="br-modpq-2-2-2-1"><span class="process-math">\(p^{q-1}+q^{p-1}\equiv {1} \pmod{p}\)</span></div></div></details> by <details id="br-modpq-2-2-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="br-modpq-2-2-3-1">modular addition.</div></div></details>
+</div> <div class="para" id="br-modpq-2-3">(Finish proof using definition of congruence modulo <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span>)</div></article></details></article></details></section><section class="subsection" id="sec-phi-start"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="space"> </span><span class="title">The Euler <span class="process-math">\(\phi\)</span>-function (20 min)</span>
+</h3>
+<div class="para" id="sec-phi-start-2">We will also find a formula for <span class="process-math">\(\phi(n)\)</span> in general. The following exercise will outline the general proof:</div>
+<details id="br-multiplicative-proof" class="activity project-like born-hidden-knowl"><summary><h4 class="heading">
+<span class="type">In Class Activity</span><span class="space"> </span><span class="codenumber">14</span><span class="period">.</span>
+</h4></summary><article class="activity project-like"><div class="para logical" id="br-multiplicative-proof-1">
+<div class="para">Let us prove that <span class="process-math">\(\phi(20)=\phi(4)\phi(5)\text{.}\)</span> First, note that <span class="process-math">\(\phi(4)=\)</span><details id="br-multiplicative-proof-1-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\({2}\)</span></div></details> and <span class="process-math">\(\phi(5)=\)</span><details id="br-multiplicative-proof-1-5" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\({4},\)</span></div></details> so <span class="process-math">\(\phi(20)=\)</span><details id="br-multiplicative-proof-1-7" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\({8}.\)</span></div></details>
+</div>
+<ol class="decimal">
+<li id="br-multiplicative-proof-1-8-1"><div class="para" id="p-derived-br-multiplicative-proof-1-8-1">A number <span class="process-math">\(a\)</span> is relatively prime to <span class="process-math">\(20\)</span> if and only if <span class="process-math">\(a\)</span> is relatively prime to <details id="br-multiplicative-proof-1-8-1-4" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\({4}\)</span></div></details> and <details id="br-multiplicative-proof-1-8-1-5" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\({5}.\)</span></div></details>
+</div></li>
+<li id="br-multiplicative-proof-1-8-2">
+<div class="para logical" id="br-multiplicative-proof-1-8-2-1">
+<div class="para">We can partition the positive integers less that <span class="process-math">\(20\)</span> into</div>
+<div class="displaymath process-math" id="br-multiplicative-proof-1-8-2-1-2">
+\begin{align*}
+\amp  0\equiv{4}\equiv{8}\equiv{12}\equiv{16}\pmod 4\\
+\amp  1\equiv{5}\equiv{9}\equiv{13}\equiv{17}\pmod 4\\
+\amp  2\equiv{6}\equiv{10}\equiv{14}\equiv{18}\pmod 4\\
+\amp  3\equiv{7}\equiv{11}\equiv{15}\equiv{19}\pmod 4
+\end{align*}
+</div>
+</div>
+<div class="para" id="br-multiplicative-proof-1-8-2-2">For any <span class="process-math">\(b\)</span> in the range <span class="process-math">\(0,1,2,3\text{,}\)</span> define <span class="process-math">\(s_b\)</span> to be the number of integers <span class="process-math">\(a\)</span> in the range <span class="process-math">\(0,1,2,\dots, 19\)</span> such that <span class="process-math">\(a\equiv b \pmod 4\)</span> and <span class="process-math">\(\gcd(a,20)=1\text{.}\)</span> Thus, <details id="br-multiplicative-proof-1-8-2-2-8" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<span class="process-math">\(s_0={0}, s_1=4, s_2=0\)</span> and <span class="process-math">\(s_3=4.\)</span>
+</div></details>
+</div>
+<div class="para" id="br-multiplicative-proof-1-8-2-3">We can see that when <span class="process-math">\((b,4)=1\text{,}\)</span> <details id="br-multiplicative-proof-1-8-2-3-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\(s_b=\phi({5})\)</span></div></details> and when <details id="br-multiplicative-proof-1-8-2-3-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like">
+<span class="process-math">\((b,4)\gt 1\text{,}\)</span> <span class="process-math">\(s_b={0}\text{.}\)</span>
+</div></details>
+</div>
+</li>
+<li id="br-multiplicative-proof-1-8-3"><div class="para" id="p-derived-br-multiplicative-proof-1-8-3">
+<span class="process-math">\(\phi(20)=s_0+s_1+s_2+s_3\text{.}\)</span> Why? <details id="br-multiplicative-proof-1-8-3-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="br-multiplicative-proof-1-8-3-2-1">All of the positive integers less than or equal to <span class="process-math">\(20\)</span> is in exactly one of the congruence classes above. The <span class="process-math">\(s_i\)</span> count how many integers in each congruence class are relatively prime to <span class="process-math">\(20\text{.}\)</span> If we add them up, we have counted all positive integers less than or equal to <span class="process-math">\(20\text{.}\)</span>
+</div></div></details>
+</div></li>
+<li id="br-multiplicative-proof-1-8-4">
+<div class="para" id="br-multiplicative-proof-1-8-4-1">We have seen that <span class="process-math">\(\phi(20)=s_0+s_1+s_2+s_3\text{,}\)</span> that when <span class="process-math">\((b,4)=1\text{,}\)</span> <span class="process-math">\(s_b=\phi(5)\text{,}\)</span> and that when <span class="process-math">\((b,4)\gt 1\text{,}\)</span> <span class="process-math">\(s_b=0\text{.}\)</span> Thus, we can say that <details id="br-multiplicative-proof-1-8-4-1-6" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\(\phi(20)=0+\phi({5})+0+\phi(\answer{5})\text{.}\)</span></div></details> To finish the 	"proof" we show that there are <details id="br-multiplicative-proof-1-8-4-1-7" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\(\phi({4})\)</span></div></details> integers <span class="process-math">\(b\)</span> where <span class="process-math">\((b,4)=1\text{.}\)</span>
+</div>
+<div class="para" id="br-multiplicative-proof-1-8-4-2">There are <details id="br-multiplicative-proof-1-8-4-2-1" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\({4}\)</span></div></details> congruence classes modulo 4. Of these, <details id="br-multiplicative-proof-1-8-4-2-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\({2}=\phi({4})\)</span></div></details> have elements that are relatively prime to <span class="process-math">\(20\text{.}\)</span> Thus, <span class="process-math">\(\phi(20)=\phi(4)\phi(5)\text{.}\)</span>
+</div>
+</li>
+</ol>
+</div></article></details></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="ch-week1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-truthTable.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-modReduce.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-phiFacts.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

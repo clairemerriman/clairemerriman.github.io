@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h4 class="heading">
+<span class="type">In Class Activity</span><span class="space"> </span><span class="codenumber">14</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let us prove that <span class="process-math">\(\phi(20)=\phi(4)\phi(5)\text{.}\)</span> First, note that <span class="process-math">\(\phi(4)=\)</span><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\({2}\)</span></div></details> and <span class="process-math">\(\phi(5)=\)</span><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\({4},\)</span></div></details> so <span class="process-math">\(\phi(20)=\)</span><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\({8}.\)</span></div></details>
+</div>
+<ol class="decimal">
+<li><div class="para">A number <span class="process-math">\(a\)</span> is relatively prime to <span class="process-math">\(20\)</span> if and only if <span class="process-math">\(a\)</span> is relatively prime to <details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\({4}\)</span></div></details> and <details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\({5}.\)</span></div></details>
+</div></li>
+<li>
+<div class="para logical">
+<div class="para">We can partition the positive integers less that <span class="process-math">\(20\)</span> into</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp  0\equiv{4}\equiv{8}\equiv{12}\equiv{16}\pmod 4\\
+\amp  1\equiv{5}\equiv{9}\equiv{13}\equiv{17}\pmod 4\\
+\amp  2\equiv{6}\equiv{10}\equiv{14}\equiv{18}\pmod 4\\
+\amp  3\equiv{7}\equiv{11}\equiv{15}\equiv{19}\pmod 4
+\end{align*}
+</div>
+</div>
+<div class="para">For any <span class="process-math">\(b\)</span> in the range <span class="process-math">\(0,1,2,3\text{,}\)</span> define <span class="process-math">\(s_b\)</span> to be the number of integers <span class="process-math">\(a\)</span> in the range <span class="process-math">\(0,1,2,\dots, 19\)</span> such that <span class="process-math">\(a\equiv b \pmod 4\)</span> and <span class="process-math">\(\gcd(a,20)=1\text{.}\)</span> Thus, <details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<span class="process-math">\(s_0={0}, s_1=4, s_2=0\)</span> and <span class="process-math">\(s_3=4.\)</span>
+</div></details>
+</div>
+<div class="para">We can see that when <span class="process-math">\((b,4)=1\text{,}\)</span> <details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\(s_b=\phi({5})\)</span></div></details> and when <details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like">
+<span class="process-math">\((b,4)\gt 1\text{,}\)</span> <span class="process-math">\(s_b={0}\text{.}\)</span>
+</div></details>
+</div>
+</li>
+<li><div class="para">
+<span class="process-math">\(\phi(20)=s_0+s_1+s_2+s_3\text{.}\)</span> Why? <details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para">All of the positive integers less than or equal to <span class="process-math">\(20\)</span> is in exactly one of the congruence classes above. The <span class="process-math">\(s_i\)</span> count how many integers in each congruence class are relatively prime to <span class="process-math">\(20\text{.}\)</span> If we add them up, we have counted all positive integers less than or equal to <span class="process-math">\(20\text{.}\)</span>
+</div></div></details>
+</div></li>
+<li>
+<div class="para">We have seen that <span class="process-math">\(\phi(20)=s_0+s_1+s_2+s_3\text{,}\)</span> that when <span class="process-math">\((b,4)=1\text{,}\)</span> <span class="process-math">\(s_b=\phi(5)\text{,}\)</span> and that when <span class="process-math">\((b,4)\gt 1\text{,}\)</span> <span class="process-math">\(s_b=0\text{.}\)</span> Thus, we can say that <details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\(\phi(20)=0+\phi({5})+0+\phi(\answer{5})\text{.}\)</span></div></details> To finish the 	"proof" we show that there are <details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\(\phi({4})\)</span></div></details> integers <span class="process-math">\(b\)</span> where <span class="process-math">\((b,4)=1\text{.}\)</span>
+</div>
+<div class="para">There are <details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\({4}\)</span></div></details> congruence classes modulo 4. Of these, <details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="solution solution-like"><span class="process-math">\({2}=\phi({4})\)</span></div></details> have elements that are relatively prime to <span class="process-math">\(20\text{.}\)</span> Thus, <span class="process-math">\(\phi(20)=\phi(4)\phi(5)\text{.}\)</span>
+</div>
+</li>
+</ol>
+</div></article><span class="incontext"><a class="internal" href="sec-phiIntro.html#br-multiplicative-proof">in-context</a></span>
+</body>
+</html>
