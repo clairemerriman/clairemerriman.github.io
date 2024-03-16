@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Reading for March 13: Primitive roots modulo p</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Number Theory">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_oscarlevin.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="root--1-2.html"><span class="title">Number Theory:</span> <span class="subtitle">MAT-255 Spring 2024</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-order.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week8.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-primeRootIntro.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\nequiv}{\not\equiv}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week1.html" class="internal"><span class="codenumber">1</span> <span class="title">Week 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Wednesday, January 17: Introduction and Divisibility</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intro.html#sec-intro-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intro.html#sec-intro-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Mathematical definitions, mathematical notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intro.html#sec-intro-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Divisibility</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-truthTable.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Friday, January 19: Logic, proof by contradiction, and biconditionals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-truthTable.html#sec-truthTable-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-truthTable.html#rqs-logic" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-truthTable.html#sec-truthTable-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Reminders and Homework Guide Review</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-truthTable.html#sec-truthTable-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Logic, proof by contradiction, and biconditionals</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week2.html" class="internal"><span class="codenumber">2</span> <span class="title">Week 2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-DivisionAlg.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Monday, January 22: Division algorithm and quantifiers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-DivisionAlg.html#rqs-divAlg" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-DivisionAlg.html#exercises-read-jan19" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-DivisionAlg.html#sec-DivisionAlg-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Division Algorithm</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-primes.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Wedneday, January 24: Primes and Greatest Common Divisor</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-primes.html#sec-primes-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-primes.html#rqs-primes" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primes.html#sec-primes-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Primes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primes.html#sec-primes-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Greatest common divisor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gcd.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Friday, January 26: Quiz 1, Induction, Greatest Common Divisors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-gcd.html#sec-gcd-3" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gcd.html#rqs-gcd" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gcd.html#sec-gcd-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Quiz (10 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gcd.html#sec-gcd-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Greatest common divisor (25 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gcd.html#sec-gcd-6" class="internal"><span class="codenumber">2.3.4</span> <span class="title">More induction</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week3.html" class="internal"><span class="codenumber">3</span> <span class="title">Week 3</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-floor.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Monday, January 29: More algebraic proofs and the Euclidean Algorithm</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-floor.html#sec-floor-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-floor.html#rqs-floor" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-floor.html#sec-floor-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Example of proof like the floor function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-floor.html#sec-floor-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">The Euclidean Algorithm</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-FTA.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Wednesday, January 31: Practice with the Euclidean Algorithm and the Fundamental Theorem of Arithmetic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-FTA.html#sec-FTA-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-FTA.html#rqs-FTA" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-FTA.html#sec-FTA-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Announcements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-FTA.html#sec-FTA-5" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Practice with the Euclidean Algorithm (15 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-FTA.html#sec-FTA-6" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Fundamental Theorem of Arithmetic</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gcd-general.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Friday, February 2: Quiz 2, Greatest Common Divisors and Diophantine Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-gcd-general.html#rqs-feb2" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gcd-general.html#rqs-diophantine" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gcd-general.html#sec-gcd-general-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Quiz (10 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gcd-general.html#sec-gcd-general-5" class="internal"><span class="codenumber">3.3.3</span> <span class="title">More greatest common divisor (40 min)</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week4.html" class="internal"><span class="codenumber">4</span> <span class="title">Week 4</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-3dioph.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Monday February 5: More facts about greatest common divisor and linear Diophantine equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-3dioph.html#rqs-3dioph" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3dioph.html#rqs-FTA-again" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3dioph.html#sec-3dioph-4" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Greatest common divisor and Diophantine equations (30 minutes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-arthProgress.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Wednesday February 7: Arithmetic progressions and introduction to equivalence relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-arthProgress.html#rqs-arthProgress" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-arthProgress.html#rqs-equiv" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arthProgress.html#sec-arthProgress-4" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Practice with gcd proofs</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arthProgress.html#sec-arthProgress-5" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Prime factorizations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arthProgress.html#sec-arthProgress-6" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Equivalence Relation Practice</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-modDef.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Friday, February 9: Modular arithmetic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-modDef.html#sec-modDef-3" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-modDef.html#rqs-modIntro" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modDef.html#sec-modDef-4" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Quiz (10 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modDef.html#sec-modDef-5" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Definitions and examples of <span class="process-math">\(\pmod m\)</span></span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week5.html" class="internal"><span class="codenumber">5</span> <span class="title">Week 5</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-modIntro.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Monday, February 12: Peer review and introduction to congruences</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modIntro.html#sec-modIntro-3" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Proposition and examples of <span class="process-math">\(\pmod m\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modIntro.html#sec-modIntro-4" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Peer review Chapter 1 Exercise 83 (20 minutes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-week5-3.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Wednesday, February 14: More congruence facts</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week5-3.html#ch-week5-3-3" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Basic facts of working modulo <span class="process-math">\(m\)</span></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-week5-4.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Friday, February 16: Linear congruences in one variable</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week5-4.html#ch-week5-4-3" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Quiz (10 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week5-4.html#ch-week5-4-4" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Linear congruences in one variable</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week6.html" class="internal"><span class="codenumber">6</span> <span class="title">Week 6</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-CRT.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Monday, February 19: Chinese Remainder Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-CRT.html#sec-CRT-3" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-CRT.html#sec-CRT-4" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Multiplicative inverses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-CRT.html#sec-CRT-5" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Simultaneous Linear congruences in one variable (30 min)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-wilson.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Wednesday, February 21: Wilson’s Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-wilson.html#sec-wilson-3" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-wilson.html#rqs-willson" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-wilson.html#sec-wilson-4" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Wilson’s Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-FlT.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Friday, February 23: Euler’s Theorem and Fermat’s Little Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-FlT.html#sec-FlT-3" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-FlT.html#rqs-FlT" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-FlT.html#sec-FlT-4" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Quiz (10 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-FlT.html#sec-FlT-5" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Euler’s Generalization of Fermat’s Little Theorem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week7.html" class="internal"><span class="codenumber">7</span> <span class="title">Week 7</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-modReduce.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Monday, February 26: Modular arithmetic calculations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modReduce.html#sec-modReduce-3" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Multiplicative inverses using Wilson’s Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modReduce.html#sec-modReduce-4" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Finding least nonnegative residue Fermat’s Little Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-phiIntro.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Wednesday, February 28: Modular arithmetic calculations and the <span class="process-math">\(\phi-\)</span> function</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-phiIntro.html#sec-phiIntro-3" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Multiplicative inverses using Euler’s Extension of Fermat’s Little Theorem (30 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-phiIntro.html#sec-phi-start" class="internal"><span class="codenumber">7.2.2</span> <span class="title">The Euler <span class="process-math">\(\phi\)</span>-function (20 min)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-phiFacts.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Friday, March 1: The <span class="process-math">\(\phi-\)</span> function and a preview of primitive roots</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-phiFacts.html#sec-phiFacts-3" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Quiz (10 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-phiFacts.html#sec-phiFacts-4" class="internal"><span class="codenumber">7.3.2</span> <span class="title">Euler <span class="process-math">\(\phi\)</span>-function (20 min)</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-week8.html" class="internal"><span class="codenumber">8</span> <span class="title">Week 8</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-order.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Monday, March 11: Order of elements modulo <span class="process-math">\(m\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-order.html#sec-order-3" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Review of <span class="process-math">\(\phi\)</span>-function (15 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-order.html#sec-order-4" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Order of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(m\)</span> (35 minutes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec-primeRootReading.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Reading for March 13: Primitive roots modulo <span class="process-math">\(p\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primeRootReading.html#sec-primeRootReading-3" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Definition of primitive root</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primeRootReading.html#sec-primeRootReading-4" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Existence of primitive roots in a prime modulus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primeRootReading.html#sec-primeRootReading-5" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Naomi’s Numerical Proof Preview: Theorem 10.3.7</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primeRootReading.html#sec-primeRootReading-6" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Referenced Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-primeRootIntro.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Wednesday, March 13: Primitive roots modulo a prime</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-primeRootIntro.html#sec-primeRootIntro-3" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-primeRootIntro.html#rqs-Mar13" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primeRootIntro.html#sec-primeRootIntro-4" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Primitive roots and comparing Strayer to the reading</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-LagrangeThem.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Friday, March 15: Lagrange’s Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-LagrangeThem.html#sec-LagrangeThem-3" class="internal"><span class="codenumber">8.4.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-LagrangeThem.html#rqs-Mar15" class="internal"><span class="codenumber">8.4.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-LagrangeThem.html#sec-LagrangeThem-4" class="internal"><span class="codenumber">8.4.2</span> <span class="title">Quiz (10 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-LagrangeThem.html#sec-LagrangeThem-5" class="internal"><span class="codenumber">8.4.3</span> <span class="title">Lagrange’s Theorem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="rubrics.html" class="internal"><span class="codenumber">A</span> <span class="title">Homework Rubrics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="r-hw1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Homework 1 Rubrics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="r-hw2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Homework 2 Rubrics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="r-hw3.html" class="internal"><span class="codenumber">A.3</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="forCrossRefrence.html" class="internal"><span class="codenumber">B</span> <span class="title">Other Results from Strayer</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-additional-div.html" class="internal"><span class="codenumber">B.1</span> <span class="title">Divisibility facts</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-additional-primes.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Prime facts</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="forCrossRefrence-4.html" class="internal"><span class="codenumber">B.3</span> <span class="title">Diophantine equations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Congruences.html" class="internal"><span class="codenumber">B.4</span> <span class="title">Congruences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Phi-Function.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Euler <span class="process-math">\(\phi\)</span>-Function</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">C</span> <span class="title">Notation list</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-primeRootReading"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">8.2</span><span class="space"> </span><span class="title">Reading for March 13: Primitive roots modulo <span class="process-math">\(p\)</span></span>
+</h2>
+<div class="para" id="sec-primeRootReading-2">The original scan on Moodle is a bit hard to read, especially as some parts are annotated and some parts are covered up--since I have not receieved the book from interlibrary loan to re-scan, I will transcribe (incorporating the annotations/references to our textbook and examples.)</div>
+<section class="subsection" id="sec-primeRootReading-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.2.1</span><span class="space"> </span><span class="title">Definition of primitive root</span>
+</h3>
+<div class="para" id="sec-primeRootReading-3-2">If <span class="process-math">\(a\)</span> is a nonzero element of <span class="process-math">\(\Z_7\)</span> (ie, <span class="process-math">\(a\not\equiv 0\pmod{7}\)</span>), then <a href="" class="xref" data-knowl="./knowl/xref/FlT.html" title="Corollary 82: Fermat’s Little Theorem">Fermat’s Little Theorem</a> tells us that <span class="process-math">\(a^6\equiv 1\pmod{7}.\)</span> This implies that the order of every element of <span class="process-math">\(\Z_7\)</span> is at most <span class="process-math">\(6\text{.}\)</span> At the beginning of this chapter (<a href="" class="xref" data-knowl="./knowl/xref/table-exp_mod7.html" title="Table 101: Table of exponents modulo 7">Table of exponents modulo <span class="process-math">\(7\)</span></a>) we saw that <span class="process-math">\(\ord_7 3=6.\)</span> We can also say that the element <span class="process-math">\(3\in\Z_7\)</span> has order <span class="process-math">\(6.\)</span>
+</div>
+<aside class="aside aside-like" id="sec-primeRootReading-3-3"></aside><article class="definition definition-like" id="defn-primeRoot-prime"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">105</span><span class="period">.</span><span class="space"> </span><span class="title">Definition 10.3.1.</span>
+</h4> <div class="para" id="defn-primeRoot-prime-2-1">Let <span class="process-math">\(p\)</span> be prime and let <span class="process-math">\(\overline{a}\in \Z_p\)</span> with <span class="process-math">\(a\not\equiv 0\pmod{p}.\)</span> Then <span class="process-math">\(\overline{a}\)</span> is said to be a <dfn class="terminology">primitive root in <span class="process-math">\(\Z_p\)</span></dfn> or <dfn class="terminology">primitive root modulo <span class="process-math">\(p\)</span></dfn> if <span class="process-math">\(\ord_p a=p-1.\)</span>
+</div></article><aside class="aside aside-like" id="sec-primeRootReading-3-5"></aside><article class="remark remark-like" id="sec-primeRootReading-3-6"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">106</span><span class="period">.</span>
+</h4>Primitive roots may also be defined for <span class="process-math">\(\Z_n\)</span> when <span class="process-math">\(n\)</span> is composite. (See Paper 3 topics)</article><article class="example example-like" id="ex-prime_roots_7"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">107</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="ex-prime_roots_7-1"><ol class="decimal">
+<li id="ex-prime_roots_7-1-1-1"><div class="para" id="p-derived-ex-prime_roots_7-1-1-1">Is <span class="process-math">\(\overline{2}\in\Z_7\)</span> a primitive root?</div></li>
+<li id="ex-prime_roots_7-1-1-2"><div class="para" id="p-derived-ex-prime_roots_7-1-1-2">Is <span class="process-math">\(\overline{5}\in\Z_7\)</span> a primitive root?</div></li>
+</ol></div> <details id="ex-prime_roots_7-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="ex-prime_roots_7-2-1">
+<div class="para">Computing powers of <span class="process-math">\(2\)</span> and <span class="process-math">\(5\)</span> modulo <span class="process-math">\(7,\)</span> we find</div>
+<div class="displaymath process-math" id="ex-prime_roots_7-2-1-4">
+\begin{align*}
+2^1 \amp  \equiv 2\pmod{7}  
+\amp 5^1\amp \equiv 5\pmod{7}\\
+2^2 \amp  \equiv 4\pmod{7}  
+\amp 5^2\amp \equiv 4\pmod{7}\\
+2^3 \amp  \equiv 1\pmod{7}  
+\amp 5^3\amp \equiv 6\pmod{7}\\
+\amp    \amp 5^4\amp \equiv 2\pmod{7}\\
+\amp    \amp 5^5\amp \equiv 3\pmod{7}\\
+\amp    \amp 5^6\amp \equiv 1\pmod{7}
+\end{align*}
+</div>
+<ol class="decimal">
+<li id="ex-prime_roots_7-2-1-5-1"><div class="para" id="p-derived-ex-prime_roots_7-2-1-5-1">Thus, the order of <span class="process-math">\(\overline{2}\)</span> is <span class="process-math">\(3,\)</span> so <span class="process-math">\(\overline{2}\)</span> is not a primitive root (in <span class="process-math">\(\Z_7\)</span>)</div></li>
+<li id="ex-prime_roots_7-2-1-5-2"><div class="para" id="p-derived-ex-prime_roots_7-2-1-5-2">We see that the order of <span class="process-math">\(\overline{5}\)</span> is <span class="process-math">\(6;\)</span> hence, <span class="process-math">\(\overline{5}\)</span> is a primitive root (in <span class="process-math">\(\Z_7\)</span>)</div></li>
+</ol>
+</div></div></details></article><article class="example example-like" id="ex-prime_roots_11"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">108</span><span class="period">.</span>
+</h4>
+<div class="para" id="ex-prime_roots_11-1">Determine which elements of <span class="process-math">\(Z_{11}\)</span> are primitive roots.</div> <aside class="aside aside-like" id="ex-prime_roots_11-2"></aside> <details id="ex-prime_roots_11-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="ex-prime_roots_11-3-1">
+<div class="para">From <a href="" class="xref" data-knowl="./knowl/xref/table-exp_mod11.html" title="Table 109: Table of exponents modulo 11">Table of exponents modulo <span class="process-math">\(11\)</span></a>, we determined the orders of all of the nonzero elements of <span class="process-math">\(\Z_{11}:\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/table-exp_mod11.html" id="ex-prime_roots_11-3-1-3">
+\begin{align*}
+\ord_{11} 1\amp =1 \\
+\ord_{11} 10\amp =2 \\
+\ord_{11} 3\amp =\ord_{11} 4=\ord_{11} 5=\ord_{11} 9=5\\
+\ord_{11} 2\amp =\ord_{11} 6=\ord_{11} 7=\ord_{11} 8=10.
+\end{align*}
+</div>
+<div class="para">Hence, the primitive roots in <span class="process-math">\(\Z_{11}\)</span> (ie, the primitive roots modulo <span class="process-math">\(11\)</span>) are <span class="process-math">\(\overline{2},\overline{6},\overline{7},\)</span> and <span class="process-math">\(\overline{8}.\)</span>
+</div>
+</div></div></details></article><article class="example example-like" id="ex-prime_roots_17"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">110</span><span class="period">.</span>
+</h4>
+<div class="para" id="ex-prime_roots_17-1">Find a primitive root in <span class="process-math">\(\Z_{17},\)</span> if one exists.</div> <details id="ex-prime_roots_17-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical" id="ex-prime_roots_17-2-1">
+<div class="para">For want of a better strategy, we will check the orders of the elements <span class="process-math">\(\overline{1},\overline{2},\overline{3},\dots,\)</span> until we find an element of order 16.</div>
+<div class="displaymath process-math" id="ex-prime_roots_17-2-1-2">
+\begin{align*}
+\amp 1^1 \equiv 1\pmod{17} 
+\amp 2^1 \equiv 2\pmod{17} 
+\amp\amp 3^1 \equiv 3\pmod{17}\\
+\amp\amp 2^2 \equiv 4\pmod{17} 
+\amp\amp 3^2 \equiv 9\pmod{17}\\
+\amp\amp 2^3 \equiv 8\pmod{17} 
+\amp\amp 3^3 \equiv 10\pmod{17}\\
+\amp\amp 2^4 \equiv 16\pmod{17} 
+\amp\amp 3^4 \equiv 13\pmod{17}\\
+\amp\amp 2^5 \equiv 15\pmod{17} 
+\amp\amp 3^5 \equiv 5\pmod{17}\\
+\amp\amp 2^6 \equiv 13\pmod{17} 
+\amp\amp 3^6 \equiv 15\pmod{17}\\
+\amp\amp 2^7 \equiv 9\pmod{17} 
+\amp\amp 3^7 \equiv 11\pmod{17}\\
+\amp\amp 2^8 \equiv 1\pmod{17} 
+\amp\amp 3^8 \equiv 16\pmod{17}\\
+\amp\amp\amp\amp 3^9 \equiv 14\pmod{17}\\
+\amp\amp\amp\amp 3^{10} \equiv 8\pmod{17}\\
+\amp\amp\amp\amp 3^{11}\equiv 7\pmod{17}\\
+\amp\amp\amp\amp 3^{12} \equiv 4\pmod{17}\\
+\amp\amp\amp\amp 3^{13} \equiv 12\pmod{17}\\
+\amp\amp\amp\amp 3^{14} \equiv 2\pmod{17}\\
+\amp\amp\amp\amp 3^{15} \equiv 6\pmod{17}\\
+\amp\amp\amp\amp 3^{16} \equiv 1\pmod{17}
+\end{align*}
+</div>
+<div class="para">From the left column, we see that <span class="process-math">\(1\)</span> has order <span class="process-math">\(1.\)</span>
+</div>
+</div> <div class="para" id="ex-prime_roots_17-2-2">From the center column, we see that <span class="process-math">\(2\)</span> has order <span class="process-math">\(8.\)</span>
+</div> <div class="para" id="ex-prime_roots_17-2-3">From the right column, we see that the order of <span class="process-math">\(3\)</span> equals <span class="process-math">\(16,\)</span> and we conclude that <span class="process-math">\(3\)</span> is a primitive root modulo <span class="process-math">\(17.\)</span>
+</div> <div class="para" id="ex-prime_roots_17-2-4">We did not actually need to compute all of those powers of <span class="process-math">\(3\)</span> to determine that <span class="process-math">\(3\)</span> is a primitive root. We know that <span class="process-math">\(\ord_{17}3\)</span> must be a divisor of <span class="process-math">\(17-1=16,\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/prop-order_divides_phi.html" title="Proposition 102: Proposition 5.1">Proposition 5.1</a>. Once we have computed from <span class="process-math">\(3^1\)</span> to <span class="process-math">\(3^8\)</span> and not yet obtained an answer of <span class="process-math">\(1,\)</span> we know <span class="process-math">\(\ord-{17}3\gt 8.\)</span> Since the only divisor of <span class="process-math">\(16\)</span> that is greater than <span class="process-math">\(8\)</span> is 16 itself, we can then conclude that <span class="process-math">\(\ord_{17}3=16.\)</span> (This observation is generalized in <a href="" class="xref" data-knowl="./knowl/xref/read-ex7.html" title="Exercise 120: Exercise 7">Exercise 7</a>.)</div>
+</div></details></article><div class="para" id="sec-primeRootReading-3-10">In <a href="" class="xref" data-knowl="./knowl/xref/ex-prime_roots_17.html" title="Example 110">Example 110</a>, we found <span class="process-math">\(\overline{3}\)</span> is a primitive root of <span class="process-math">\(\Z_{17}\)</span> (ie, <span class="process-math">\(3\)</span> is a primitive root modulo <span class="process-math">\(17.\)</span>) Looking again at the column of powers of <span class="process-math">\(\overline{3}\)</span> from the example, observe that these powers cycle through all of the nonzero elements of <span class="process-math">\(\Z_{17}.\)</span> That is, every nonzero element is equivalent to <span class="process-math">\(\overline{3}\)</span> raised to some power. This is a general fact about primite roots, which we will now prove.</div>
+<article class="proposition theorem-like" id="read-prop-prime-root-generates"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">111</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="read-prop-prime-root-generates-1-1">
+<div class="para">Let <span class="process-math">\(p\)</span> be a prime and let <span class="process-math">\(a\in\Z_p\)</span> be a primitive root. Then every nonzero element of <span class="process-math">\(\Z_p\)</span> appears exactly once on the list</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\overline{a}^0,\overline{a}^1,\dots,\overline{a}^{p-2} \pmod{p}.
+\end{equation*}
+</div>
+</div></article><aside class="aside aside-like" id="sec-primeRootReading-3-12"></aside><details id="sec-primeRootReading-3-13" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical" id="sec-primeRootReading-3-13-1">
+<div class="para">First, we show that the elements in the list <a href="" class="xref" data-knowl="./knowl/xref/eq-prime-generates.html" title="Equation 8.1">(8.1)</a> are distinct. Suppose that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-prime-generates.html ./knowl/xref/prop-exponents_mod_order.html ./knowl/xref/eq-prime-generates.html">
+\begin{equation*}
+a^j\equiv a^k\pmod{p}
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(j\)</span> and <span class="process-math">\(k\)</span> in the range <span class="process-math">\(0,\dots,p-2.\)</span> Since <span class="process-math">\(\ord_p a=p-1,\)</span> we know that the two powers of <span class="process-math">\(a\)</span> are equal if and only if the exponents are congruent modulo <span class="process-math">\(p-1,\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/prop-exponents_mod_order.html" title="Proposition 103: Proposition 5.2">Proposition 5.2</a>. Hence,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-prime-generates.html ./knowl/xref/prop-exponents_mod_order.html ./knowl/xref/eq-prime-generates.html">
+\begin{equation*}
+j\equiv k\pmod{p-1}.
+\end{equation*}
+</div>
+<div class="para">But since <span class="process-math">\(j\)</span> and <span class="process-math">\(k\)</span> are restricted to the range <span class="process-math">\(0,\dots,p-2,\)</span> it follows that <span class="process-math">\(j=k.\)</span> THus, we have show the elements in list <a href="" class="xref" data-knowl="./knowl/xref/eq-prime-generates.html" title="Equation 8.1">(8.1)</a> are all distinct.</div>
+</div> <div class="para" id="sec-primeRootReading-3-13-2">Note that since <span class="process-math">\(a\not\equiv 0\pmod{p},\)</span> each element in the like <a href="" class="xref" data-knowl="./knowl/xref/eq-prime-generates.html" title="Equation 8.1">(8.1)</a> is a nonzero element modulo <span class="process-math">\(p.\)</span> There are <span class="process-math">\(p-1\)</span> elements in list <a href="" class="xref" data-knowl="./knowl/xref/eq-prime-generates.html" title="Equation 8.1">(8.1)</a>, and we have just shown that these elements are distinct. Since there are exactly <span class="process-math">\(p-1\)</span> nonzero residues modulo <span class="process-math">\(p,\)</span> list <a href="" class="xref" data-knowl="./knowl/xref/eq-prime-generates.html" title="Equation 8.1">(8.1)</a> must include every nonzero residue modulo <span class="process-math">\(p.\)</span>
+</div></article></details><article class="question example-like" id="sec-primeRootReading-3-14"><h4 class="heading">
+<span class="type">Question</span><span class="space"> </span><span class="codenumber">112</span><span class="period">.</span>
+</h4>In <span class="process-math">\(\Z_{11},\)</span> <span class="process-math">\(\overline{2}\)</span> is a primitive root.  Express each of the following elements as <span class="process-math">\(\overline{2}^k,\)</span> where <span class="process-math">\(k\)</span> is in the range <span class="process-math">\(0,\dots,9\)</span> <ol class="decimal">
+<li id="sec-primeRootReading-3-14-6-1"><div class="para" id="p-derived-sec-primeRootReading-3-14-6-1"><span class="process-math">\(\displaystyle \overline{5}\)</span></div></li>
+<li id="sec-primeRootReading-3-14-6-2"><div class="para" id="p-derived-sec-primeRootReading-3-14-6-2"><span class="process-math">\(\displaystyle \overline{9}\)</span></div></li>
+</ol></article><div class="para" id="sec-primeRootReading-3-15">The converse of <a href="" class="xref" data-knowl="./knowl/xref/read-prop-prime-root-generates.html" title="Proposition 111"></a> is also true. More precisely, if <span class="process-math">\(\overline{a}\in\Z_p,\)</span> and if every nonzero element if <span class="process-math">\(\Z_p\)</span> can be expressed as a power of <span class="process-math">\(\overline{a},\)</span> then <span class="process-math">\(\overline{a}\)</span> must be a primitive root. (See <a href="" class="xref" data-knowl="./knowl/xref/read-ex11.html" title="Exercise 121: Exercise 11">Exercise 11</a>.)</div></section><section class="subsection" id="sec-primeRootReading-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.2.2</span><span class="space"> </span><span class="title">Existence of primitive roots in a prime modulus</span>
+</h3>
+<div class="para" id="sec-primeRootReading-4-2">In Example <a href="" class="xref" data-knowl="./knowl/xref/ex-prime_roots_17.html" title="Example 110">Example 110</a>, we asked whether there exists a primitive root in <span class="process-math">\(\Z_{17}.\)</span> To solve this, we did not have to search very vary. Although <span class="process-math">\(\overline{1}\)</span> and <span class="process-math">\(\overline{2}\)</span> are not primitive roots we found that <span class="process-math">\(\overline{3}\)</span> is a primitive roots. If we looke for primitive roots modulo other primes, we find a similar situation. For example, modulo <span class="process-math">\(47,\)</span> we find that <span class="process-math">\(5\)</span> is a primitive root, and modulo <span class="process-math">\(293,\)</span> we find that <span class="process-math">\(2\)</span> is a primitive toot, In fact, every prime less that <span class="process-math">\(100\)</span> has a primitive root that is less than or equal to <span class="process-math">\(7.\)</span> Every prime less that <span class="process-math">\(1,000,000\)</span> has a primitive root that is less than or equal to <span class="process-math">\(73.\)</span>
+</div>
+<div class="para" id="sec-primeRootReading-4-3">The main result of this chapter is the <a href="" class="xref" data-knowl="./knowl/xref/thm-prime-roots.html" title="Theorem 113: Primitive Root Theorem">Primitive Root Theorem</a>, which states that for every prime <span class="process-math">\(p,\)</span> there exists a primitive root modulo <span class="process-math">\(p.\)</span> Although this is easy to state, priving it is quite tricky. So tricky, in fact, that the proof given by the great Leonhard Euler was incorrect. It was Lagrange who gave the first correct proof of the <a href="" class="xref" data-knowl="./knowl/xref/thm-prime-roots.html" title="Theorem 113: Primitive Root Theorem">Primitive Root Theorem</a>.</div>
+<article class="theorem theorem-like" id="thm-prime-roots"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">113</span><span class="period">.</span><span class="space"> </span><span class="title">Primitive Root Theorem.</span>
+</h4>
+<div class="para" id="thm-prime-roots-2-1">Let <span class="process-math">\(p\)</span> be prime. Then there exists a primitive root modulo <span class="process-math">\(p.\)</span>
+</div></article><div class="para" id="sec-primeRootReading-4-5">To prove the <a href="" class="xref" data-knowl="./knowl/xref/thm-prime-roots.html" title="Theorem 113: Primitive Root Theorem">Primitive Root Theorem</a>, we must first prove that in <span class="process-math">\(\Z_,\)</span> there exists an element of order <span class="process-math">\(p-1.\)</span> Our first step is to prove that there exists an element of order <span class="process-math">\(q^s,\)</span> where <span class="process-math">\(q\)</span> is prime and <span class="process-math">\(q^s\)</span> divides <span class="process-math">\(p-1\text{.}\)</span> (Numbers of the form <span class="process-math">\(q^s\)</span> where <span class="process-math">\(q\)</span> is prime and <span class="process-math">\(s\in\N\)</span> are called <em class="emphasis">prime powers</em>.)</div>
+<article class="lemma theorem-like" id="read-lem-prime-power-order"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">114</span><span class="period">.</span><span class="space"> </span><span class="title">Lemma 10.3.4.</span>
+</h4>
+<div class="para" id="read-lem-prime-power-order-2-1">Let <span class="process-math">\(p\)</span> be a prime and let <span class="process-math">\(q^s\)</span> be a prime power (where <span class="process-math">\(q\)</span> is prime and <span class="process-math">\(s\geq 1\)</span>). If <span class="process-math">\(q^s\mid p-1,\)</span> then there exits an element of order <span class="process-math">\(q^s\)</span> modulo <span class="process-math">\(p.\)</span>
+</div></article><div class="para" id="sec-primeRootReading-4-7">Before proving this lemma, let’s see a quick example.</div>
+<article class="example example-like" id="ex-orders_101"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">115</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="ex-orders_101-1">
+<div class="para">Suppose that <span class="process-math">\(p=101.\)</span> Then <span class="process-math">\(p-1=100=2^2(5^2),\)</span> which is divisible by the following prime powers:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/read-lem-prime-power-order.html">
+\begin{equation*}
+2^1=2, 2^2=4,5^1=5, 5^2=25.
+\end{equation*}
+</div>
+<div class="para">Thus, <a href="" class="xref" data-knowl="./knowl/xref/read-lem-prime-power-order.html" title="Lemma 114: Lemma 10.3.4">Lemma 10.3.4</a> guarentees that we will find elements of orders <span class="process-math">\(2,4,5,\)</span> and <span class="process-math">\(25\)</span> modulo <span class="process-math">\(101.\)</span>
+</div>
+</div></article><details id="sec-primeRootReading-4-9" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof of  Lemma 10.3.4.</span></h4></summary><article class="hiddenproof"> <div class="para logical" id="sec-primeRootReading-4-9-2">
+<div class="para">Let <span class="process-math">\(p\)</span> be a prime. Let <span class="process-math">\(q\)</span> be prime and <span class="process-math">\(s\in\N\)</span> such that <span class="process-math">\(q^s\mid p-1.\)</span> Consider the following equations in <span class="process-math">\(\Z_p:\)</span>
+</div>
+<div class="displaymath process-math" id="sec-primeRootReading-4-9-2-6">
+\begin{align}
+x^{q^s}\amp \equiv 1\pmod{p}\tag{8.2}\\
+\text{ and } 
+x^{q^{s-1}}\amp \equiv 1\pmod{p}.\tag{8.3}
+\end{align}
+</div>
+</div> <div class="para logical" id="sec-primeRootReading-4-9-3">
+<div class="para">By Proposition 5.8, equation <a href="" class="xref" data-knowl="./knowl/xref/eq-2a.html" title="Equation 8.2">(8.2)</a> has <span class="process-math">\(q^s\)</span> solutions and equation <a href="" class="xref" data-knowl="./knowl/xref/eq-2b.html" title="Equation 8.3">(8.3)</a> has <span class="process-math">\(q^{s-1}\)</span> solutions. Since <span class="process-math">\(q^s \gt  q^{s-1},\)</span> there must be at least one <span class="process-math">\(a\in\Z\)</span> that is a solution to <a href="" class="xref" data-knowl="./knowl/xref/eq-2a.html" title="Equation 8.2">(8.2)</a> and not <a href="" class="xref" data-knowl="./knowl/xref/eq-2b.html" title="Equation 8.3">(8.3)</a>. That is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-2a.html ./knowl/xref/eq-2b.html ./knowl/xref/eq-2a.html ./knowl/xref/eq-2b.html" id="sec-primeRootReading-4-9-3-9">
+\begin{align}
+a^{q^s}\amp \equiv 1\pmod{p}\tag{8.4}\\
+\textnormal{ but } 
+a^{q^{s-1}}\amp \not\equiv 1\pmod{p}.\tag{8.5}
+\end{align}
+</div>
+</div> <article class="claim theorem-like" id="claim-1"><h4 class="heading">
+<span class="type">Claim</span><span class="space"> </span><span class="codenumber">116</span><span class="period">.</span>
+</h4>
+<div class="para" id="claim-1-1-1">
+<span class="process-math">\(a\)</span> has order <span class="process-math">\(q^s.\)</span>
+</div></article><details id="claim-1-2" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical" id="claim-1-2-1">
+<div class="para">By equation <a href="" class="xref" data-knowl="./knowl/xref/eq-3a.html" title="Equation 8.4">(8.4)</a>, it follows (using <a href="" class="xref" data-knowl="./knowl/xref/prop-order_divides_phi.html" title="Proposition 102: Proposition 5.1">Proposition 5.1</a>) that <span class="process-math">\(\ord_p a\)</span> divides <span class="process-math">\(q^s.\)</span> Thus, the order of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(p\)</span> is one of the numbers in the list</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-3a.html ./knowl/xref/prop-order_divides_phi.html ./knowl/xref/eq-3b.html ./knowl/xref/prop-order_divides_phi.html ./knowl/xref/eq-4.html" id="eq-4">
+\begin{equation}
+1,q,q^2,\dots,q^{s-1},q^s.\tag{8.6}
+\end{equation}
+</div>
+<div class="para">However, from <a href="" class="xref" data-knowl="./knowl/xref/eq-3b.html" title="Equation 8.5">(8.5)</a>, it follows (again using <a href="" class="xref" data-knowl="./knowl/xref/prop-order_divides_phi.html" title="Proposition 102: Proposition 5.1">Proposition 5.1</a>) that <span class="process-math">\(\ord_p a\)</span> does not divide <span class="process-math">\(q^{s-1}.\)</span> Since the only number in list <a href="" class="xref" data-knowl="./knowl/xref/eq-4.html" title="Equation 8.6">(8.6)</a> that does not divide <span class="process-math">\(q^{s-1}\)</span> is <span class="process-math">\(q^s,\)</span> we conclude that the order of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(p\)</span> is <span class="process-math">\(q^s.\)</span>
+</div>
+</div></article></details> <div class="para" id="sec-primeRootReading-4-9-5">Thus, we have found an integer <span class="process-math">\(a\)</span> with order <span class="process-math">\(q^s\)</span> modulo <span class="process-math">\(p.\)</span>
+</div></article></details><div class="para" id="sec-primeRootReading-4-10">Suppose we want to know whether <span class="process-math">\(\Z_{101}\)</span> has primitive root--that is, an element of order <span class="process-math">\(100.\)</span> <a href="" class="xref" data-knowl="./knowl/xref/read-lem-prime-power-order.html" title="Lemma 114: Lemma 10.3.4">Lemma 10.3.4</a> tells us that there is an element <span class="process-math">\(\overline{a}\)</span> of order <span class="process-math">\(4,\)</span> and element <span class="process-math">\(b\)</span> of order <span class="process-math">\(25\)</span> (see Example <a href="" class="xref" data-knowl="./knowl/xref/ex-orders_101.html" title="Example 115">Example 115</a>). It turns out that the product <span class="process-math">\(\overline{ab}\)</span> will have order <span class="process-math">\(4\cdot 25=100\)</span> and hence, <span class="process-math">\(\overline{ab}\)</span> is the primitive root we seek. This is guarenteed by the following lemma.</div>
+<article class="lemma theorem-like" id="read-lem-order-multiplicative"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">117</span><span class="period">.</span><span class="space"> </span><span class="title">Lemma 10.3.5.</span>
+</h4>
+<div class="para logical" id="read-lem-order-multiplicative-2-1">
+<div class="para">Let <span class="process-math">\(n\in\N,\)</span> and let <span class="process-math">\(\overline{a},\overline{b}\in\Z_n\)</span> be reduced residues (see: <a href="" class="xref" data-knowl="./knowl/xref/defn-reduced-res-sys.html" title="Definition 75: reduced residue system modulo m">reduced residue system modulo <span class="process-math">\(m\)</span></a>). If <span class="process-math">\(\ord_n a\)</span> and <span class="process-math">\(\ord_n b\)</span> are relatively prime, then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/defn-reduced-res-sys.html">
+\begin{equation*}
+\ord_n (ab)=(\ord_n a)(\ord_n b).
+\end{equation*}
+</div>
+</div></article><details id="read-lem-order-multiplicative-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="read-lem-order-multiplicative-3-1">On Homework 6--Strayer Chapter 5, Exercise 5a.</div></article></details><div class="para" id="sec-primeRootReading-4-12">In Example <a href="" class="xref" data-knowl="./knowl/xref/ex-orders_101.html" title="Example 115">Example 115</a>, we used <a href="" class="xref" data-knowl="./knowl/xref/read-lem-prime-power-order.html" title="Lemma 114: Lemma 10.3.4">Lemma 10.3.4</a> to determine that <span class="process-math">\(\Z_{101}\)</span> has orders <span class="process-math">\(4\)</span> and <span class="process-math">\(25.\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/read-lem-order-multiplicative.html" title="Lemma 117: Lemma 10.3.5">Lemma 10.3.5</a>, the product of these elements has order <span class="process-math">\(100,\)</span> os it is a primitive root. We will use this same argument, which combines <a href="" class="xref" data-knowl="./knowl/xref/read-lem-prime-power-order.html" title="Lemma 114: Lemma 10.3.4">Lemma 10.3.4</a> and <a href="" class="xref" data-knowl="./knowl/xref/read-lem-order-multiplicative.html" title="Lemma 117: Lemma 10.3.5">Lemma 10.3.5</a> to give a general proof of the <a href="" class="xref" data-knowl="./knowl/xref/thm-prime-roots.html" title="Theorem 113: Primitive Root Theorem">Primitive Root Theorem</a>.</div>
+<details id="sec-primeRootReading-4-13" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof of Primitive Root Theorem.</span></h4></summary><article class="hiddenproof"> <div class="para" id="sec-primeRootReading-4-13-2">Let <span class="process-math">\(p\)</span> be prime.</div> <div class="para" id="sec-primeRootReading-4-13-3">If <span class="process-math">\(p=2,\)</span> then <span class="process-math">\(1\)</span> is a primitive root modulo <span class="process-math">\(p.\)</span> Thus, we may assume <span class="process-math">\(p\gt 2.\)</span>
+</div> <div class="para logical" id="sec-primeRootReading-4-13-4">
+<div class="para">Factor <span class="process-math">\(p-1\)</span> into primes:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p-1=q_1^{a^1}q_1^{a_2}\cdots q_m^{a_m}.
+\end{equation*}
+</div>
+</div> <div class="para logical" id="sec-primeRootReading-4-13-5">
+<div class="para">By <a href="" class="xref" data-knowl="./knowl/xref/read-lem-prime-power-order.html" title="Lemma 114: Lemma 10.3.4">Lemma 10.3.4</a>, for each <span class="process-math">\(k=1,2,\dots, m,\)</span> there exists an integer <span class="process-math">\({x_k}\)</span> of order <span class="process-math">\(q_k^{a_k}\)</span> modulo <span class="process-math">\(p.\)</span> Let</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/read-lem-prime-power-order.html ./knowl/xref/read-lem-order-multiplicative.html ./knowl/xref/read-ex11.html">
+\begin{equation*}
+x\equiv x_1 x_2\cdots x_m\pmod{p}.
+\end{equation*}
+</div>
+<div class="para">Applying <a href="" class="xref" data-knowl="./knowl/xref/read-lem-order-multiplicative.html" title="Lemma 117: Lemma 10.3.5">Lemma 10.3.5</a> repeatedly (see <a href="" class="xref" data-knowl="./knowl/xref/read-ex11.html" title="Exercise 121: Exercise 11">Exercise 11</a>), we find</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/read-lem-prime-power-order.html ./knowl/xref/read-lem-order-multiplicative.html ./knowl/xref/read-ex11.html" id="sec-primeRootReading-4-13-5-9">
+\begin{align*}
+\ord_p x \amp =(\ord_p x_1)(\ord_p x_2)\cdots(\ord_p x_m)\\
+\amp =q_1^{a^1}q_1^{a_2}\cdots q_m^{a_m}\\
+\amp =p-1
+\end{align*}
+</div>
+<div class="para">Hence, <span class="process-math">\(x\)</span> is a primitive root modulo <span class="process-math">\(p.\)</span>
+</div>
+</div></article></details><div class="para" id="sec-primeRootReading-4-14">We have now proved that <span class="process-math">\(\Z_p\)</span> always has at least one primitive root, but as we have seen, <span class="process-math">\(\Z_p\)</span> often has more than one primitive root. It turns out that once we know <em class="emphasis">one</em> primitive root in <span class="process-math">\(\Z_p,\)</span> it is easy to find all primitive roots in <span class="process-math">\(\Z_p.\)</span> The following lemma tells us how to do this.</div>
+<article class="lemma theorem-like" id="read-lem-all-prime-roots"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">118</span><span class="period">.</span><span class="space"> </span><span class="title">Lemma 10.3.6.</span>
+</h4>
+<div class="para" id="read-lem-all-prime-roots-2-1">Let <span class="process-math">\(p\)</span> be prime, and let <span class="process-math">\(a\in\Z\)</span> be a primitive root modulo <span class="process-math">\(p.\)</span> Then for any <span class="process-math">\(j\in\Z,\)</span> <span class="process-math">\(a^j\)</span> is a primitive root modulo <span class="process-math">\(p\)</span> if and only if <span class="process-math">\(\gcd(j,p-1)=1.\)</span>
+</div></article><details id="read-lem-all-prime-roots-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="read-lem-all-prime-roots-3-1">Let <span class="process-math">\(p\)</span> be prime, and let <span class="process-math">\(a\in\Z\)</span> be a primitive root modulo <span class="process-math">\(p.\)</span>
+</div> <div class="para logical" id="read-lem-all-prime-roots-3-2">
+<div class="para">By Proposition 5.4,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ord_p(a^j)=\frac{p-1}{\gcd(j,p-1)}.
+\end{equation*}
+</div>
+<div class="para">Thus, <span class="process-math">\(\ord_p(a^j)=p-1\)</span> if and only if <span class="process-math">\(\gcd(j,p-1)=1.\)</span>
+</div>
+</div></article></details></section><section class="subsection" id="sec-primeRootReading-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.2.3</span><span class="space"> </span><span class="title">Naomi’s Numerical Proof Preview: Theorem 10.3.7</span>
+</h3>
+<div class="para logical" id="sec-primeRootReading-5-2">
+<div class="para">Let’s see whether we can use this llemma to determine how many primitive roots there are modulo <span class="process-math">\(19.\)</span> Let <span class="process-math">\(\overline{a}\in\Z_{19}\)</span> be a primitive root (modulo <span class="process-math">\(19\)</span>). Then the nonzero elements of <span class="process-math">\(\Z_{19}\)</span> are</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/read-lem-all-prime-roots.html">
+\begin{equation*}
+\overline{a}^0,\overline{a}^1,\overline{a}^2,\dots,\overline{a}^{17}.
+\end{equation*}
+</div>
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/xref/read-lem-all-prime-roots.html" title="Lemma 118: Lemma 10.3.6">Lemma 10.3.6</a> tells us which of these elements are primitive roots modulo <span class="process-math">\(19\text{:}\)</span> precisely those in which the exponent is relatively prime to <span class="process-math">\(18.\)</span> Thus, the primitive roots modulo <span class="process-math">\(19\)</span> are</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/read-lem-all-prime-roots.html">
+\begin{equation*}
+\overline{a}^1,\overline{a}^5,\overline{a}^7,\overline{a}^{11},\overline{a}^{13},\overline{a}^{17}.
+\end{equation*}
+</div>
+<div class="para">We see then that the primitive roots modulo <span class="process-math">\(19\)</span> correspond to the exponents <span class="process-math">\(1,5,7,11,13\)</span> and <span class="process-math">\(17,\)</span> which are the positive integers less than <span class="process-math">\(18\)</span> which are relatively prime to <span class="process-math">\(18.\)</span> The nunber of such integers is exactly <span class="process-math">\(\phi(18)=6.\)</span> In general, we have the following theorem.</div>
+</div>
+<article class="theorem theorem-like" id="read-thm-number-prime-roots"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">119</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem 10.3.7.</span>
+</h4>
+<div class="para" id="read-thm-number-prime-roots-2-1">Let <span class="process-math">\(p\)</span> be prime. Then there are exactly <span class="process-math">\(\phi(p-1)\)</span> primitive roots modulo <span class="process-math">\(p.\)</span>
+</div></article><details id="read-thm-number-prime-roots-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical" id="read-thm-number-prime-roots-3-1">
+<div class="para">Let <span class="process-math">\(a\in\Z\)</span> be a primitive root modulo <span class="process-math">\(p.\)</span> Then by <a href="" class="xref" data-knowl="./knowl/xref/read-prop-prime-root-generates.html" title="Proposition 111"></a>, we know that the list of reduced residues modulo <span class="process-math">\(p\)</span> comprises the elements</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/read-prop-prime-root-generates.html ./knowl/xref/read-lem-all-prime-roots.html">
+\begin{equation*}
+a^0,a^1,a^2,\dots,a^{p-2}
+\end{equation*}
+</div>
+<div class="para">By <a href="" class="xref" data-knowl="./knowl/xref/read-lem-all-prime-roots.html" title="Lemma 118: Lemma 10.3.6">Lemma 10.3.6</a>, an integers <span class="process-math">\(a^j\)</span> is a primitive root modulo <span class="process-math">\(p\)</span> if and only if <span class="process-math">\(\gcd(j,p-1)=1.\)</span> Thus, the number of primitive roots equals the number of positive integers <span class="process-math">\(j\)</span> that are less than <span class="process-math">\(p-1\)</span> and relatively prime to <span class="process-math">\(p-1.\)</span> By definition, this is exactly <span class="process-math">\(\phi(p-1).\)</span>
+</div>
+</div></article></details></section><section class="subsection" id="sec-primeRootReading-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.2.4</span><span class="space"> </span><span class="title">Referenced Exercises</span>
+</h3>
+<details id="read-ex7" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">120</span><span class="period">.</span><span class="space"> </span><span class="title">Exercise 7.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="read-ex7-2">Let <span class="process-math">\(p\)</span> be prime and let <span class="process-math">\(a\in\Z\)</span> such that <span class="process-math">\(a\not\equiv 0\pmod{p}.\)</span> Suppose <span class="process-math">\(\ord_p a \gt \frac{p-1}{2}.\)</span> Prove that <span class="process-math">\(a\)</span> is a primitive root modulo <span class="process-math">\(p.\)</span>
+</div></article></details><details id="read-ex11" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">121</span><span class="period">.</span><span class="space"> </span><span class="title">Exercise 11.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="read-ex11-2">Prove the following statement, which is the converse of <a href="" class="xref" data-knowl="./knowl/xref/read-prop-prime-root-generates.html" title="Proposition 111"></a>:</div>
+<div class="para" id="read-ex11-3">Let <span class="process-math">\(p\)</span> be prime, and let <span class="process-math">\(\overline{a}\in\Z_p.\)</span> If every nonzero element of <span class="process-math">\(\Z_p\)</span> is a power of <span class="process-math">\(\overline{a},\)</span> then <span class="process-math">\(\overline{a}\)</span> is a primitive root (modulo <span class="process-math">\(p\)</span>).</div></article></details><details id="sec-primeRootReading-6-4" class="exercise exercise-like born-hidden-knowl"><summary><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">122</span><span class="period">.</span><span class="space"> </span><span class="title">Exercise 14.</span>
+</h4></summary><article class="exercise exercise-like"><div class="para" id="sec-primeRootReading-6-4-2">Prove the following generalization of <a href="" class="xref" data-knowl="./knowl/xref/read-lem-order-multiplicative.html" title="Lemma 117: Lemma 10.3.5">Lemma 10.3.5</a>
+</div>
+<article class="lemma theorem-like" id="sec-primeRootReading-6-4-3"><h5 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">123</span><span class="period">.</span>
+</h5>
+<div class="para logical" id="sec-primeRootReading-6-4-3-1-1">
+<div class="para">Let <span class="process-math">\(n\in\Z\)</span> and let <span class="process-math">\(x_1,x_2,\dots,x_m\)</span> be reduced residues modulo <span class="process-math">\(n\text{.}\)</span>  Suppose that for all <span class="process-math">\(i\neq j,\)</span> <span class="process-math">\(\ord_n(x_i)\)</span> and <span class="process-math">\(\ord_n(x_j)\)</span> are relatively prime. Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ord_n(x_1 x_2\cdots x_m)=(\ord_n x_1)(\ord_n x_2)\cdots (\ord_n x_m).
+\end{equation*}
+</div>
+</div></article></article></details></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-order.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-primeRootIntro.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

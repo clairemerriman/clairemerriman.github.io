@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">131</span><span class="space"> </span><span class="creator">(Lagrange)</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem 5.7.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(p\)</span> be a prime number and let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=a_n x^n +a_{n-1} x^{n-1}+\cdots +a_1 x+a_0
+\end{equation*}
+</div>
+<div class="para">for integers <span class="process-math">\(a_0,a_1,\dots,a_n.\)</span> Let <span class="process-math">\(d\)</span> be the greatest integer such that <span class="process-math">\(a_d\not\equiv 0\pmod{p}t\)</span> then <span class="process-math">\(d\)</span> is the <dfn class="terminology">degree of <span class="process-math">\(f(x)\)</span> modulo <span class="process-math">\(p.\)</span></dfn> Then the congruence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)\equiv 0\pmod{p}
+\end{equation*}
+</div>
+<div class="para">has at most <span class="process-math">\(d\)</span> incongruent solutions. We call these solutions <dfn class="terminology">roots of <span class="process-math">\(f(x)\)</span> modulo <span class="process-math">\(p.\)</span></dfn>
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof from class.</span></h4></summary><article class="hiddenproof"> <div class="para">We proceed by induction on the degree <span class="process-math">\(d.\)</span>
+</div> <div class="para">First, for degree <span class="process-math">\(d=0,\)</span> note that <span class="process-math">\(f(x)\equiv a_0\not\equiv 0\pmod{p}\)</span> by assumption, so <span class="process-math">\(f(x)\equiv 0\pmod{p}\)</span> for <span class="process-math">\(0\)</span> integers.</div> <div class="para">
+<em class="emphasis">Base Case: <span class="process-math">\(d=1\text{.}\)</span></em> Then <span class="process-math">\(f(x)\equiv a_1 x+a_0\pmod{p}\text{.}\)</span> Since <span class="process-math">\(a_1\not\equiv 0\pmod{p}\)</span> by assumption, <span class="process-math">\(p\nmid a_1.\)</span> Since <span class="process-math">\(p\)</span> is prime, <span class="process-math">\((a_1,p)=1.\)</span> Thus, by <a href="" class="xref" data-knowl="./knowl/xref/cor-condition-invertible.html" title="Corollary 64: Corollary 2.8">Corollary 2.8</a>, there is a unique solution modulo <span class="process-math">\(p\)</span> to <span class="process-math">\(a_1\not\equiv 0\pmod{p}.\)</span>
+</div> <div class="para logical">
+<div class="para">
+<em class="emphasis">Induction Hypothesis:</em> Assume that for all <span class="process-math">\(k\lt d,\)</span> if <span class="process-math">\(f(x)\)</span> has degree <span class="process-math">\(k\)</span> modulo <span class="process-math">\(p,\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)\equiv a_k x^k +a_{k-1}x^{k-1}+\cdots+a_1x+a_0\equiv 0 \pmod{p}
+\end{equation*}
+</div>
+<div class="para">has at most <span class="process-math">\(k\)</span> incongruent solutions.</div>
+</div> <div class="para logical">
+<div class="para">We will proceed by contradiction. That is, assume that there exists <span class="process-math">\(f(x)\)</span> with degree <span class="process-math">\(d\)</span> modulo <span class="process-math">\(p\)</span> and at least <span class="process-math">\(d+1\)</span> roots modulo <span class="process-math">\(p.\)</span> Call these roots <span class="process-math">\(r_1,r_2,\dots,r_d,r_{d+1}.\)</span> Consider the polynomial</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(x)=a_d(x-r_1)(x-r_2)\cdots (x-r_d).
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> have the same leading term modulo <span class="process-math">\(p.\)</span> The polynomial <span class="process-math">\(h(x)=f(x)-g(x)\)</span> is either the <span class="process-math">\(0\)</span> polynomial or it has degree less than <span class="process-math">\(d\)</span> modulo <span class="process-math">\(p.\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">If <span class="process-math">\(h(x)\)</span> is the <span class="process-math">\(0\)</span> polynomial, then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h(r_{1})\equiv h(r_2)\equiv\cdots\equiv h(r_{d+1})\equiv 0\pmod{p}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(r_{1})\equiv f(r_2)\equiv\cdots\equiv f(r_{d+1})\equiv 0\pmod{p}
+\end{equation*}
+</div>
+<div class="para">implies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(r_{1})\equiv g(r_2)\equiv\cdots\equiv g(r_{d+1})\equiv 0\pmod{p}.
+\end{equation*}
+</div>
+<div class="para">That is,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_d(r_{d+1}-r_1)(r_{d+1}-r_2)\cdots(r_{d+1}-r_d)\equiv 0\pmod{p}.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(p\)</span> is prime, repeated applications of Homework 4, Problem 9a gives that one of <span class="process-math">\(a_d,r_{d+1}-r_1,r_{d+1}-r_2,\dots,r_{d+1}-r_d\)</span> is <span class="process-math">\(0\)</span> modulo <span class="process-math">\(p.\)</span> Now, <span class="process-math">\(a_d\not\equiv0\pmod{p}\)</span> by assumption, and the <span class="process-math">\(r_i\)</span> are distinct modulo <span class="process-math">\(p,\)</span> so we have a contradiction. Thus, <span class="process-math">\(h(x)\)</span> is not the <span class="process-math">\(0\)</span> polynomial.</div>
+</div> <div class="para">Since <span class="process-math">\(r_1,r_2,\dots,r_d\)</span> are roots of both <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x),\)</span> they are also roots of <span class="process-math">\(h(x).\)</span> This contradicts the induction hypothesis, since <span class="process-math">\(h(x)\)</span> has degree less than <span class="process-math">\(d\)</span> by construction.</div> <div class="para">Thus, <span class="process-math">\(f(x)\)</span> has at most <span class="process-math">\(d\)</span> incongruent solution modulo <span class="process-math">\(p.\)</span>
+</div></article></details><details class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Modified proof from Strayer.</span></h4></summary><article class="hiddenproof"> <div class="para">We proceed by induction on the degree <span class="process-math">\(d.\)</span>
+</div> <div class="para">First, for degree <span class="process-math">\(d=0,\)</span> note that <span class="process-math">\(f(x)\equiv a_0\not\equiv 0\pmod{p}\)</span> by assumption, so <span class="process-math">\(f(x)\equiv 0\pmod{p}\)</span> for <span class="process-math">\(0\)</span> integers.</div> <div class="para">
+<em class="emphasis">Base Case: <span class="process-math">\(d=1\text{.}\)</span></em> Then <span class="process-math">\(f(x)\equiv a_1 x+a_0\pmod{p}\text{.}\)</span> Since <span class="process-math">\(a_1\not\equiv 0\pmod{p}\)</span> by assumption, <span class="process-math">\(p\nmid a_1.\)</span> Since <span class="process-math">\(p\)</span> is prime, <span class="process-math">\((a_1,p)=1.\)</span> Thus, by <a href="" class="xref" data-knowl="./knowl/xref/cor-condition-invertible.html" title="Corollary 64: Corollary 2.8">Corollary 2.8</a>, there is a unique solution modulo <span class="process-math">\(p\)</span> to <span class="process-math">\(a_1\not\equiv 0\pmod{p}.\)</span>
+</div> <div class="para logical">
+<div class="para">
+<em class="emphasis">Induction Hypothesis:</em> Assume that for all <span class="process-math">\(k\lt d,\)</span> if <span class="process-math">\(f(x)\)</span> has degree <span class="process-math">\(k\)</span> modulo <span class="process-math">\(p,\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)\equiv a_k x^k +a_{k-1}x^{k-1}+\cdots+a_1x+a_0\equiv 0 \pmod{p}
+\end{equation*}
+</div>
+<div class="para">has at most <span class="process-math">\(k\)</span> incongruent solutions.</div>
+</div> <div class="para logical">
+<div class="para">If the congruence <span class="process-math">\(f(x)\equiv 0\pmod{p}\)</span> has no solutions we are done. Otherwise, assume that there exists at least one solution, say <span class="process-math">\(a.\)</span> Dividing <span class="process-math">\(f(x)\)</span> by <span class="process-math">\((x-a)\)</span> gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)\equiv (x-a)q(x)\pmod{p}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(q(x)\)</span> is a polynomial of degree <span class="process-math">\(d-1\)</span> modulo <span class="process-math">\(p.\)</span> Since <span class="process-math">\(q(x)\)</span> has at most <span class="process-math">\(d-1\)</span> roots modulo <span class="process-math">\(p\)</span> by the induction hypothesis, there are at most <span class="process-math">\(d-1\)</span> incongruent additional roots of <span class="process-math">\(f(x)\)</span> modulo <span class="process-math">\(p\text{.}\)</span> Thus, there are a total of at most <span class="process-math">\(d\)</span> incongruent roots modulo <span class="process-math">\(p.\)</span>
+</div>
+</div></article></details><span class="incontext"><a class="internal" href="sec-LagrangeThem.html#thm-lagrange">in-context</a></span>
+</body>
+</html>

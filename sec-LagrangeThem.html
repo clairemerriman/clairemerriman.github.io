@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Friday, March 15: Lagrange’s Theorem</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Number Theory">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_oscarlevin.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom-styles.css">
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="root--1-2.html"><span class="title">Number Theory:</span> <span class="subtitle">MAT-255 Spring 2024</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-primeRootIntro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week8.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="rubrics.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\nequiv}{\not\equiv}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week1.html" class="internal"><span class="codenumber">1</span> <span class="title">Week 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-intro.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Wednesday, January 17: Introduction and Divisibility</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intro.html#sec-intro-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intro.html#sec-intro-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Mathematical definitions, mathematical notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-intro.html#sec-intro-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Divisibility</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-truthTable.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Friday, January 19: Logic, proof by contradiction, and biconditionals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-truthTable.html#sec-truthTable-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-truthTable.html#rqs-logic" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-truthTable.html#sec-truthTable-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Reminders and Homework Guide Review</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-truthTable.html#sec-truthTable-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Logic, proof by contradiction, and biconditionals</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week2.html" class="internal"><span class="codenumber">2</span> <span class="title">Week 2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-DivisionAlg.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Monday, January 22: Division algorithm and quantifiers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-DivisionAlg.html#rqs-divAlg" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-DivisionAlg.html#exercises-read-jan19" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-DivisionAlg.html#sec-DivisionAlg-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Division Algorithm</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-primes.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Wedneday, January 24: Primes and Greatest Common Divisor</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-primes.html#sec-primes-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-primes.html#rqs-primes" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primes.html#sec-primes-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Primes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primes.html#sec-primes-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Greatest common divisor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gcd.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Friday, January 26: Quiz 1, Induction, Greatest Common Divisors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-gcd.html#sec-gcd-3" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gcd.html#rqs-gcd" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gcd.html#sec-gcd-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Quiz (10 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gcd.html#sec-gcd-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Greatest common divisor (25 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gcd.html#sec-gcd-6" class="internal"><span class="codenumber">2.3.4</span> <span class="title">More induction</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week3.html" class="internal"><span class="codenumber">3</span> <span class="title">Week 3</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-floor.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Monday, January 29: More algebraic proofs and the Euclidean Algorithm</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-floor.html#sec-floor-3" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-floor.html#rqs-floor" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-floor.html#sec-floor-4" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Example of proof like the floor function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-floor.html#sec-floor-5" class="internal"><span class="codenumber">3.1.3</span> <span class="title">The Euclidean Algorithm</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-FTA.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Wednesday, January 31: Practice with the Euclidean Algorithm and the Fundamental Theorem of Arithmetic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-FTA.html#sec-FTA-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-FTA.html#rqs-FTA" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-FTA.html#sec-FTA-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Announcements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-FTA.html#sec-FTA-5" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Practice with the Euclidean Algorithm (15 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-FTA.html#sec-FTA-6" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Fundamental Theorem of Arithmetic</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gcd-general.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Friday, February 2: Quiz 2, Greatest Common Divisors and Diophantine Equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-gcd-general.html#rqs-feb2" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gcd-general.html#rqs-diophantine" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gcd-general.html#sec-gcd-general-4" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Quiz (10 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gcd-general.html#sec-gcd-general-5" class="internal"><span class="codenumber">3.3.3</span> <span class="title">More greatest common divisor (40 min)</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week4.html" class="internal"><span class="codenumber">4</span> <span class="title">Week 4</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-3dioph.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Monday February 5: More facts about greatest common divisor and linear Diophantine equations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-3dioph.html#rqs-3dioph" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-3dioph.html#rqs-FTA-again" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-3dioph.html#sec-3dioph-4" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Greatest common divisor and Diophantine equations (30 minutes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-arthProgress.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Wednesday February 7: Arithmetic progressions and introduction to equivalence relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-arthProgress.html#rqs-arthProgress" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-arthProgress.html#rqs-equiv" class="internal"><span class="codenumber">4.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arthProgress.html#sec-arthProgress-4" class="internal"><span class="codenumber">4.2.2</span> <span class="title">Practice with gcd proofs</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arthProgress.html#sec-arthProgress-5" class="internal"><span class="codenumber">4.2.3</span> <span class="title">Prime factorizations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-arthProgress.html#sec-arthProgress-6" class="internal"><span class="codenumber">4.2.4</span> <span class="title">Equivalence Relation Practice</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-modDef.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Friday, February 9: Modular arithmetic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-modDef.html#sec-modDef-3" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-modDef.html#rqs-modIntro" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modDef.html#sec-modDef-4" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Quiz (10 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modDef.html#sec-modDef-5" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Definitions and examples of <span class="process-math">\(\pmod m\)</span></span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week5.html" class="internal"><span class="codenumber">5</span> <span class="title">Week 5</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-modIntro.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Monday, February 12: Peer review and introduction to congruences</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modIntro.html#sec-modIntro-3" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Proposition and examples of <span class="process-math">\(\pmod m\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modIntro.html#sec-modIntro-4" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Peer review Chapter 1 Exercise 83 (20 minutes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-week5-3.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Wednesday, February 14: More congruence facts</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week5-3.html#ch-week5-3-3" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Basic facts of working modulo <span class="process-math">\(m\)</span></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-week5-4.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Friday, February 16: Linear congruences in one variable</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week5-4.html#ch-week5-4-3" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Quiz (10 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week5-4.html#ch-week5-4-4" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Linear congruences in one variable</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week6.html" class="internal"><span class="codenumber">6</span> <span class="title">Week 6</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-CRT.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Monday, February 19: Chinese Remainder Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-CRT.html#sec-CRT-3" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-CRT.html#sec-CRT-4" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Multiplicative inverses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-CRT.html#sec-CRT-5" class="internal"><span class="codenumber">6.1.3</span> <span class="title">Simultaneous Linear congruences in one variable (30 min)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-wilson.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Wednesday, February 21: Wilson’s Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-wilson.html#sec-wilson-3" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-wilson.html#rqs-willson" class="internal"><span class="codenumber">6.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-wilson.html#sec-wilson-4" class="internal"><span class="codenumber">6.2.2</span> <span class="title">Wilson’s Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-FlT.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Friday, February 23: Euler’s Theorem and Fermat’s Little Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-FlT.html#sec-FlT-3" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-FlT.html#rqs-FlT" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-FlT.html#sec-FlT-4" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Quiz (10 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-FlT.html#sec-FlT-5" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Euler’s Generalization of Fermat’s Little Theorem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week7.html" class="internal"><span class="codenumber">7</span> <span class="title">Week 7</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-modReduce.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Monday, February 26: Modular arithmetic calculations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modReduce.html#sec-modReduce-3" class="internal"><span class="codenumber">7.1.1</span> <span class="title">Multiplicative inverses using Wilson’s Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modReduce.html#sec-modReduce-4" class="internal"><span class="codenumber">7.1.2</span> <span class="title">Finding least nonnegative residue Fermat’s Little Theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-phiIntro.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Wednesday, February 28: Modular arithmetic calculations and the <span class="process-math">\(\phi-\)</span> function</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-phiIntro.html#sec-phiIntro-3" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Multiplicative inverses using Euler’s Extension of Fermat’s Little Theorem (30 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-phiIntro.html#sec-phi-start" class="internal"><span class="codenumber">7.2.2</span> <span class="title">The Euler <span class="process-math">\(\phi\)</span>-function (20 min)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-phiFacts.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Friday, March 1: The <span class="process-math">\(\phi-\)</span> function and a preview of primitive roots</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-phiFacts.html#sec-phiFacts-3" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Quiz (10 min)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-phiFacts.html#sec-phiFacts-4" class="internal"><span class="codenumber">7.3.2</span> <span class="title">Euler <span class="process-math">\(\phi\)</span>-function (20 min)</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-week8.html" class="internal"><span class="codenumber">8</span> <span class="title">Week 8</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-order.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Monday, March 11: Order of elements modulo <span class="process-math">\(m\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-order.html#sec-order-3" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Review of <span class="process-math">\(\phi\)</span>-function (15 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-order.html#sec-order-4" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Order of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(m\)</span> (35 minutes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-primeRootReading.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Reading for March 13: Primitive roots modulo <span class="process-math">\(p\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primeRootReading.html#sec-primeRootReading-3" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Definition of primitive root</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primeRootReading.html#sec-primeRootReading-4" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Existence of primitive roots in a prime modulus</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primeRootReading.html#sec-primeRootReading-5" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Naomi’s Numerical Proof Preview: Theorem 10.3.7</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primeRootReading.html#sec-primeRootReading-6" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Referenced Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-primeRootIntro.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Wednesday, March 13: Primitive roots modulo a prime</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-primeRootIntro.html#sec-primeRootIntro-3" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-primeRootIntro.html#rqs-Mar13" class="internal"><span class="codenumber">8.3.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primeRootIntro.html#sec-primeRootIntro-4" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Primitive roots and comparing Strayer to the reading</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec-LagrangeThem.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Friday, March 15: Lagrange’s Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-LagrangeThem.html#sec-LagrangeThem-3" class="internal"><span class="codenumber">8.4.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-LagrangeThem.html#rqs-Mar15" class="internal"><span class="codenumber">8.4.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-LagrangeThem.html#sec-LagrangeThem-4" class="internal"><span class="codenumber">8.4.2</span> <span class="title">Quiz (10 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-LagrangeThem.html#sec-LagrangeThem-5" class="internal"><span class="codenumber">8.4.3</span> <span class="title">Lagrange’s Theorem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="rubrics.html" class="internal"><span class="codenumber">A</span> <span class="title">Homework Rubrics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="r-hw1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Homework 1 Rubrics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="r-hw2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Homework 2 Rubrics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="r-hw3.html" class="internal"><span class="codenumber">A.3</span> <span class="title"></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="forCrossRefrence.html" class="internal"><span class="codenumber">B</span> <span class="title">Other Results from Strayer</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-additional-div.html" class="internal"><span class="codenumber">B.1</span> <span class="title">Divisibility facts</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-additional-primes.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Prime facts</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="forCrossRefrence-4.html" class="internal"><span class="codenumber">B.3</span> <span class="title">Diophantine equations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Congruences.html" class="internal"><span class="codenumber">B.4</span> <span class="title">Congruences</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Phi-Function.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Euler <span class="process-math">\(\phi\)</span>-Function</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">C</span> <span class="title">Notation list</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-LagrangeThem"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">8.4</span><span class="space"> </span><span class="title">Friday, March 15: Lagrange’s Theorem</span>
+</h2>
+<article class="objectives goal-like" id="sec-LagrangeThem-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ul class="disc"><li id="sec-LagrangeThem-2-1-1"><div class="para" id="p-derived-sec-LagrangeThem-2-1-1">Prove Lagrange’s Theorem <span class="process-math">\(m\)</span>
+</div></li></ul></article><section class="reading-questions" id="sec-LagrangeThem-3"><h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space"> </span><span class="codenumber">8.4.1</span><span class="space"> </span><span class="title">Reading Questions</span>
+</h3>
+<section class="introduction" id="sec-LagrangeThem-3-1"><div class="para" id="sec-LagrangeThem-3-1-1">Section 5.3</div></section><section class="exercises" id="rqs-Mar15"><h4 class="heading hide-type">
+<span class="type">Turn In</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Turn In</span>
+</h4>
+<details id="rqs-Mar15-1" class="exercise exercise-like born-hidden-knowl"><summary><h5 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Exercise 10a.</span>
+</h5></summary><article class="exercise exercise-like"><div class="para" id="rqs-Mar15-1-2-1">Determine the number of incongruent primitive roots modulo <span class="process-math">\(41\)</span>
+</div>
+<div class="solutions"><details id="rqs-Mar15-1-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="rqs-Mar15-1-3-1">Since <span class="process-math">\(41\)</span> is prime, <a href="" class="xref" data-knowl="./knowl/xref/read-thm-number-prime-roots.html" title="Theorem 119: Theorem 10.3.7">Theorem 119</a> says there are <span class="process-math">\(\phi(41)=40\)</span> primitive roots modulo <span class="process-math">\(41.\)</span>
+</div></div></details></div></article></details><details id="rqs-Mar15-2" class="exercise exercise-like born-hidden-knowl"><summary><h5 class="heading">
+<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Exercise 11a.</span>
+</h5></summary><article class="exercise exercise-like"><div class="para" id="rqs-Mar15-2-2-1">Find all incongruent integers having order <span class="process-math">\(6\)</span> modulo <span class="process-math">\(31.\)</span>
+</div>
+<div class="solutions"><details id="rqs-Mar15-2-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical" id="rqs-Mar15-2-3-1">
+<div class="para">From Appendix E, Table 3, <span class="process-math">\(3\)</span> is a primitive root modulo <span class="process-math">\(31.\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/prop-compare-order.html" title="Proposition 127: Proposition 5.4">Proposition 5.4</a>, the elements of order <span class="process-math">\(6\)</span> modulo <span class="process-math">\(31\)</span> are those where</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-compare-order.html">
+\begin{equation*}
+6=\ord_{31}(3^i)=\frac{\phi(31)}{(\phi(31),i)}=\frac{30}{5}.
+\end{equation*}
+</div>
+<div class="para">The positive integers less than <span class="process-math">\(31\)</span> where <span class="process-math">\((30,i)=5\)</span> are <span class="process-math">\(i=5,25.\)</span> So the elements of order <span class="process-math">\(6\)</span> are <span class="process-math">\(3^5, 3^{25}.\)</span>
+</div>
+</div> <div class="para logical" id="rqs-Mar15-2-3-2">
+<div class="para">The problem does not ask for the least nonnegative residues. However, we can also find those:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3^5\equiv (-4)(9)\equiv -5\equiv 26\pmod{31}
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3^{25}\equiv (-5)^{5}\equiv (-6)^2(-5)\equiv -25\equiv 6\pmod{31}
+\end{equation*}
+</div>
+</div>
+</div></details></div></article></details></section></section><section class="subsection" id="sec-LagrangeThem-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.4.2</span><span class="space"> </span><span class="title">Quiz (10 minutes)</span>
+</h3></section><section class="subsection" id="sec-LagrangeThem-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.4.3</span><span class="space"> </span><span class="title">Lagrange’s Theorem</span>
+</h3>
+<div class="para" id="sec-LagrangeThem-5-2">The goal is to finish proving the <a href="" class="xref" data-knowl="./knowl/xref/thm-prime-roots.html" title="Theorem 113: Primitive Root Theorem">Primitive Root Theorem</a> with a look at polynomials.</div>
+<article class="theorem theorem-like" id="thm-lagrange"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">131</span><span class="space"> </span><span class="creator">(Lagrange)</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem 5.7.</span>
+</h4>
+<div class="para logical" id="thm-lagrange-3-1">
+<div class="para">Let <span class="process-math">\(p\)</span> be a prime number and let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=a_n x^n +a_{n-1} x^{n-1}+\cdots +a_1 x+a_0
+\end{equation*}
+</div>
+<div class="para">for integers <span class="process-math">\(a_0,a_1,\dots,a_n.\)</span> Let <span class="process-math">\(d\)</span> be the greatest integer such that <span class="process-math">\(a_d\not\equiv 0\pmod{p}t\)</span> then <span class="process-math">\(d\)</span> is the <dfn class="terminology">degree of <span class="process-math">\(f(x)\)</span> modulo <span class="process-math">\(p.\)</span></dfn> Then the congruence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)\equiv 0\pmod{p}
+\end{equation*}
+</div>
+<div class="para">has at most <span class="process-math">\(d\)</span> incongruent solutions. We call these solutions <dfn class="terminology">roots of <span class="process-math">\(f(x)\)</span> modulo <span class="process-math">\(p.\)</span></dfn>
+</div>
+</div></article><details id="thm-lagrange-4" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof from class.</span></h4></summary><article class="hiddenproof"> <div class="para" id="thm-lagrange-4-2">We proceed by induction on the degree <span class="process-math">\(d.\)</span>
+</div> <div class="para" id="thm-lagrange-4-3">First, for degree <span class="process-math">\(d=0,\)</span> note that <span class="process-math">\(f(x)\equiv a_0\not\equiv 0\pmod{p}\)</span> by assumption, so <span class="process-math">\(f(x)\equiv 0\pmod{p}\)</span> for <span class="process-math">\(0\)</span> integers.</div> <div class="para" id="thm-lagrange-4-4">
+<em class="emphasis">Base Case: <span class="process-math">\(d=1\text{.}\)</span></em> Then <span class="process-math">\(f(x)\equiv a_1 x+a_0\pmod{p}\text{.}\)</span> Since <span class="process-math">\(a_1\not\equiv 0\pmod{p}\)</span> by assumption, <span class="process-math">\(p\nmid a_1.\)</span> Since <span class="process-math">\(p\)</span> is prime, <span class="process-math">\((a_1,p)=1.\)</span> Thus, by <a href="" class="xref" data-knowl="./knowl/xref/cor-condition-invertible.html" title="Corollary 64: Corollary 2.8">Corollary 2.8</a>, there is a unique solution modulo <span class="process-math">\(p\)</span> to <span class="process-math">\(a_1\not\equiv 0\pmod{p}.\)</span>
+</div> <div class="para logical" id="thm-lagrange-4-5">
+<div class="para">
+<em class="emphasis">Induction Hypothesis:</em> Assume that for all <span class="process-math">\(k\lt d,\)</span> if <span class="process-math">\(f(x)\)</span> has degree <span class="process-math">\(k\)</span> modulo <span class="process-math">\(p,\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)\equiv a_k x^k +a_{k-1}x^{k-1}+\cdots+a_1x+a_0\equiv 0 \pmod{p}
+\end{equation*}
+</div>
+<div class="para">has at most <span class="process-math">\(k\)</span> incongruent solutions.</div>
+</div> <div class="para logical" id="thm-lagrange-4-6">
+<div class="para">We will proceed by contradiction. That is, assume that there exists <span class="process-math">\(f(x)\)</span> with degree <span class="process-math">\(d\)</span> modulo <span class="process-math">\(p\)</span> and at least <span class="process-math">\(d+1\)</span> roots modulo <span class="process-math">\(p.\)</span> Call these roots <span class="process-math">\(r_1,r_2,\dots,r_d,r_{d+1}.\)</span> Consider the polynomial</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(x)=a_d(x-r_1)(x-r_2)\cdots (x-r_d).
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> have the same leading term modulo <span class="process-math">\(p.\)</span> The polynomial <span class="process-math">\(h(x)=f(x)-g(x)\)</span> is either the <span class="process-math">\(0\)</span> polynomial or it has degree less than <span class="process-math">\(d\)</span> modulo <span class="process-math">\(p.\)</span>
+</div>
+</div> <div class="para logical" id="thm-lagrange-4-7">
+<div class="para">If <span class="process-math">\(h(x)\)</span> is the <span class="process-math">\(0\)</span> polynomial, then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h(r_{1})\equiv h(r_2)\equiv\cdots\equiv h(r_{d+1})\equiv 0\pmod{p}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(r_{1})\equiv f(r_2)\equiv\cdots\equiv f(r_{d+1})\equiv 0\pmod{p}
+\end{equation*}
+</div>
+<div class="para">implies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(r_{1})\equiv g(r_2)\equiv\cdots\equiv g(r_{d+1})\equiv 0\pmod{p}.
+\end{equation*}
+</div>
+<div class="para">That is,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_d(r_{d+1}-r_1)(r_{d+1}-r_2)\cdots(r_{d+1}-r_d)\equiv 0\pmod{p}.
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(p\)</span> is prime, repeated applications of Homework 4, Problem 9a gives that one of <span class="process-math">\(a_d,r_{d+1}-r_1,r_{d+1}-r_2,\dots,r_{d+1}-r_d\)</span> is <span class="process-math">\(0\)</span> modulo <span class="process-math">\(p.\)</span> Now, <span class="process-math">\(a_d\not\equiv0\pmod{p}\)</span> by assumption, and the <span class="process-math">\(r_i\)</span> are distinct modulo <span class="process-math">\(p,\)</span> so we have a contradiction. Thus, <span class="process-math">\(h(x)\)</span> is not the <span class="process-math">\(0\)</span> polynomial.</div>
+</div> <div class="para" id="thm-lagrange-4-8">Since <span class="process-math">\(r_1,r_2,\dots,r_d\)</span> are roots of both <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x),\)</span> they are also roots of <span class="process-math">\(h(x).\)</span> This contradicts the induction hypothesis, since <span class="process-math">\(h(x)\)</span> has degree less than <span class="process-math">\(d\)</span> by construction.</div> <div class="para" id="thm-lagrange-4-9">Thus, <span class="process-math">\(f(x)\)</span> has at most <span class="process-math">\(d\)</span> incongruent solution modulo <span class="process-math">\(p.\)</span>
+</div></article></details><details id="thm-lagrange-5" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Modified proof from Strayer.</span></h4></summary><article class="hiddenproof"> <div class="para" id="thm-lagrange-5-2">We proceed by induction on the degree <span class="process-math">\(d.\)</span>
+</div> <div class="para" id="thm-lagrange-5-3">First, for degree <span class="process-math">\(d=0,\)</span> note that <span class="process-math">\(f(x)\equiv a_0\not\equiv 0\pmod{p}\)</span> by assumption, so <span class="process-math">\(f(x)\equiv 0\pmod{p}\)</span> for <span class="process-math">\(0\)</span> integers.</div> <div class="para" id="thm-lagrange-5-4">
+<em class="emphasis">Base Case: <span class="process-math">\(d=1\text{.}\)</span></em> Then <span class="process-math">\(f(x)\equiv a_1 x+a_0\pmod{p}\text{.}\)</span> Since <span class="process-math">\(a_1\not\equiv 0\pmod{p}\)</span> by assumption, <span class="process-math">\(p\nmid a_1.\)</span> Since <span class="process-math">\(p\)</span> is prime, <span class="process-math">\((a_1,p)=1.\)</span> Thus, by <a href="" class="xref" data-knowl="./knowl/xref/cor-condition-invertible.html" title="Corollary 64: Corollary 2.8">Corollary 2.8</a>, there is a unique solution modulo <span class="process-math">\(p\)</span> to <span class="process-math">\(a_1\not\equiv 0\pmod{p}.\)</span>
+</div> <div class="para logical" id="thm-lagrange-5-5">
+<div class="para">
+<em class="emphasis">Induction Hypothesis:</em> Assume that for all <span class="process-math">\(k\lt d,\)</span> if <span class="process-math">\(f(x)\)</span> has degree <span class="process-math">\(k\)</span> modulo <span class="process-math">\(p,\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)\equiv a_k x^k +a_{k-1}x^{k-1}+\cdots+a_1x+a_0\equiv 0 \pmod{p}
+\end{equation*}
+</div>
+<div class="para">has at most <span class="process-math">\(k\)</span> incongruent solutions.</div>
+</div> <div class="para logical" id="thm-lagrange-5-6">
+<div class="para">If the congruence <span class="process-math">\(f(x)\equiv 0\pmod{p}\)</span> has no solutions we are done. Otherwise, assume that there exists at least one solution, say <span class="process-math">\(a.\)</span> Dividing <span class="process-math">\(f(x)\)</span> by <span class="process-math">\((x-a)\)</span> gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)\equiv (x-a)q(x)\pmod{p}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(q(x)\)</span> is a polynomial of degree <span class="process-math">\(d-1\)</span> modulo <span class="process-math">\(p.\)</span> Since <span class="process-math">\(q(x)\)</span> has at most <span class="process-math">\(d-1\)</span> roots modulo <span class="process-math">\(p\)</span> by the induction hypothesis, there are at most <span class="process-math">\(d-1\)</span> incongruent additional roots of <span class="process-math">\(f(x)\)</span> modulo <span class="process-math">\(p\text{.}\)</span> Thus, there are a total of at most <span class="process-math">\(d\)</span> incongruent roots modulo <span class="process-math">\(p.\)</span>
+</div>
+</div></article></details><article class="proposition theorem-like" id="prop-roots-unity"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">132</span><span class="period">.</span><span class="space"> </span><span class="title">Proposition 5.8.</span>
+</h4>
+<div class="para logical" id="prop-roots-unity-2-1">
+<div class="para">Let <span class="process-math">\(p\)</span> be prime and <span class="process-math">\(m\)</span> a positive integer where <span class="process-math">\(m\mid p-1\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x^m\equiv 1\pmod{p}
+\end{equation*}
+</div>
+<div class="para">has <span class="process-math">\(m\)</span> incongruent solutions modulo <span class="process-math">\(p.\)</span>
+</div>
+</div></article><details id="prop-roots-unity-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical" id="prop-roots-unity-3-1">
+<div class="para">Let <span class="process-math">\(p\)</span> be prime and <span class="process-math">\(m\)</span> a positive integer where <span class="process-math">\(m\mid p-1\text{.}\)</span> Then there exists <span class="process-math">\(k\in\Z\)</span> such that <span class="process-math">\(mk=p-1.\)</span> Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/FlT.html">
+\begin{equation*}
+x^{p-1}=(x^m-1)(x^{(k-1)m}+x^{(k-2)m}+\cdots+x^{2m}+x^m+1)
+\end{equation*}
+</div>
+<div class="para">By <a href="" class="xref" data-knowl="./knowl/xref/FlT.html" title="Corollary 82: Fermat’s Little Theorem">Fermat’s Little Theorem</a>, there are <span class="process-math">\(p-1\)</span> incongruent solutions to <span class="process-math">\(x^{p-1}-1\equiv0\pmod{p},\)</span> namely <span class="process-math">\(1,2,\dots,p-1.\)</span> We will show that <span class="process-math">\(m\)</span> of these are solutions to <span class="process-math">\(x^m-1\equiv 0\pmod{p}\)</span> and the rest are solutions to <span class="process-math">\(x^{(k-1)m}+x^{(k-2)m}+\cdots+x^{2m}+x^m+1\equiv 0\pmod{p}.\)</span>
+</div>
+</div> <div class="para" id="prop-roots-unity-3-2">By <a href="" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" title="Theorem 131: Theorem 5.7">Theorem 5.7</a>, there are at most <span class="process-math">\((k-1)m\)</span> solutions to <span class="process-math">\(x^{(k-1)m}+x^{(k-2)m}+\cdots+x^{2m}+x^m+1\equiv 0\pmod{p}.\)</span> Thus, there are at least <span class="process-math">\(p-1-(k-1)m=m\)</span> incongruent solutions to <span class="process-math">\(x^m-1\equiv 0\pmod{p}.\)</span> Since there are also at least <span class="process-math">\(m\)</span> incongruent solutions to <span class="process-math">\(x^m-1\equiv 0\pmod{p}\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" title="Theorem 131: Theorem 5.7">Theorem 5.7</a>, there are exactly <span class="process-math">\(m\)</span> incongruent solutions to <span class="process-math">\(x^m-1\equiv 0\pmod{p}\)</span> and thus <span class="process-math">\(x^m\equiv 1\pmod{p}.\)</span>
+</div></article></details><article class="definition definition-like" id="def-root-unity"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">133</span><span class="period">.</span><span class="space"> </span><span class="title">Roots of unity.</span>
+</h4> <div class="para logical" id="def-root-unity-2-1">
+<div class="para">Let <span class="process-math">\(p\)</span> be prime and <span class="process-math">\(m\)</span> a positive integer. We call the solutions to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x^m\equiv 1\pmod{p}
+\end{equation*}
+</div>
+<div class="para">the <dfn class="terminology"><span class="process-math">\(m^{th}\)</span> roots of unity modulo <span class="process-math">\(p.\)</span></dfn>
+</div>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-primeRootIntro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="rubrics.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

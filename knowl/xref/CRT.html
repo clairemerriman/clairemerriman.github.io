@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">68</span><span class="period">.</span><span class="space"> </span><span class="title">Chinese Remainder Theorem.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(m_1,m_2,\dots m_k\)</span> be pairwise relatively prime positive integers (that is, any pair <span class="process-math">\(\gcd(m_i,m_j)=1\)</span> when <span class="process-math">\(i\neq j\)</span>). Let <span class="process-math">\(b_1, b_2,\dots, b_k\)</span> be integers. Then the system of congruences</div>
+<div class="displaymath process-math">
+\begin{align*}
+x\amp \equiv b_1 \pmod{m_1}\\
+x\amp \equiv b_2 \pmod{m_2}\\
+\amp \vdots\\
+x\amp \equiv b_n \pmod{m_k}
+\end{align*}
+</div>
+<div class="para">has a unique solution modulo <span class="process-math">\(M=m_1m_2\dots m_k\text{.}\)</span> This solution has the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x=M_1x_1b_1+M_2x_2b_2+\cdot+M_kx_kb_k,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(M_i=\frac{M}{m_i}\)</span> and <span class="process-math">\(M_i x_i\equiv 1 \pmod{m_i}\text{.}\)</span>
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">Let <span class="process-math">\(m_1,m_2,\dots m_k\)</span> be pairwise relatively prime positive integers. We start by constructing a solution modulo <span class="process-math">\(M=m_1m_2\dots m_k\text{.}\)</span> By construction, <span class="process-math">\(M_i=\frac{M}{m_i}\)</span> is an integer. Since each the <span class="process-math">\(m_i\)</span> are pairwise relatively prime, <span class="process-math">\(\left(M_i, m_i\right)=1\text{.}\)</span> Thus, by <a href="" class="xref" data-knowl="./knowl/xref/cor-condition-invertible.html" title="Corollary 64: Corollary 2.8">Corollary 2.8</a>, for each <span class="process-math">\(i\)</span> there is an integer <span class="process-math">\(x_i\)</span> where <span class="process-math">\(M_i x_i\equiv 1 \pmod{m_i}\text{.}\)</span> Thus <span class="process-math">\(M_i x_i b_i\equiv b_i\pmod{m_i}\text{.}\)</span> We also have that <span class="process-math">\((M_i, m_j)=m_j\)</span> when <span class="process-math">\(i\neq j\text{,}\)</span> so <span class="process-math">\(M_i b_i\equiv 0 \pmod{m_j}\)</span> when <span class="process-math">\(i\neq j\text{.}\)</span>  Let</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-condition-invertible.html">
+\begin{equation*}
+x=M_1x_1b_1+M_2x_2b_2+\cdot+M_kx_kb_k.
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(x\equiv M_i x_i b_i\equiv b_i\pmod{m_i}\)</span> for each <span class="process-math">\(i=1,2,\dots,k\)</span> and <span class="process-math">\(x\equiv M_i x_i b_i\equiv 0\pmod{m_j}\)</span> when <span class="process-math">\(i\neq j.\)</span> Thus, we have found a solution to the system of equivalences.</div>
+</div> <div class="para">To show the solution is unique modulo <span class="process-math">\(M,\)</span> consider two solutions <span class="process-math">\(x_1,x_2.\)</span> Then <span class="process-math">\(x_1\equiv x_2\pmod{m_i}\)</span> for each <span class="process-math">\(i=1,2,\dots,k.\)</span> Thus <span class="process-math">\(m_i\mid x_2-x_1\text{.}\)</span> Since <span class="process-math">\((m_i,m_j)=1\)</span> when <span class="process-math">\(i\neq j,\)</span> <span class="process-math">\(M=[m_1,m_2,\dots,m_k]\)</span> and <span class="process-math">\(M\mid x_2-x_1.\)</span> Thus, <span class="process-math">\(x_1\equiv x_2\pmod M.\)</span>
+</div></article></details><span class="incontext"><a class="internal" href="sec-CRT.html#CRT">in-context</a></span>
+</body>
+</html>
