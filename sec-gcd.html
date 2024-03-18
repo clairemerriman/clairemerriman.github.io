@@ -382,7 +382,9 @@ window.MathJax = {
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="r-hw1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Homework 1 Rubrics</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="r-hw2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Homework 2 Rubrics</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="r-hw3.html" class="internal"><span class="codenumber">A.3</span> <span class="title"></span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="r-hw3.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Homework 3 Rubrics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="r-hw4.html" class="internal"><span class="codenumber">A.4</span> <span class="title">Homework 4 Rubrics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="r-hw5.html" class="internal"><span class="codenumber">A.5</span> <span class="title">Homework 5 Rubrics</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-appendix">
@@ -448,11 +450,10 @@ window.MathJax = {
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="space"> </span><span class="title">Greatest common divisor (25 min)</span>
 </h3>
 <article class="definition definition-like" id="sec-gcd-5-2"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">24</span><span class="period">.</span>
-</h4>
-<div class="para" id="sec-gcd-5-2-1">If <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(a\mid c\)</span> then <span class="process-math">\(a\)</span> is a <dfn class="terminology">common divisor</dfn> of <span class="process-math">\(b\)</span> and <span class="process-math">\(c\text{.}\)</span>
-</div> <div class="para" id="sec-gcd-5-2-2">If at least one of <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> is not <span class="process-math">\(0\text{,}\)</span> the greatest (positive) number among their common divisors  is called the <dfn class="terminology">greatest common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span></dfn> and is denoted <span class="process-math">\(gcd(a,b)\)</span> or just <span class="process-math">\((a,b)\text{.}\)</span>
-</div> <div class="para" id="sec-gcd-5-2-3">If <span class="process-math">\(gcd(a,b)=1\text{,}\)</span> we say that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are <dfn class="terminology">relatively prime</dfn>.</div> <div class="para" id="sec-gcd-5-2-4">If we want the greatest common divisor of several integers at once we denote that by <span class="process-math">\(\gcd(b_1,b_2,b_3,\dots,b_n)\text{.}\)</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">24</span><span class="period">.</span><span class="space"> </span><span class="title">Common divisor, greatest common divisor.</span>
+</h4> <div class="para" id="sec-gcd-5-2-2">If <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(a\mid c\)</span> then <span class="process-math">\(a\)</span> is a <dfn class="terminology">common divisor</dfn> of <span class="process-math">\(b\)</span> and <span class="process-math">\(c\text{.}\)</span>
+</div> <div class="para" id="sec-gcd-5-2-3">If at least one of <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> is not <span class="process-math">\(0\text{,}\)</span> the greatest (positive) number among their common divisors  is called the <dfn class="terminology">greatest common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span></dfn> and is denoted <span class="process-math">\(gcd(a,b)\)</span> or just <span class="process-math">\((a,b)\text{.}\)</span>
+</div> <div class="para" id="sec-gcd-5-2-4">If <span class="process-math">\(gcd(a,b)=1\text{,}\)</span> we say that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are <dfn class="terminology">relatively prime</dfn>.</div> <div class="para" id="sec-gcd-5-2-5">If we want the greatest common divisor of several integers at once we denote that by <span class="process-math">\(\gcd(b_1,b_2,b_3,\dots,b_n)\text{.}\)</span>
 </div></article><div class="para" id="sec-gcd-5-3">For example, <span class="process-math">\(\gcd(4,8)\)</span> is <span class="process-math">\(4\)</span> but <span class="process-math">\(\gcd(4,6,8)\)</span> is <span class="process-math">\(2\text{.}\)</span>
 </div>
 <div class="para" id="sec-gcd-5-4">The GCD always exists when at least one of the integers is nonzero. How to show this: <span class="process-math">\(1\)</span> is always a divisor, and no divisor can be larger than the maximum of <span class="process-math">\(|a|,|b|\text{.}\)</span> So there is a finite number of divisors, thus there is a maximum.</div>
@@ -466,7 +467,7 @@ window.MathJax = {
 (a,b)=\min \{ma+nb : m,n\in\Z, ma+nb&gt;0\}.
 \end{equation*}
 </div>
-</div></article><div class="para" id="sec-gcd-5-6">This proof brings together definitions (of gcd), previous results (<a href="" class="xref" data-knowl="./knowl/xref/div-alg.html" title="Theorem 12: Division Algorithm">Division Algorithm</a>, factors of <a href="" class="xref" data-knowl="./knowl/xref/lem-linear-combo.html" title="Lemma 148: Proposition 1.2">Proposition 1.2</a>), the well-ordering principle, and some methods for minimum and maximum/greatest.</div>
+</div></article><div class="para" id="sec-gcd-5-6">This proof brings together <a href="" class="xref" data-knowl="./knowl/xref/def-gcd.html" title="Definition 23: Greatest common divisor, relatively prime">definitions (of gcd)</a>, previous results (<a href="" class="xref" data-knowl="./knowl/xref/div-alg.html" title="Theorem 12: Division Algorithm">Division Algorithm</a>, factors of <a href="" class="xref" data-knowl="./knowl/xref/lem-linear-combo.html" title="Lemma 171: Proposition 1.2">Proposition 1.2</a>), the well-ordering principle, and some methods for minimum and maximum/greatest.</div>
 <details id="sec-gcd-5-7" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical" id="sec-gcd-5-7-1">
 <div class="para">Since <span class="process-math">\(a,b\in\Z\)</span> are not both zero, at least one of</div>
 <div class="displaymath process-math">
@@ -502,12 +503,12 @@ r=a-qd=a-q(xa+yb)=(1-qx)a-qyb,
 <div class="para" id="sec-gcd-6-2-2-3-1">We proceed by induction.  When <span class="process-math">\(n=1,\)</span> <span class="process-math">\(3\mid 4^n-1=3\text{.}\)</span> Thus, the statement is true for <span class="process-math">\(n=1.\)</span>
 </div> <div class="para logical" id="sec-gcd-6-2-2-3-2">
 <div class="para">Now assume <span class="process-math">\(k\geq 1\)</span> and the desired statement is true for <span class="process-math">\(n=k\text{.}\)</span> Then the induction hypothesis is</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-divides.html">
 \begin{equation*}
 3\mid 4^k-1.
 \end{equation*}
 </div>
-<div class="para">By the definition of divisible, there exists <span class="process-math">\(m\in\Z\)</span> such that <span class="process-math">\(3m=4^k-1.\)</span> In other words, <span class="process-math">\(3m+1=4^k\text{.}\)</span> Multiplying both sides by <span class="process-math">\(4\)</span> gives <span class="process-math">\(12m+4=4^{k+1}\text{.}\)</span> Rewriting this equation gives <span class="process-math">\(3(4m+1)=4^{k+1}-1\text{.}\)</span> Thus, <span class="process-math">\(3\mid 4^{k+1}-1\text{,}\)</span> and the desired statement is true for <span class="process-math">\(n=k+1\text{.}\)</span> By the (first) principle of mathematical induction, the statement is true for all positive integers, and the proof is complete.</div>
+<div class="para">By the <a href="" class="xref" data-knowl="./knowl/xref/def-divides.html" title="Definition 7: a divides b">definition of divisible</a>, there exists <span class="process-math">\(m\in\Z\)</span> such that <span class="process-math">\(3m=4^k-1.\)</span> In other words, <span class="process-math">\(3m+1=4^k\text{.}\)</span> Multiplying both sides by <span class="process-math">\(4\)</span> gives <span class="process-math">\(12m+4=4^{k+1}\text{.}\)</span> Rewriting this equation gives <span class="process-math">\(3(4m+1)=4^{k+1}-1\text{.}\)</span> Thus, <span class="process-math">\(3\mid 4^{k+1}-1\text{,}\)</span> and the desired statement is true for <span class="process-math">\(n=k+1\text{.}\)</span> By the (first) principle of mathematical induction, the statement is true for all positive integers, and the proof is complete.</div>
 </div>
 </div></details></div></article> <article class="problem example-like" id="sec-gcd-6-2-3"><h5 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">27</span><span class="period">.</span><span class="space"> </span><span class="title">Ernst Theorem 4.7.</span>
