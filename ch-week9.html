@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Friday, February 16: Linear congruences in one variable</title>
+<title>Week9</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -106,7 +106,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-week5-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-week6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-LagrangeThem.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="root--1-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-week9-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\C}{\mathbb C}
@@ -264,9 +264,9 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-week5.html" class="internal"><span class="codenumber">5</span> <span class="title">Week 5</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-modIntro.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Monday, February 12: Peer review and introduction to congruences</span></a></div>
 <ul class="structural toc-item-list">
@@ -278,7 +278,7 @@ window.MathJax = {
 <div class="toc-title-box"><a href="ch-week5-3.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Wednesday, February 14: More congruence facts</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week5-3.html#ch-week5-3-3" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Basic facts of working modulo <span class="process-math">\(m\)</span></span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="ch-week5-4.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Friday, February 16: Linear congruences in one variable</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week5-4.html#ch-week5-4-3" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Quiz (10 min)</span></a></div></li>
@@ -389,7 +389,7 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter active">
 <div class="toc-title-box"><a href="ch-week9.html" class="internal"><span class="codenumber">9</span> <span class="title">Week9</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section">
 <div class="toc-title-box"><a href="ch-week9-2.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Monday, March 18: Proof of Primitive Root Theorem</span></a></div>
@@ -421,76 +421,12 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">C</span> <span class="title">Notation list</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="ch-week5-4"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">5.3</span><span class="space"> </span><span class="title">Friday, February 16: Linear congruences in one variable</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-week9"><h2 class="heading">
+<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">9</span><span class="space"> </span><span class="title">Week9</span>
 </h2>
-<article class="objectives goal-like" id="ch-week5-4-2"><h3 class="heading"><span class="type">Objectives</span></h3>
-<ul class="disc">
-<li id="ch-week5-4-2-1-1"><div class="para" id="p-derived-ch-week5-4-2-1-1">Prove when a linear congruence in one variable has a solution</div></li>
-<li id="ch-week5-4-2-1-2"><div class="para" id="p-derived-ch-week5-4-2-1-2">All all solutions to a linear congruence given a particular solution</div></li>
-<li id="ch-week5-4-2-1-3"><div class="para" id="p-derived-ch-week5-4-2-1-3">Find the number of incongruent solutions to a linear congruence</div></li>
-</ul></article><section class="subsection" id="ch-week5-4-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="space"> </span><span class="title">Quiz (10 min)</span>
-</h3></section><section class="subsection" id="ch-week5-4-4"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="space"> </span><span class="title">Linear congruences in one variable</span>
-</h3>
-<article class="remark remark-like" id="remark-add-inverse"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">60</span><span class="period">.</span>
-</h4>
-<div class="para" id="remark-add-inverse-1">Let <span class="process-math">\(a,b,m\in\Z\)</span> with <span class="process-math">\(m\gt 0\text{.}\)</span> Every row/column of addition modulo <span class="process-math">\(m\)</span> contains <span class="process-math">\(\{0,1,\dots,m-1\}\text{.}\)</span> We can also say that <span class="process-math">\(a+x\equiv b\pmod m\)</span> always has a solution, since <span class="process-math">\(x\equiv b-a\pmod m\text{.}\)</span>
-</div></article><article class="theorem theorem-like" id="thm-lin-cong-solutions"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">61</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Theorem 2.6 and Porism 2.7.</span>
-</h4>
-<div class="para logical" id="thm-lin-cong-solutions-2-1">
-<div class="para">Let <span class="process-math">\(a,b,m\in\Z\)</span> with <span class="process-math">\(m\gt 0,\)</span> and <span class="process-math">\(d=(a,m)\text{.}\)</span> The linear congruence in one variable <span class="process-math">\(ax\equiv b\pmod m\)</span> has a solution if and only if <span class="process-math">\(d\mid b\text{.}\)</span> When <span class="process-math">\(d\mid b,\)</span> there are exactly <span class="process-math">\(d\)</span> incongruent solutions modulo <span class="process-math">\(m\)</span> corresponding to the congruence classes</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x_0, x_0+\frac{m}{d},\dots,x_0+\frac{(d-1)m}{d} \pmod m.
-\end{equation*}
-</div>
-</div></article><details id="thm-lin-cong-solutions-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="thm-lin-cong-solutions-3-1">Let <span class="process-math">\(a,b,m\in\Z\)</span> with <span class="process-math">\(m\gt 0\text{,}\)</span> and <span class="process-math">\(d=(a,m)\text{.}\)</span> From the <a href="" class="xref" data-knowl="./knowl/xref/def-mod-divides.html" title="Definition 50: Congruence modulo m">definition of congruence modulo <span class="process-math">\(m\)</span></a>, <span class="process-math">\(ax\equiv b \pmod m\)</span> if and only if <span class="process-math">\(m\mid (ax-b)\text{.}\)</span> That is, <span class="process-math">\(ax\equiv b \pmod m\)</span> if and only if <span class="process-math">\(my=ax-b\)</span> for some <span class="process-math">\(y\in\Z\)</span> from the <a href="" class="xref" data-knowl="./knowl/xref/def-divides.html" title="Definition 7: a divides b">definition of divisibility</a>. Since <span class="process-math">\(ax-my=b\)</span> is a linear Diophantine equation, <a href="" class="xref" data-knowl="./knowl/xref/thm-linear-dioph.html" title="Theorem 180: Theorem 6.2">Theorem 6.2</a> says solutions exist if and only if <span class="process-math">\((a,-m)=d\mid b.\)</span>
-</div> <div class="para" id="thm-lin-cong-solutions-3-2">In the case that solutions exist, let <span class="process-math">\(x_0, y_0\)</span> be a particular solution to the linear Diophantine equation. Then <span class="process-math">\(x_0\)</span> is also a solution to the linear congruence in one variable, since <span class="process-math">\(a x_0-my_0=b,\)</span> implies <span class="process-math">\(ax_0\equiv b\pmod m\text{.}\)</span> From Theorem 6.2, all solutions have the from <span class="process-math">\(x=x_0+\frac{mn}{d}\)</span> for all <span class="process-math">\(n\in\Z.\)</span>  We need to show that these solutions are in exactly <span class="process-math">\(d\)</span> distinct congruence classes modulo <span class="process-math">\(m.\)</span>
-</div> <div class="para logical" id="thm-lin-cong-solutions-3-3">
-<div class="para">Consider the solutions <span class="process-math">\(x_0+\frac{mi}{d}\)</span> and <span class="process-math">\(x_0+\frac{mj}{d}\)</span> for some integers <span class="process-math">\(i\)</span> and <span class="process-math">\(j.\)</span> Then <span class="process-math">\(x_0+\frac{mj}{d}\equiv x_0+\frac{mk}{d} \pmod m\)</span> if and only if <span class="process-math">\(m\mid \left(\frac{mi}{d}-\frac{mj}{d}\right).\)</span> That is, if and only if there exists <span class="process-math">\(k\in\Z\)</span> such that <span class="process-math">\(mk=\frac{mi}{d}-\frac{mj}{d}\text{.}\)</span> Rearranging this equation, we get that <span class="process-math">\(x_0+\frac{mj}{d}\equiv x_0+\frac{mk}{d} \pmod m\)</span> if and only if <span class="process-math">\(dk=i-j.\)</span> Thus, <span class="process-math">\(i\equiv j\pmod{d}\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/def-mod-divides.html" title="Definition 50: Congruence modulo m">definition of modulo <span class="process-math">\(d.\)</span></a> Thus, the incongruent solutions to <span class="process-math">\(ax\equiv b\pmod m\)</span> are the congruence classes</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-mod-divides.html">
-\begin{equation*}
-x_0, x_0+\frac{m}{d},\dots,x_0+\frac{(d-1)m}{d} \pmod m.
-\end{equation*}
-</div>
-</div></article></details><article class="example example-like" id="ch-week5-4-4-4"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">62</span><span class="period">.</span>
-</h4>
-<div class="para logical" id="ch-week5-4-4-4-1">
-<div class="para">Let’s consider several linear congruences modulo <span class="process-math">\(12.\)</span>
-</div>
-<ul class="disc">
-<li id="ch-week5-4-4-4-1-2-1"><div class="para" id="p-derived-ch-week5-4-4-4-1-2-1">The linear congruence <span class="process-math">\(2x\equiv 1\pmod{12}\)</span> has no solutions, since <span class="process-math">\(2\nmid 1.\)</span>
-</div></li>
-<li id="ch-week5-4-4-4-1-2-2"><div class="para" id="p-derived-ch-week5-4-4-4-1-2-2">
-<span class="process-math">\(8x\equiv b\pmod{12}\)</span><span class="process-math">\(4\mid b\text{.}\)</span><span class="process-math">\(b\)</span><ul class="circle">
-<li id="ch-week5-4-4-4-1-2-2-4-1"><div class="para" id="p-derived-ch-week5-4-4-4-1-2-2-4-1">
-<span class="process-math">\(8x\equiv 0\pmod{12}.\)</span> The incongruent solutions are <span class="process-math">\(0,3,6,9\pmod{12}.\)</span>
-</div></li>
-<li id="ch-week5-4-4-4-1-2-2-4-2"><div class="para" id="p-derived-ch-week5-4-4-4-1-2-2-4-2">
-<span class="process-math">\(8x\equiv 4\pmod{12}.\)</span> The incongruent solutions are <span class="process-math">\(2,5,8,11\pmod{12}.\)</span> Notice we cannot divide across the equivalence, since <span class="process-math">\(2x\equiv 1\pmod{12}\)</span> has no solutions.</div></li>
-<li id="ch-week5-4-4-4-1-2-2-4-3"><div class="para" id="p-derived-ch-week5-4-4-4-1-2-2-4-3">
-<span class="process-math">\(8x\equiv 8\pmod{12}.\)</span> The incongruent solutions are <span class="process-math">\(1,4,7,10\pmod{12}.\)</span>
-</div></li>
-</ul>
-</div></li>
-<li id="ch-week5-4-4-4-1-2-3"><div class="para" id="p-derived-ch-week5-4-4-4-1-2-3">The linear congruence <span class="process-math">\(5x\equiv 1 \pmod{12}\)</span> has solution <span class="process-math">\(x\equiv 5\pmod{12}.\)</span> Since <span class="process-math">\((5,12)=1,\)</span> the solution is unique.</div></li>
-<li id="ch-week5-4-4-4-1-2-4"><div class="para" id="p-derived-ch-week5-4-4-4-1-2-4">The linear congruence <span class="process-math">\(5x\equiv 7 \pmod{12}\)</span> has solution <span class="process-math">\(x\equiv -1\equiv 11\pmod{12}.\)</span> Since <span class="process-math">\((5,12)=1,\)</span> the solution is unique. Note that instead of <span class="process-math">\(12+5(-1)=7,\)</span> we could have done<div class="displaymath process-math">
-\begin{equation*}
-5(5x)\equiv 5(7)\equiv 11\pmod{12}.
-\end{equation*}
-</div>
-</div></li>
-</ul>
-</div></article><article class="definition definition-like" id="def-mult-inv"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">63</span><span class="period">.</span><span class="space"> </span><span class="title">multiplicative inverse of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(m\)</span>.</span>
-</h4> <div class="para" id="def-mult-inv-2-1">Let <span class="process-math">\(a,m\in\Z\)</span> with <span class="process-math">\(m\gt 0\)</span> and <span class="process-math">\((a,m)=1.\)</span> We call the unique incongruent solution to <span class="process-math">\(ax\equiv 1\pmod m\)</span> the <em class="emphasis">multiplicative inverse of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(m\)</span></em>.</div></article></section></section></div>
+<nav class="summary-links"><ul><li><a href="ch-week9-2.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Monday, March 18: Proof of Primitive Root Theorem</span></a></li></ul></nav></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="ch-week5-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-week6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-LagrangeThem.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-week9-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -68,7 +68,8 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
@@ -94,7 +95,18 @@ window.MathJax = {
 <h1 class="heading"><a href="root--1-2.html"><span class="title">Number Theory:</span> <span class="subtitle">MAT-255 Spring 2024</span></a></h1>
 <p class="byline"></p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="r-hw4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="rubrics.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="forCrossRefrence.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="r-hw4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="rubrics.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="forCrossRefrence.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\C}{\mathbb C}
@@ -377,6 +389,16 @@ window.MathJax = {
 </li>
 </ul>
 </li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week9.html" class="internal"><span class="codenumber">9</span> <span class="title">Week9</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-week9-2.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Monday, March 18: Proof of Primitive Root Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week9-2.html#ch-week9-2-3" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Roots of unity (25 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week9-2.html#ch-week9-2-4" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Primitive roots modulo a prime (25 minutes)</span></a></div></li>
+</ul>
+</li></ul>
+</li>
 <li class="toc-item toc-appendix contains-active">
 <div class="toc-title-box"><a href="rubrics.html" class="internal"><span class="codenumber">A</span> <span class="title">Homework Rubrics</span></a></div>
 <ul class="structural toc-item-list contains-active">
@@ -403,20 +425,20 @@ window.MathJax = {
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">A.5</span><span class="space"> </span><span class="title">Homework 5 Rubrics</span>
 </h2>
 <article class="problem example-like" id="ch2-ex43"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">161</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 43.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">162</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 43.</span>
 </h3> <div class="para logical" id="ch2-ex43-2"><ol class="lower-alpha">
 <li id="ch2-ex43-2-1-1"><div class="para" id="p-derived-ch2-ex43-2-1-1">Prove that is <span class="process-math">\(p\)</span> is an odd prime number, then <span class="process-math">\(2(p-3)!\equiv -1 \pmod{p}\text{.}\)</span>
 </div></li>
 <li id="ch2-ex43-2-1-2"><div class="para" id="p-derived-ch2-ex43-2-1-2">Find the least nonnegative residue of <span class="process-math">\(2(100!)\)</span> modulo <span class="process-math">\(103\)</span>
 </div></li>
 </ol></div></article><article class="problem example-like" id="ch2-ex44"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">162</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 44.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">163</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 44.</span>
 </h3> <div class="para" id="ch2-ex44-2">Let <span class="process-math">\(n\in\Z\)</span> with <span class="process-math">\(n\gt 1.\)</span> Prove that <span class="process-math">\(n\)</span> is a prime number if and only if <span class="process-math">\((n-2)!\equiv 1\pmod{n}.\)</span>
 </div></article><article class="problem example-like" id="ch2-ex45"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">163</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 45.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">164</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 45.</span>
 </h3> <div class="para" id="ch2-ex45-2">Let <span class="process-math">\(n\)</span> be a composite integer greater than 4. Prove that <span class="process-math">\((n-1)!\equiv 0\pmod{n}\text{.}\)</span>
 </div></article><article class="problem example-like" id="ch2-ex57"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">164</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 57.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">165</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 57.</span>
 </h3> <div class="para logical" id="ch2-ex57-2">
 <div class="para">(Using Fermat’s Little Theorem) Let <span class="process-math">\(n\)</span> be an integer. Prove each congruence below.</div>
 <ol class="lower-alpha">
@@ -425,12 +447,12 @@ window.MathJax = {
 <li id="ch2-ex57-2-2-3"><div class="para" id="p-derived-ch2-ex57-2-2-3"><span class="process-math">\(n^{13} \equiv n \pmod{2730}\text{.}\)</span></div></li>
 </ol>
 </div></article><article class="problem example-like" id="ch2-60"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">165</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 60.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">166</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 60.</span>
 </h3> <div class="para" id="ch2-60-2">Let <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> be distinct prime numbers with <span class="process-math">\(p-1\mid q-1\text{.}\)</span>  If <span class="process-math">\(a\in\Z\)</span> with <span class="process-math">\((a,pq)=1,\)</span> prove that <span class="process-math">\(a^{q-1}\equiv 1 \pmod{pq}\text{.}\)</span>
 </div></article><article class="problem example-like" id="ch2-ex67"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">166</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 67.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">167</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 67.</span>
 </h3> <div class="para" id="ch2-ex67-2">Prove that <span class="process-math">\(9^8\equiv 1 \pmod{16}\)</span> following the steps in the proof of Euler’s Theorem (Theorem 2.17)</div></article><article class="problem example-like" id="ch2-ex71"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">167</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 71.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">168</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 71.</span>
 </h3> <div class="para logical" id="ch2-ex71-2">
 <div class="para">(Using Theorem 2.17 and the Chinese Remainder Theorem)</div>
 <ol class="lower-alpha">
@@ -440,7 +462,7 @@ window.MathJax = {
 </div></li>
 </ol>
 </div></article><article class="problem example-like" id="ch2-ex74"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">168</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 74.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">169</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 2, Exercise 74.</span>
 </h3> <div class="para logical" id="ch2-ex74-2">
 <div class="para">Let <span class="process-math">\(p\)</span> be an odd prime number. Prove that</div>
 <div class="displaymath process-math">
@@ -454,10 +476,10 @@ window.MathJax = {
 <div class="para">is a reduced residue system modulo <span class="process-math">\(p\text{.}\)</span>
 </div>
 </div></article><article class="problem example-like" id="ch3-ex11"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">169</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 3, Exercise 11.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">170</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 3, Exercise 11.</span>
 </h3> <div class="para" id="ch3-ex11-2">Complete the proof of Theorem 3.2 by proving that if <span class="process-math">\(m,n\)</span> and <span class="process-math">\(i\)</span> are positive integers with <span class="process-math">\((m,n)=(m,i)=1,\)</span> then the integers <span class="process-math">\(i,m+i,2m+i,\dots,(n-1)m+i\)</span> form a complete system of residues modulo <span class="process-math">\(n\text{.}\)</span>
 </div></article><article class="problem example-like" id="ch3-ex12"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">170</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 3, Exercise 12.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">171</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer Chapter 3, Exercise 12.</span>
 </h3> <div class="para logical" id="ch3-ex12-2">
 <div class="para">Let <span class="process-math">\(n\in\Z\)</span> with <span class="process-math">\(n\gt 1.\)</span> If <span class="process-math">\(p_1^{a_1}p_2^{a_2}\cdots p_m^{a_m}\)</span> is the prime factorization of <span class="process-math">\(n,\)</span> prove that</div>
 <div class="displaymath process-math">

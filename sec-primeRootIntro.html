@@ -68,7 +68,8 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
@@ -94,7 +95,18 @@ window.MathJax = {
 <h1 class="heading"><a href="root--1-2.html"><span class="title">Number Theory:</span> <span class="subtitle">MAT-255 Spring 2024</span></a></h1>
 <p class="byline"></p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-primeRootReading.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week8.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-LagrangeThem.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-primeRootReading.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week8.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-LagrangeThem.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\C}{\mathbb C}
@@ -377,6 +389,16 @@ window.MathJax = {
 </li>
 </ul>
 </li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week9.html" class="internal"><span class="codenumber">9</span> <span class="title">Week9</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch-week9-2.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Monday, March 18: Proof of Primitive Root Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week9-2.html#ch-week9-2-3" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Roots of unity (25 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week9-2.html#ch-week9-2-4" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Primitive roots modulo a prime (25 minutes)</span></a></div></li>
+</ul>
+</li></ul>
+</li>
 <li class="toc-item toc-appendix">
 <div class="toc-title-box"><a href="rubrics.html" class="internal"><span class="codenumber">A</span> <span class="title">Homework Rubrics</span></a></div>
 <ul class="structural toc-item-list">
@@ -434,12 +456,12 @@ window.MathJax = {
 </div></li>
 <li id="sec-primeRootIntro-4-4-1-1-2"><div class="para" id="p-derived-sec-primeRootIntro-4-4-1-1-2">Since <span class="process-math">\(\phi(6)=\phi(3)\phi(2)=2\)</span> and <span class="process-math">\(\ord_6 5=2,\)</span> <span class="process-math">\(5\)</span> is a primitive root modulo <span class="process-math">\(6.\)</span> The powers <span class="process-math">\(\{5^1, 5^2\}\)</span> are a reduced residue system modulo <span class="process-math">\(6.\)</span>
 </div></li>
-<li id="sec-primeRootIntro-4-4-1-1-3"><div class="para" id="p-derived-sec-primeRootIntro-4-4-1-1-3">There are no primitive roots modulo <span class="process-math">\(8.\)</span> By <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm-phi-prime-power" missing or not unique]</code>, <span class="process-math">\(\phi(8)=4.\)</span> Since every odd number squares to <span class="process-math">\(1\)</span> modulo <span class="process-math">\(8,\)</span> <span class="process-math">\(\ord_8 1=1\)</span> and <span class="process-math">\(\ord_8 3=\ord_8 5=\ord_8 7=2.\)</span>
+<li id="sec-primeRootIntro-4-4-1-1-3"><div class="para" id="p-derived-sec-primeRootIntro-4-4-1-1-3">There are no primitive roots modulo <span class="process-math">\(8.\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/thm-phi-prime-power.html" title="Theorem 184: Theorem 3.3">Theorem 3.3</a>, <span class="process-math">\(\phi(8)=4.\)</span> Since every odd number squares to <span class="process-math">\(1\)</span> modulo <span class="process-math">\(8,\)</span> <span class="process-math">\(\ord_8 1=1\)</span> and <span class="process-math">\(\ord_8 3=\ord_8 5=\ord_8 7=2.\)</span>
 </div></li>
 <li id="sec-primeRootIntro-4-4-1-1-4">
 <div class="para logical" id="sec-primeRootIntro-4-4-1-1-4-1">
-<div class="para">Since <span class="process-math">\(\phi(9)=3^1(3-1)=6\)</span> by <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "thm-phi-prime-power" missing or not unique]</code>, we check:</div>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/prop-exponents_mod_order.html" id="sec-primeRootIntro-4-4-1-1-4-1-3">
+<div class="para">Since <span class="process-math">\(\phi(9)=3^1(3-1)=6\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/thm-phi-prime-power.html" title="Theorem 184: Theorem 3.3">Theorem 3.3</a>, we check:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-phi-prime-power.html ./knowl/xref/prop-exponents_mod_order.html" id="sec-primeRootIntro-4-4-1-1-4-1-3">
 \begin{align*}
 \amp 2^1=2,
 \amp 2^2=4,
@@ -450,14 +472,14 @@ window.MathJax = {
 \end{align*}
 </div>
 <div class="para">So <span class="process-math">\(2\)</span> is a primite root modulo <span class="process-math">\(9,\)</span> but are there more?</div>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/prop-exponents_mod_order.html" id="sec-primeRootIntro-4-4-1-1-4-1-6">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-phi-prime-power.html ./knowl/xref/prop-exponents_mod_order.html" id="sec-primeRootIntro-4-4-1-1-4-1-6">
 \begin{align*}
 4^1\amp =4, \amp 4^2\amp =2^4\equiv 7\pmod{9}, \amp 4^3\amp =2^6\equiv1\pmod{9}
 \end{align*}
 </div>
 <div class="para">We can also use exponent rules and <a href="" class="xref" data-knowl="./knowl/xref/prop-exponents_mod_order.html" title="Proposition 102: Proposition 5.2">Proposition 5.2</a> to simplify some calculuations. For example, <span class="process-math">\(5\equiv 2^5\pmod{9},\)</span> so <span class="process-math">\(5^i\equiv 2^{5i}\equiv 2^j\pmod{9}\)</span> if and only if <span class="process-math">\(5i\equiv j\pmod{6}.\)</span>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/prop-exponents_mod_order.html" id="sec-primeRootIntro-4-4-1-1-4-1-11">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-phi-prime-power.html ./knowl/xref/prop-exponents_mod_order.html" id="sec-primeRootIntro-4-4-1-1-4-1-11">
 \begin{align*}
 5^1\amp \equiv 5\pmod{9}, 
 \amp 5^2\amp \equiv 2^{10}\equiv 2^4\equiv 7\pmod{9},
@@ -467,14 +489,14 @@ window.MathJax = {
 \amp 5^6\amp \equiv 1\pmod{9},
 \end{align*}
 </div>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/prop-exponents_mod_order.html" id="sec-primeRootIntro-4-4-1-1-4-1-12">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-phi-prime-power.html ./knowl/xref/prop-exponents_mod_order.html" id="sec-primeRootIntro-4-4-1-1-4-1-12">
 \begin{align*}
 7^1\amp \equiv (-2)\equiv 7\pmod{9}, 
 \amp 7^2\amp \equiv (-2)^2\equiv 4\pmod{9},
 \amp 7^3\amp \equiv (-2)^{3}\equiv -8 \equiv 1\pmod{9}
 \end{align*}
 </div>
-<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/prop-exponents_mod_order.html" id="sec-primeRootIntro-4-4-1-1-4-1-13">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-phi-prime-power.html ./knowl/xref/prop-exponents_mod_order.html" id="sec-primeRootIntro-4-4-1-1-4-1-13">
 \begin{align*}
 \ord_9(1)\amp =1\\
 \ord_9(2)\amp =\ord_9(5)=6\\
@@ -500,7 +522,7 @@ window.MathJax = {
 </div>
 <div class="para">is a set of reduced residues modulo <span class="process-math">\(m.\)</span>
 </div>
-</div></article><div class="para" id="sec-primeRootIntro-4-6">This is the general version of <a href="" class="xref" data-knowl="./knowl/xref/read-prop-prime-root-generates.html" title="Proposition 110"></a>, using exponents <span class="process-math">\(1,2,\dots,\phi(m)\)</span> instead of <span class="process-math">\(0,1,\dots,\phi(m)-1\text{.}\)</span> Since Strayer’s statement of <a href="" class="xref" data-knowl="./knowl/xref/prop-exponents_mod_order.html" title="Proposition 102: Proposition 5.2">Proposition 5.2</a> is already stated and proved for composites, and both lists have the same number of elements, the only changes to the proof is replacing <span class="process-math">\(p-1\)</span> with <span class="process-math">\(\phi(m).\)</span> Note <span class="process-math">\(a^0\equiv a^{\phi(m)}\equiv 1\pmod{m}\)</span> when <span class="process-math">\((a,m)=1.\)</span>
+</div></article><div class="para" id="sec-primeRootIntro-4-6">This is the general version of <a href="" class="xref" data-knowl="./knowl/xref/read-prop-prime-root-generates.html" title="Proposition 110: Proposition 10.3.2">Proposition 10.3.2</a>, using exponents <span class="process-math">\(1,2,\dots,\phi(m)\)</span> instead of <span class="process-math">\(0,1,\dots,\phi(m)-1\text{.}\)</span> Since Strayer’s statement of <a href="" class="xref" data-knowl="./knowl/xref/prop-exponents_mod_order.html" title="Proposition 102: Proposition 5.2">Proposition 5.2</a> is already stated and proved for composites, and both lists have the same number of elements, the only changes to the proof is replacing <span class="process-math">\(p-1\)</span> with <span class="process-math">\(\phi(m).\)</span> Note <span class="process-math">\(a^0\equiv a^{\phi(m)}\equiv 1\pmod{m}\)</span> when <span class="process-math">\((a,m)=1.\)</span>
 </div>
 <article class="proposition theorem-like" id="prop-compare-order"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">126</span><span class="period">.</span><span class="space"> </span><span class="title">Proposition 5.4.</span>
@@ -524,18 +546,34 @@ window.MathJax = {
 \ord_m(r^i)=\frac{\phi(m)}{\gcd(\phi(m),i)}.
 \end{equation*}
 </div>
-</div></article> <details id="sec-primeRootIntro-4-8-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="sec-primeRootIntro-4-8-3-1">Let <span class="process-math">\(r,m\in\Z\)</span> with <span class="process-math">\(m\gt 0\)</span> and <span class="process-math">\(r\)</span> a primitive root modulo <span class="process-math">\(m.\)</span> Then <span class="process-math">\(\ord_m r=\phi(m)\)</span> by <article class="definition definition-like" id="def-primeRoot"><h5 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">128</span><span class="period">.</span>
-</h5>. By <div class="para" id="def-primeRoot-1-1"></div></article>
-</div></div></details></article></details><div class="para" id="sec-primeRootIntro-4-9">Exercises and other results cited in the reading</div>
+</div></article> <details id="sec-primeRootIntro-4-8-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical" id="sec-primeRootIntro-4-8-3-1">
+<div class="para">Let <span class="process-math">\(i,r,m\in\Z\)</span> with <span class="process-math">\(i,m\gt 0\)</span> and <span class="process-math">\(r\)</span> a primitive root modulo <span class="process-math">\(m.\)</span> Then <span class="process-math">\(\ord_m r=\phi(m)\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/defn-primeRoot.html" title="Definition 123: primitive root">definition</a>. Let <span class="process-math">\(d=(\phi(m),i).\)</span> Then there exists positive integers <span class="process-math">\(j,k\)</span> such that <span class="process-math">\(\phi(m)=dj,i=dk\)</span> and <span class="process-math">\((j,k)=1\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/prop-div-gcd-rel-prime.html" title="Proposition 173: Proposition 1.10">Proposition 1.10</a>. Then using the proceding equations and exponent rules, we find</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/defn-primeRoot.html ./knowl/xref/prop-div-gcd-rel-prime.html ./knowl/xref/defn-primeRoot.html ./knowl/xref/prop-order_divides_phi.html">
+\begin{equation*}
+(a^i)^j=(a^{dk})^{\phi(m)/d}=(a^{\phi(m)})^k\equiv 1\pmod{m}
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(a^{\phi(m)}\equiv 1\pmod{p}\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/defn-primeRoot.html" title="Definition 123: primitive root">definition</a>. <a href="" class="xref" data-knowl="./knowl/xref/prop-order_divides_phi.html" title="Proposition 101: Proposition 5.1">Proposition 5.1</a> says that <span class="process-math">\(\ord_p(a^i)\mid j.\)</span>
+</div>
+</div> <div class="para" id="sec-primeRootIntro-4-8-3-2">Since <span class="process-math">\(a^{i\ord_p(a^i)}\equiv(a^i)^{\ord_p(a^i)}\equiv 1\pmod{p}\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/defn-order.html" title="Definition 99: order of a modulo m">definition of order</a>, <a href="" class="xref" data-knowl="./knowl/xref/prop-order_divides_phi.html" title="Proposition 101: Proposition 5.1">Proposition 5.1</a> says that <span class="process-math">\(\ord_p a\mid i \ord_p(a^i).\)</span> Since <span class="process-math">\(\ord_p a=\phi(m)=dj\)</span> and <span class="process-math">\(i=dk,\)</span> we have <span class="process-math">\(dj\mid dk \ord_p(a^i)\)</span> which simplifies to <span class="process-math">\(j\mid k \ord_p(a^i)\text{.}\)</span> Since <span class="process-math">\((j,k)=1,\)</span> we can conclude <span class="process-math">\(j\mid \ord_p(a^i)\text{.}\)</span>
+</div> <div class="para logical" id="sec-primeRootIntro-4-8-3-3">
+<div class="para">Since <span class="process-math">\(\ord_p(a^i)\mid j, j\mid \ord_p(a^i)\)</span> and both values are positive, we can conclude that <span class="process-math">\(\ord_p(a^i)=j.\)</span> Finally, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ord_p(a^i)=j=\frac{\phi(m)}{d}=\frac{\phi(m)}{(\phi(m),i)}.
+\end{equation*}
+</div>
+</div>
+</div></details></article></details><div class="para" id="sec-primeRootIntro-4-9">Exercises and other results cited in the reading, also on Homework 6.</div>
 <details id="sec-primeRootIntro-4-10" class="activity project-like born-hidden-knowl"><summary><h4 class="heading">
 <span class="type">In Class Activity</span><span class="space"> </span><span class="codenumber">16</span><span class="period">.</span>
-</h4></summary><article class="activity project-like"><div class="para" id="sec-primeRootIntro-4-10-1">Prove the following statement, which is the converse of <a href="" class="xref" data-knowl="./knowl/xref/read-prop-prime-root-generates.html" title="Proposition 110"></a>:</div> <div class="para" id="sec-primeRootIntro-4-10-2">Let <span class="process-math">\(p\)</span> be prime, and let <span class="process-math">\(a\in\Z.\)</span> If every <span class="process-math">\(b\in\Z\)</span> such that <span class="process-math">\(p\nmid b\)</span> is congruent to a power of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(p,\)</span> then <span class="process-math">\({a}\)</span> is a primitive root modulo <span class="process-math">\(p\text{.}\)</span>
+</h4></summary><article class="activity project-like"><div class="para" id="sec-primeRootIntro-4-10-1">Prove the following statement, which is the converse of <a href="" class="xref" data-knowl="./knowl/xref/read-prop-prime-root-generates.html" title="Proposition 110: Proposition 10.3.2">Proposition 10.3.2</a>:</div> <div class="para" id="sec-primeRootIntro-4-10-2">Let <span class="process-math">\(p\)</span> be prime, and let <span class="process-math">\(a\in\Z.\)</span> If every <span class="process-math">\(b\in\Z\)</span> such that <span class="process-math">\(p\nmid b\)</span> is congruent to a power of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(p,\)</span> then <span class="process-math">\({a}\)</span> is a primitive root modulo <span class="process-math">\(p\text{.}\)</span>
 </div></article></details><details id="sec-primeRootIntro-4-11" class="activity project-like born-hidden-knowl"><summary><h4 class="heading">
 <span class="type">In Class Activity</span><span class="space"> </span><span class="codenumber">17</span><span class="period">.</span>
 </h4></summary><article class="activity project-like"><div class="para" id="sec-primeRootIntro-4-11-1">Prove the following generalization of <a href="" class="xref" data-knowl="./knowl/xref/read-lem-order-multiplicative.html" title="Lemma 116: Lemma 10.3.5">Lemma 10.3.5</a>
 </div> <article class="lemma theorem-like" id="sec-primeRootIntro-4-11-2"><h5 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">129</span><span class="period">.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">128</span><span class="period">.</span>
 </h5>
 <div class="para logical" id="sec-primeRootIntro-4-11-2-1-1">
 <div class="para">Let <span class="process-math">\(n\in\Z\)</span> and let <span class="process-math">\(x_1,x_2,\dots,x_m\)</span> be reduced residues modulo <span class="process-math">\(n\text{.}\)</span>  Suppose that for all <span class="process-math">\(i\neq j,\)</span> <span class="process-math">\(\ord_n(x_i)\)</span> and <span class="process-math">\(\ord_n(x_j)\)</span> are relatively prime. Then</div>
