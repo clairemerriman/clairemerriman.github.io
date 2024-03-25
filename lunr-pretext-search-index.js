@@ -2368,6 +2368,96 @@ var ptx_lunr_docs = [
   "body": "Strayer Chapter 3, Exercise 12  Let with If is the prime factorization of prove that   Rubric  Does not demonstrate understanding. Contains enough of the relevant steps to provide feed back, but does not reach the level of needs revisions.  Needs revisions. Proof contains significant gaps, errors, or excess information.  Demonstrates understanding. Mathematically correct proofs that contains extra details or missing some details, generally would benefit from proofreading. Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct proof. May include minor errors while still demonstrating understanding of the concepts. Work is easy to follow with formal mathematical writing.    "
 },
 {
+  "id": "r-hw6",
+  "level": "1",
+  "url": "r-hw6.html",
+  "type": "Section",
+  "number": "B.6",
+  "title": "Homework 6 Rubrics",
+  "body": " Homework 6 Rubrics   Initial rubrics for the Proofs and Writing problems. More detailed rubrics available on Gradescope once the assignment is graded.  Some solutions posted after the resubmission deadline.   Chapter 5, Exercise 5    Let be a positive integer and let and be integers relatively prime to with . Prove that .  Show that the hypothesis cannot be eliminated from part (a). What can be said about if ? The hint in the back of the book is wrong  The mistake is a typo: the equal sign in should not be a different symbol. It should not be changed to as this condition is sometimes true, for example, when  To see why the hint is wrong, consider    but   Try showing that when  and a few other scenarios.      Rubric  Does not demonstrate understanding. Contains enough of the relevant steps to provide feed back, but does not reach the level of needs revisions.  Needs revisions. Work shows understanding of the definition of but it has significant gaps or errors. Proves that but not that (or other case), with mathematically correct answer and example for part (b). Or some missing details in proof for part (a) with no example in part (b).  Demonstrates understanding. Mathematically correct proof for part (a) and counter example for part (b), with some errors in the characterization of (b). May contains extra details or missing some details, generally would benefit from proofreading. Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct solutions for both parts, using the definition of and exponent rules. Gives and example for part (b) with an answer related to the results in this section. Follows the homework guide for mathematical writing.     Chapter 5, Exercise 6  Let be a positive integer and let with . Prove or disprove that there exists with .  Rubric  Does not demonstrate understanding. Contains enough of the relevant steps to provide feed back, but does not reach the level of needs revisions.  Needs revisions. Work shows understanding of the relationship between of and but it has significant gaps or errors. Example is incorrect.  Demonstrates understanding. Example of and where there are no elements of order , but no justification for the fact there are no elements of order . Or uses informal mathematical writing.Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct example and explanation. Follows the homework guide for mathematical writing.     Chapter 5, Exercise 7  Let be a positive integer and let with .  Prove that if (with and positive integers), then .  Prove that if , then is a prime number.     Rubric  Does not demonstrate understanding. Contains enough of the relevant steps to provide feed back, but does not reach the level of needs revisions.  Needs revisions. Work shows understanding of the relationship between of and but it has significant gaps or errors. Example is incorrect.  Demonstrates understanding. Example of and where there are no elements of order , but no justification for the fact there are no elements of order . Or uses informal mathematical writing.Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct example and explanation. Follows the homework guide for mathematical writing.     Chapter 5, Exercise 8  Let and be positive integers with . Prove that . ( Hint: Consider ).     Prove the following statement, which is the converse of (restricted to primes) (which is also ):  Let be prime, and let If every such that is congruent to a power of modulo then is a primitive root modulo .     Prove the following generalization of Chapter 5, Exercise 5  Let and let be reduced residues modulo . Suppose that for all  and are relatively prime. Then      If is a prime and is a primitive root modulo is also a primitive root modulo ? Prove or provide a counter example.  Think about how this question is different from the next question.     If is a prime with and is a primitive root modulo is also a primitive root modulo ? Prove or provide a counter example.   See Chapter 5, Exercise 13a.      Let be prime and such that Suppose that Prove that is a primitive root modulo   "
+},
+{
+  "id": "ch5-ex5",
+  "level": "2",
+  "url": "r-hw6.html#ch5-ex5",
+  "type": "Problem",
+  "number": "173",
+  "title": "Chapter 5, Exercise 5.",
+  "body": "Chapter 5, Exercise 5    Let be a positive integer and let and be integers relatively prime to with . Prove that .  Show that the hypothesis cannot be eliminated from part (a). What can be said about if ? The hint in the back of the book is wrong  The mistake is a typo: the equal sign in should not be a different symbol. It should not be changed to as this condition is sometimes true, for example, when  To see why the hint is wrong, consider    but   Try showing that when  and a few other scenarios.      Rubric  Does not demonstrate understanding. Contains enough of the relevant steps to provide feed back, but does not reach the level of needs revisions.  Needs revisions. Work shows understanding of the definition of but it has significant gaps or errors. Proves that but not that (or other case), with mathematically correct answer and example for part (b). Or some missing details in proof for part (a) with no example in part (b).  Demonstrates understanding. Mathematically correct proof for part (a) and counter example for part (b), with some errors in the characterization of (b). May contains extra details or missing some details, generally would benefit from proofreading. Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct solutions for both parts, using the definition of and exponent rules. Gives and example for part (b) with an answer related to the results in this section. Follows the homework guide for mathematical writing.    "
+},
+{
+  "id": "ch5-ex6",
+  "level": "2",
+  "url": "r-hw6.html#ch5-ex6",
+  "type": "Problem",
+  "number": "175",
+  "title": "Chapter 5, Exercise 6.",
+  "body": "Chapter 5, Exercise 6  Let be a positive integer and let with . Prove or disprove that there exists with .  Rubric  Does not demonstrate understanding. Contains enough of the relevant steps to provide feed back, but does not reach the level of needs revisions.  Needs revisions. Work shows understanding of the relationship between of and but it has significant gaps or errors. Example is incorrect.  Demonstrates understanding. Example of and where there are no elements of order , but no justification for the fact there are no elements of order . Or uses informal mathematical writing.Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct example and explanation. Follows the homework guide for mathematical writing.    "
+},
+{
+  "id": "ch5-ex7",
+  "level": "2",
+  "url": "r-hw6.html#ch5-ex7",
+  "type": "Problem",
+  "number": "176",
+  "title": "Chapter 5, Exercise 7.",
+  "body": "Chapter 5, Exercise 7  Let be a positive integer and let with .  Prove that if (with and positive integers), then .  Prove that if , then is a prime number.     Rubric  Does not demonstrate understanding. Contains enough of the relevant steps to provide feed back, but does not reach the level of needs revisions.  Needs revisions. Work shows understanding of the relationship between of and but it has significant gaps or errors. Example is incorrect.  Demonstrates understanding. Example of and where there are no elements of order , but no justification for the fact there are no elements of order . Or uses informal mathematical writing.Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct example and explanation. Follows the homework guide for mathematical writing.    "
+},
+{
+  "id": "ch5-ex8",
+  "level": "2",
+  "url": "r-hw6.html#ch5-ex8",
+  "type": "Problem",
+  "number": "177",
+  "title": "Chapter 5, Exercise 8.",
+  "body": "Chapter 5, Exercise 8  Let and be positive integers with . Prove that . ( Hint: Consider ).   "
+},
+{
+  "id": "pmf-generator-primitive",
+  "level": "2",
+  "url": "r-hw6.html#pmf-generator-primitive",
+  "type": "Problem",
+  "number": "178",
+  "title": "",
+  "body": " Prove the following statement, which is the converse of (restricted to primes) (which is also ):  Let be prime, and let If every such that is congruent to a power of modulo then is a primitive root modulo .   "
+},
+{
+  "id": "pmf-order_k_factors",
+  "level": "2",
+  "url": "r-hw6.html#pmf-order_k_factors",
+  "type": "Problem",
+  "number": "179",
+  "title": "",
+  "body": " Prove the following generalization of Chapter 5, Exercise 5  Let and let be reduced residues modulo . Suppose that for all  and are relatively prime. Then    "
+},
+{
+  "id": "pmf-neg-prim-root",
+  "level": "2",
+  "url": "r-hw6.html#pmf-neg-prim-root",
+  "type": "Problem",
+  "number": "181",
+  "title": "",
+  "body": " If is a prime and is a primitive root modulo is also a primitive root modulo ? Prove or provide a counter example.  Think about how this question is different from the next question.   "
+},
+{
+  "id": "pmf-neg-prim-root-good-prime",
+  "level": "2",
+  "url": "r-hw6.html#pmf-neg-prim-root-good-prime",
+  "type": "Problem",
+  "number": "182",
+  "title": "",
+  "body": " If is a prime with and is a primitive root modulo is also a primitive root modulo ? Prove or provide a counter example.   See Chapter 5, Exercise 13a.    "
+},
+{
+  "id": "pmf-order-above-half-mod",
+  "level": "2",
+  "url": "r-hw6.html#pmf-order-above-half-mod",
+  "type": "Problem",
+  "number": "183",
+  "title": "",
+  "body": " Let be prime and such that Suppose that Prove that is a primitive root modulo  "
+},
+{
   "id": "sec-additional-div",
   "level": "1",
   "url": "sec-additional-div.html",
@@ -2381,7 +2471,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-div.html#lem-linear-combo",
   "type": "Lemma",
-  "number": "173",
+  "number": "184",
   "title": "Proposition 1.2.",
   "body": "Proposition 1.2   Let If and then    "
 },
@@ -2390,7 +2480,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-div.html#prop-div-gcd-rel-prime",
   "type": "Proposition",
-  "number": "174",
+  "number": "185",
   "title": "Proposition 1.10.",
   "body": "Proposition 1.10   Let with Then    "
 },
@@ -2399,7 +2489,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-div.html#lem-gcd-remainders",
   "type": "Lemma",
-  "number": "175",
+  "number": "186",
   "title": "Lemma 1.12.",
   "body": "Lemma 1.12   If  and with then    "
 },
@@ -2417,7 +2507,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-primes.html#lem-irreducible-prime",
   "type": "Lemma",
-  "number": "176",
+  "number": "187",
   "title": "Lemma 1.14.",
   "body": "Lemma 1.14 Euclid   Let with prime. If then or    "
 },
@@ -2426,7 +2516,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-primes.html#cor-irreducible-prime",
   "type": "Corollary",
-  "number": "177",
+  "number": "188",
   "title": "Corollary 1.15.",
   "body": "Corollary 1.15   Let with prime. If then for some    "
 },
@@ -2435,7 +2525,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-primes.html#prop-form-lcm-gcd",
   "type": "Proposition",
-  "number": "178",
+  "number": "189",
   "title": "Proposition 1.17.",
   "body": "Proposition 1.17   Let with Write and where are distinct primes and are nonnegative integers (possibly zero). Then and    "
 },
@@ -2444,7 +2534,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-primes.html#thm-prod-lcm-gcd",
   "type": "Theorem",
-  "number": "179",
+  "number": "190",
   "title": "Theorem 1.19.",
   "body": "Theorem 1.19   Let with Then    "
 },
@@ -2453,7 +2543,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-primes.html#def-lcm",
   "type": "Definition",
-  "number": "180",
+  "number": "191",
   "title": "Least common multiple.",
   "body": "Least common multiple    least common multiple of and     least common multiple of and   If and then is a common multiple of and .  The least positive common multiple of and is called the least common multiple of and and is denoted or just .  If we want the least common multiple of several integers at once we denote that by or .  "
 },
@@ -2471,7 +2561,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "forCrossRefrence-4.html#thm-linear-dioph",
   "type": "Theorem",
-  "number": "181",
+  "number": "192",
   "title": "Theorem 6.2.",
   "body": "Theorem 6.2   Let be a linear Diophantine equation in two variables and and let If then the equation has no solutions. If then there are infinitely many solutions of the form    "
 },
@@ -2489,7 +2579,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Congruences.html#thm-mods-equiv-relation",
   "type": "Theorem",
-  "number": "182",
+  "number": "193",
   "title": "Restatement of Strayer Propositions 2.1.",
   "body": "Restatement of Strayer Propositions 2.1   Let with Then:  and implies   implies     "
 },
@@ -2498,7 +2588,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Congruences.html#prop-basic-mod-arith",
   "type": "Theorem",
-  "number": "183",
+  "number": "194",
   "title": "Strayer Propositions 2.4.",
   "body": "Strayer Propositions 2.4   Let with Then:   and implies   and implies .     "
 },
@@ -2507,7 +2597,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Congruences.html#prop-change-modulus",
   "type": "Theorem",
-  "number": "184",
+  "number": "195",
   "title": "Strayer Proposition 2.5.",
   "body": "Strayer Proposition 2.5   Let with Then if and only if .   "
 },
@@ -2516,7 +2606,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Congruences.html#cor-p-power_mod-p",
   "type": "Corollary",
-  "number": "185",
+  "number": "196",
   "title": "Corollary 2.15.",
   "body": "Corollary 2.15   Let be a prime number and let Then    "
 },
@@ -2534,7 +2624,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Phi-Function.html#thm-phi-prime-power",
   "type": "Theorem",
-  "number": "186",
+  "number": "197",
   "title": "Theorem 3.3.",
   "body": "Theorem 3.3   Let be a prime number and a positive integer. Then    "
 },
