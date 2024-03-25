@@ -391,13 +391,26 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-week9.html" class="internal"><span class="codenumber">9</span> <span class="title">Week9</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="ch-week9-2.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Monday, March 18: Proof of Primitive Root Theorem</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week9-2.html#ch-week9-2-3" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Roots of unity (25 minutes)</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week9-2.html#ch-week9-2-4" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Primitive roots modulo a prime (25 minutes)</span></a></div></li>
 </ul>
-</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-quadResIntro.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Wednesday, March 20: Introduction to quadratic residues</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-quadResIntro.html#sec-quadResIntro-3" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-quadResIntro.html#rqs-mar20" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quadResIntro.html#sec-quadResIntro-4" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Finish proof of the existence of primitive roots modulo a prime (10 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quadResIntro.html#sec-quadResIntro-5" class="internal"><span class="codenumber">9.2.3</span> <span class="title">Quadratic residues (40 minutes)</span></a></div></li>
+</ul>
+</li>
+</ul>
 </li>
 <li class="toc-item toc-appendix">
 <div class="toc-title-box"><a href="hwguide.html" class="internal"><span class="codenumber">A</span> <span class="title">Homework Guide</span></a></div>
@@ -641,9 +654,9 @@ r_1=r_2 q_3+r_3,\quad 0\leq r_3\lt r_2.
 </div></article><details id="euclid-alg-4" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="euclid-alg-4-1">Note that <span class="process-math">\(r_1\gt r_2\gt r_3\gt \dots\geq0\)</span> by construction. If the sequence did not stop, then we would have an infinite, decreasing sequence of positive integers, which is not possible. Thus, <span class="process-math">\(r_n=0\)</span> for some <span class="process-math">\(n\text{.}\)</span>
 </div> <div class="para" id="euclid-alg-4-2">When <span class="process-math">\(n=1\text{,}\)</span> <span class="process-math">\(a=bq+0\)</span> and <span class="process-math">\(\gcd(a,b)=b\text{.}\)</span>
 </div> <div class="para" id="euclid-alg-4-3">
-<a href="" class="xref" data-knowl="./knowl/xref/lem-gcd-remainders.html" title="Lemma 186: Lemma 1.12">Lemma 1.12</a> states that for <span class="process-math">\(a=bq_1+r_1\text{,}\)</span> <span class="process-math">\(\gcd(a,b)=\gcd(b,r_1)\text{.}\)</span> This is because any common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span>  is also a divisor of <span class="process-math">\(r_1=a-bq_1\text{.}\)</span>
+<a href="" class="xref" data-knowl="./knowl/xref/lem-gcd-remainders.html" title="Lemma 192: Lemma 1.12">Lemma 1.12</a> states that for <span class="process-math">\(a=bq_1+r_1\text{,}\)</span> <span class="process-math">\(\gcd(a,b)=\gcd(b,r_1)\text{.}\)</span> This is because any common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span>  is also a divisor of <span class="process-math">\(r_1=a-bq_1\text{.}\)</span>
 </div> <div class="para logical" id="euclid-alg-4-4">
-<div class="para">If <span class="process-math">\(n\gt 1\text{,}\)</span> then by repeated application of the <a href="" class="xref" data-knowl="./knowl/xref/lem-gcd-remainders.html" title="Lemma 186: Lemma 1.12">Lemma 1.12</a>, we have</div>
+<div class="para">If <span class="process-math">\(n\gt 1\text{,}\)</span> then by repeated application of the <a href="" class="xref" data-knowl="./knowl/xref/lem-gcd-remainders.html" title="Lemma 192: Lemma 1.12">Lemma 1.12</a>, we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-gcd-remainders.html">
 \begin{equation*}
 \gcd(a,b)=\gcd(b,r_1)=\gcd(r_1,r_2)=\cdots=\gcd(r_{n-2},r_{n-1})

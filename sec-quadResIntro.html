@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Friday, March 1: The \phi- function and a preview of primitive roots</title>
+<title>Wednesday, March 20: Introduction to quadratic residues</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -106,7 +106,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-phiIntro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-week8.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-week9-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week9.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="hwguide.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\C}{\mathbb C}
@@ -321,9 +321,9 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-week7.html" class="internal"><span class="codenumber">7</span> <span class="title">Week 7</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-modReduce.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Monday, February 26: Modular arithmetic calculations</span></a></div>
 <ul class="structural toc-item-list">
@@ -338,7 +338,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-phiIntro.html#sec-phi-start" class="internal"><span class="codenumber">7.2.2</span> <span class="title">The Euler <span class="process-math">\(\phi\)</span>-function (20 min)</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-phiFacts.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Friday, March 1: The <span class="process-math">\(\phi-\)</span> function and a preview of primitive roots</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-phiFacts.html#sec-phiFacts-3" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Quiz (10 min)</span></a></div></li>
@@ -389,9 +389,9 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-week9.html" class="internal"><span class="codenumber">9</span> <span class="title">Week9</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="ch-week9-2.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Monday, March 18: Proof of Primitive Root Theorem</span></a></div>
 <ul class="structural toc-item-list">
@@ -399,7 +399,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week9-2.html#ch-week9-2-4" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Primitive roots modulo a prime (25 minutes)</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
+<li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="sec-quadResIntro.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Wednesday, March 20: Introduction to quadratic residues</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-reading-questions">
@@ -445,66 +445,158 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">D</span> <span class="title">Notation list</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-phiFacts"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">7.3</span><span class="space"> </span><span class="title">Friday, March 1: The <span class="process-math">\(\phi-\)</span> function and a preview of primitive roots</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-quadResIntro"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">9.2</span><span class="space"> </span><span class="title">Wednesday, March 20: Introduction to quadratic residues</span>
 </h2>
-<article class="objectives goal-like" id="sec-phiFacts-2"><h3 class="heading"><span class="type">Objectives</span></h3>
-<ul class="disc"><li id="sec-phiFacts-2-1-1"><div class="para" id="p-derived-sec-phiFacts-2-1-1">Prove that <span class="process-math">\(\phi(m)\phi(n)=\phi(mn)\)</span> when <span class="process-math">\((m,n)=1\)</span>
-</div></li></ul></article><section class="subsection" id="sec-phiFacts-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.3.1</span><span class="space"> </span><span class="title">Quiz (10 min)</span>
-</h3></section><section class="subsection" id="sec-phiFacts-4"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="space"> </span><span class="title">Euler <span class="process-math">\(\phi\)</span>-function (20 min)</span>
+<article class="objectives goal-like" id="sec-quadResIntro-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ul class="disc">
+<li id="sec-quadResIntro-2-1-1"><div class="para" id="p-derived-sec-quadResIntro-2-1-1">Define a quadratic residue modulo <span class="process-math">\(m\)</span>
+</div></li>
+<li id="sec-quadResIntro-2-1-2"><div class="para" id="p-derived-sec-quadResIntro-2-1-2">Prove that the quadratic congruence <span class="process-math">\(x^2\equiv a\pmod{p}\)</span> has zero or one solution modulo a prime when <span class="process-math">\(p\nmid a\)</span>
+</div></li>
+<li id="sec-quadResIntro-2-1-3"><div class="para" id="p-derived-sec-quadResIntro-2-1-3">Use the solution to a quadratic congruence modulo a prime to find the other solution</div></li>
+</ul></article><section class="reading-questions" id="sec-quadResIntro-3"><h3 class="heading hide-type">
+<span class="type">Reading Questions</span><span class="space"> </span><span class="codenumber">9.2.1</span><span class="space"> </span><span class="title">Reading Questions</span>
 </h3>
-<div class="para" id="sec-phiFacts-4-2">We will use <a href="" class="xref" data-knowl="./knowl/xref/br-multiplicative-proof.html" title="In Class Activity 14"></a> as an outline to prove</div>
-<article class="theorem theorem-like" id="thm-phi-multiplicative"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">95</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem 3.2.</span>
+<section class="introduction" id="sec-quadResIntro-3-1">Strayer Section 4.1</section><section class="exercises" id="rqs-mar20"><h4 class="heading hide-type">
+<span class="type">Turn In</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Turn In</span>
 </h4>
-<div class="para" id="thm-phi-multiplicative-2-1">Let <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> be positive integers where <span class="process-math">\((m,n)=1\text{.}\)</span> Then <span class="process-math">\(\phi(mn)=\phi(m)\phi(n).\)</span>
-</div></article><details id="thm-phi-multiplicative-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="thm-phi-multiplicative-3-1">First, we note that an integer <span class="process-math">\(a\)</span> is relatively prime to <span class="process-math">\(mn\)</span> if and only if it is relatively prime to <span class="process-math">\(m\)</span> and <span class="process-math">\(n,\)</span> since <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> (together) have the same prime divisors as <span class="process-math">\(mn\text{.}\)</span>
-</div> <div class="para" id="thm-phi-multiplicative-3-2">We can partition the positive integers less than or equal to <span class="process-math">\(mn\)</span> into <div class="tabular-box natural-width"><table class="tabular">
+<details id="rqs-mar20-1" class="exercise exercise-like born-hidden-knowl"><summary><h5 class="heading">
+<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Exercise 3.</span>
+</h5></summary><article class="exercise exercise-like"><div class="para" id="rqs-mar20-1-2-1">Find all incongruent solutions of the quadratic congruence <span class="process-math">\(x^2\equiv 1\pmod{8}.\)</span> Is it not true that quadratic congruences have either no solutions or exactly two incongruent solutions? Explain.</div>
+<div class="solutions"><details id="rqs-mar20-1-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="rqs-mar20-1-3-1">As we have seen on many previous questions, <span class="process-math">\(x^2\equiv 1\pmod{8}\)</span> for all odd numbers. So there are <span class="process-math">\(4\)</span> incongruent solutions modulo <span class="process-math">\(8\text{,}\)</span> which is not a contradiction because <span class="process-math">\(8\)</span> is not an odd prime number.</div></div></details></div></article></details></section></section><section class="subsection" id="sec-quadResIntro-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">9.2.2</span><span class="space"> </span><span class="title">Finish proof of the existence of primitive roots modulo a prime (10 minutes)</span>
+</h3></section><section class="subsection" id="sec-quadResIntro-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">9.2.3</span><span class="space"> </span><span class="title">Quadratic residues (40 minutes)</span>
+</h3>
+<article class="definition definition-like" id="def-quad-residue"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">134</span><span class="period">.</span><span class="space"> </span><span class="title">quadratic residue.</span>
+</h4> Let <span class="process-math">\(a,m\in\Z\)</span> with <span class="process-math">\(m\gt 0\)</span> and <span class="process-math">\((a,m)=1.\)</span> The <span class="process-math">\(a\)</span> is said to be a <dfn class="terminology">quadratic residue modulo <span class="process-math">\(m\)</span></dfn> if the quadratic congruence <span class="process-math">\(x^2\equiv a\pmod{m}\)</span> is solvable in <span class="process-math">\(\Z.\)</span> Otherwise, <span class="process-math">\(a\)</span> is said to be a <dfn class="terminology">quadratic nonresidue modulo <span class="process-math">\(m\)</span></dfn>.</article><article class="remark remark-like" id="sec-quadResIntro-5-3"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">135</span><span class="period">.</span>
+</h4>
+<div class="para" id="sec-quadResIntro-5-3-1-1">When finding squares modulo <span class="process-math">\(m,\)</span> we only need to check up to <span class="process-math">\(\frac{m}{2},\)</span> since <span class="process-math">\((-a)^2=a^2\)</span> and <span class="process-math">\(m-a\equiv -a\pmod{m}\)</span>
+</div></article><details id="sec-quadResIntro-5-4" class="activity project-like born-hidden-knowl"><summary><h4 class="heading">
+<span class="type">In Class Activity</span><span class="space"> </span><span class="codenumber">21</span><span class="period">.</span>
+</h4></summary><article class="activity project-like"><div class="para" id="sec-quadResIntro-5-4-1-1">Find all incongruent quadratic residues and nonresidues modulo <span class="process-math">\(2,3,4,5,6,7,8,\)</span> and <span class="process-math">\(9\text{.}\)</span>
+</div>
+<div class="solutions"><details id="sec-quadResIntro-5-4-2" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="sec-quadResIntro-5-4-2-1">I also included solutions modulo <span class="process-math">\(10,11,12\)</span>
+</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1  \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv m + 1  \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv 2m + 1 \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \cdots \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv (n-1)m + 1\pmod{m}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">Modulus</td>
+<td class="l m b0 r0 l0 t0" style="max-width:120">
+<div class="para" id="sec-quadResIntro-5-4-2-2-1-2-1">least nonnegative</div>
+<div class="para" id="sec-quadResIntro-5-4-2-2-1-2-2">reduced residues</div>
+</td>
+<td class="l m b0 r0 l0 t0 lines">quadratic residues</td>
+<td class="l m b0 r0 l0 t0 lines">quadratic nonresidues</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2  \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv m + 2  \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv 2m + 2 \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \cdots  \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv(n-1)m + 2\pmod{m}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">N/A</td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1,2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(m-1  \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv 2m - 1  \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv 3m -1 \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \cdots  \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv nm - 1\pmod{m}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1,3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
 </tr>
 <tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(m  \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv 2m \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv 3m\)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv \cdots  \)</span></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv nm\pmod{m}  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1,2,3,4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1,4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2,3\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1,5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(7\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1,2,3,4,5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\({1,2,4}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3,5,6\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1,3,5,7\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3,5,7\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(9\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1,2,4,5,7,8\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\({1,4,7}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2,4,8\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1,3,7,9\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\({1,9}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3,7\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(11\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">
+<span class="process-math">\(1,2,3,4,5,6,7,8,\)</span> <span class="process-math">\(9,10\)</span>
+</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\({1,3,4,5,9}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2,6,7,8,10\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(12\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1,5,7,11\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\({1}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5,7,11\)</span></td>
 </tr>
 </table></div>
-</div> <div class="para" id="thm-phi-multiplicative-3-3">For any <span class="process-math">\(b\)</span> in the range <span class="process-math">\(1,2,\dots,m\text{,}\)</span> define <span class="process-math">\(s_b\)</span> to be the number of integers <span class="process-math">\(a\)</span> in the range <span class="process-math">\(1,2,\dots, mn\)</span> such that <span class="process-math">\(a\equiv b \pmod{m}\)</span> and <span class="process-math">\(\gcd(a,mn)=1\text{.}\)</span> For each equivalence class <span class="process-math">\(b,\)</span> <span class="process-math">\(\gcd(b,m)\mid km +b\)</span> by linear combination. Thus, <span class="process-math">\(s_b={0}\)</span> if <span class="process-math">\((b,m)\gt 1.\)</span> If <span class="process-math">\(\gcd(b,m)=1\text{,}\)</span> the arithmetic progression, <span class="process-math">\(\{b, m + b, 2m + b, \dots, (n-1)m+ b\}\)</span> contains <span class="process-math">\(n\)</span> elements. By <a href="" class="xref" data-knowl="./knowl/xref/ch3-ex11.html" title="Problem 177: Strayer Chapter 3, Exercise 11">Strayer Chapter 3, Exercise 11</a>, the arithmetic progression is a <a href="" class="xref" data-knowl="./knowl/xref/def-comp-res-sys.html" title="Definition 57: complete residue system">complete residue system</a> modulo <span class="process-math">\(n,\)</span> so <span class="process-math">\(\phi(n)\)</span> elements are relatively prime to <span class="process-math">\(n\)</span> and thus <span class="process-math">\(mn.\)</span>
-</div> <div class="para" id="thm-phi-multiplicative-3-4">Thus, can see that when <span class="process-math">\((b,m)=1\text{,}\)</span> <span class="process-math">\(s_b=\phi(n)\)</span> and when <span class="process-math">\((b,m)\gt 1\text{,}\)</span> <span class="process-math">\(s_b={0}\text{.}\)</span>
-</div> <div class="para" id="thm-phi-multiplicative-3-5">Since all of the positive integers less than or equal to <span class="process-math">\(mn\)</span> is in exactly one of the congruence classes above and t he <span class="process-math">\(s_i\)</span> count how many integers in each congruence class are relatively prime to <span class="process-math">\(mn\text{,}\)</span> <span class="process-math">\(phi(mn)=s_0+s_1+\cdots +s_{m-1}.\)</span>
-</div> <div class="para" id="thm-phi-multiplicative-3-6">Since <span class="process-math">\(\phi(m)\)</span> of the <span class="process-math">\(s_i=\phi(n)\)</span> and the rest are 0, <span class="process-math">\(\phi(mn)=s_0+s_1+\cdots +s_{m-1}=\phi(m)\phi(n).\)</span>
+</div></details></div></article></details><article class="lemma theorem-like" id="lem-roots-pairs"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">136</span><span class="period">.</span><span class="space"> </span><span class="title">Generalized Porism 4.2.</span>
+</h4>
+<div class="para" id="lem-roots-pairs-2-1">Let <span class="process-math">\(a,m\in\Z\)</span> with <span class="process-math">\(m\gt 0\)</span> and <span class="process-math">\((a,m)=1.\)</span> If the quadratic congruence <span class="process-math">\(x^2\equiv a\pmod{m}\)</span> is solvable, say with <span class="process-math">\(x=x_0,\)</span> then  <span class="process-math">\(m-x_0\)</span> is also a solution. If <span class="process-math">\(m\gt 2,\)</span> then <span class="process-math">\(x_0\not\equiv m-x_0\pmod{m},\)</span> and solutions occur in pairs.</div></article><details id="lem-roots-pairs-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical" id="lem-roots-pairs-3-1">
+<div class="para">Let <span class="process-math">\(a,m\in\Z\)</span> with <span class="process-math">\(m\gt 0\)</span> and <span class="process-math">\((a,m)=1.\)</span> If the quadratic congruence <span class="process-math">\(x^2\equiv a\pmod{m}\)</span> is solvable, say with <span class="process-math">\(x=x_0.\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(m-x_0)^2\equiv (-x_0)^2\equiv x_0^2\equiv a\pmod{m}.
+\end{equation*}
+</div>
+</div> <div class="para" id="lem-roots-pairs-3-2">If <span class="process-math">\(x_0\equiv m-x_0\pmod{m},\)</span> then <span class="process-math">\(2x_0\equiv m\equiv 0 \pmod{m}\)</span> and <span class="process-math">\(m\mid 2x_0\)</span> by definition. Since <span class="process-math">\((a,m)=1,\)</span> it must be that <span class="process-math">\((x_0,m)=1\)</span> since <span class="process-math">\((x_0,m)\mid(a,m).\)</span> Thus, <span class="process-math">\(m\mid 2,\)</span> so <span class="process-math">\(m=2.\)</span> Therefore, when  <span class="process-math">\(m\gt 2,\)</span> then <span class="process-math">\(x_0\not\equiv m-x_0\pmod{m},\)</span> and solutions occur in pairs.</div></article></details><article class="remark remark-like" id="sec-quadResIntro-5-6"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">137</span><span class="period">.</span>
+</h4>
+<div class="para" id="sec-quadResIntro-5-6-1-1">Since <span class="process-math">\(x_0\equiv m-x_0\pmod{m}\)</span> implies <span class="process-math">\(x_0\equiv \frac{m}{2},\)</span> we can say that if <span class="process-math">\(x^2\equiv a\pmod{m}\)</span> is solvable and <span class="process-math">\(\frac{m}{2}\)</span> is <em class="emphasis">not</em> a solution, then solutions occur in pairs.</div></article><article class="proposition theorem-like" id="prop-number-sqrts"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">138</span><span class="period">.</span><span class="space"> </span><span class="title">Proposition 4.1.</span>
+</h4>
+<div class="para" id="prop-number-sqrts-2-1">Let <span class="process-math">\(p\)</span> be an odd prime number and let <span class="process-math">\(a\in\Z\)</span> with <span class="process-math">\(p\mid a.\)</span> Then the quadratic congruence <span class="process-math">\(x^2\equiv a\pmod{p}\)</span> has either no solutions or exactly two incongruent solutions modulo <span class="process-math">\(p\text{.}\)</span>
+</div></article><details id="prop-number-sqrts-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="prop-number-sqrts-3-1">Let <span class="process-math">\(p\)</span> be an odd prime number and let <span class="process-math">\(a\in\Z\)</span> with <span class="process-math">\(p\mid a.\)</span> Consider the quadratic congruence <span class="process-math">\(x^2\equiv a\pmod{p}.\)</span> If no solutions exist, we are done.</div> <div class="para" id="prop-number-sqrts-3-2">If solutions to the quadratic congruence exist, then <a href="" class="xref" data-knowl="./knowl/xref/lem-roots-pairs.html" title="Lemma 136: Generalized Porism 4.2">Generalized Porism 4.2</a> says that there are at least two solutions, since <span class="process-math">\(p\gt 2.\)</span> <a href="" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" title="Theorem 129: Theorem 5.7">Theorem 5.7</a> says that there are at most two solutions to <span class="process-math">\(x^2-a\equiv 0\pmod{p}\)</span> and therefore <span class="process-math">\(x^2\equiv a\pmod{p}.\)</span> Thus, there are exactly two incongruent solutions modulo <span class="process-math">\(p.\)</span>
+</div></article></details><article class="proposition theorem-like" id="prop-number-quad-residues"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">139</span><span class="period">.</span><span class="space"> </span><span class="title">Proposition 4.3.</span>
+</h4>
+<div class="para" id="prop-number-quad-residues-2-1">Let <span class="process-math">\(p\)</span> be an odd prime number. Then there are exactly <span class="process-math">\(\frac{p-1}{2}\)</span> incongruent quadratic residues modulo <span class="process-math">\(p\)</span> and exactly <span class="process-math">\(\frac{p-1}{2}\)</span> incongruent quadratic nonresidues modulo <span class="process-math">\(p.\)</span>
+</div></article><details id="prop-number-quad-residues-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical" id="prop-number-quad-residues-3-1">
+<div class="para">Consider the <span class="process-math">\(p-1\)</span> quadratic congruences</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-number-sqrts.html" id="prop-number-quad-residues-3-1-2">
+\begin{align*}
+x^2\amp \equiv 1\pmod{p}\\
+x^2\amp \equiv 2\pmod{p}\\
+\amp \vdots\\
+x^2\amp \equiv p-1\pmod{p}
+\end{align*}
+</div>
+<div class="para">Since each congruence has either zero or two incongruent solutions modulo <span class="process-math">\(p\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/prop-number-sqrts.html" title="Proposition 138: Proposition 4.1">Proposition 4.1</a>, and no integer is a solution to more than one of the congruences, exactly half are solvable. Therefore,  there are exactly <span class="process-math">\(\frac{p-1}{2}\)</span> incongruent quadratic residues modulo <span class="process-math">\(p\)</span> and exactly <span class="process-math">\(\frac{p-1}{2}\)</span> incongruent quadratic nonresidues modulo <span class="process-math">\(p.\)</span>
+</div>
 </div></article></details></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-phiIntro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-week8.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ch-week9-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="hwguide.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

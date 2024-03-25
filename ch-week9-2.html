@@ -106,7 +106,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-week9.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week9.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="hwguide.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-week9.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week9.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-quadResIntro.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\C}{\mathbb C}
@@ -391,13 +391,26 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-week9.html" class="internal"><span class="codenumber">9</span> <span class="title">Week9</span></a></div>
-<ul class="structural toc-item-list contains-active"><li class="toc-item toc-section active">
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="ch-week9-2.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Monday, March 18: Proof of Primitive Root Theorem</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week9-2.html#ch-week9-2-3" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Roots of unity (25 minutes)</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week9-2.html#ch-week9-2-4" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Primitive roots modulo a prime (25 minutes)</span></a></div></li>
 </ul>
-</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-quadResIntro.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Wednesday, March 20: Introduction to quadratic residues</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-quadResIntro.html#sec-quadResIntro-3" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-quadResIntro.html#rqs-mar20" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quadResIntro.html#sec-quadResIntro-4" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Finish proof of the existence of primitive roots modulo a prime (10 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quadResIntro.html#sec-quadResIntro-5" class="internal"><span class="codenumber">9.2.3</span> <span class="title">Quadratic residues (40 minutes)</span></a></div></li>
+</ul>
+</li>
+</ul>
 </li>
 <li class="toc-item toc-appendix">
 <div class="toc-title-box"><a href="hwguide.html" class="internal"><span class="codenumber">A</span> <span class="title">Homework Guide</span></a></div>
@@ -477,7 +490,7 @@ x^{q^s}\equiv 1\pmod{p}\tag{9.1}
 x^{q^s}\equiv 1\pmod{p}\tag{9.2}
 \end{equation}
 </div>
-<div class="para">Since <span class="process-math">\((x^{q^{s-1}})^q=x^{q^s},\)</span> all solutions to <a href="" class="xref" data-knowl="./knowl/xref/eqn-unity-2b.html" title="Equation 9.2">(9.2)</a> are solutions to <a href="" class="xref" data-knowl="./knowl/xref/eqn-unity-2a.html" title="Equation 9.1">(9.1)</a>. Thus, there are exactly <span class="process-math">\(q^s-q^{s-1}=q^{s-1}(q-1)\)</span> integers <span class="process-math">\(a\)</span> where <span class="process-math">\(a^{q^s}\equiv 1\pmod{p}\)</span> and <span class="process-math">\(a^{q^{s-1}}\not\equiv 1\pmod{p}.\)</span> Thus, by <a href="" class="xref" data-knowl="./knowl/xref/prop-order_divides_phi.html" title="Proposition 101: Proposition 5.1">Proposition 5.1</a>, <span class="process-math">\(\ord_p a \mid q^s\)</span> and <span class="process-math">\(\ord_p a\nmid q^{s-1}.\)</span> Since <span class="process-math">\(q\)</span> is prime, <span class="process-math">\(\ord_p a =q^s.\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/thm-phi-prime-power.html" title="Theorem 197: Theorem 3.3">Theorem 3.3</a>, <span class="process-math">\(\phi(q^s)=q^s-q^{s-1}=q^{s-1}(q-1),\)</span> so we have shown there are <span class="process-math">\(\phi(q^s)\)</span> incongruent integers with order <span class="process-math">\(q^s\)</span> modulo <span class="process-math">\(p\text{.}\)</span>
+<div class="para">Since <span class="process-math">\((x^{q^{s-1}})^q=x^{q^s},\)</span> all solutions to <a href="" class="xref" data-knowl="./knowl/xref/eqn-unity-2b.html" title="Equation 9.2">(9.2)</a> are solutions to <a href="" class="xref" data-knowl="./knowl/xref/eqn-unity-2a.html" title="Equation 9.1">(9.1)</a>. Thus, there are exactly <span class="process-math">\(q^s-q^{s-1}=q^{s-1}(q-1)\)</span> integers <span class="process-math">\(a\)</span> where <span class="process-math">\(a^{q^s}\equiv 1\pmod{p}\)</span> and <span class="process-math">\(a^{q^{s-1}}\not\equiv 1\pmod{p}.\)</span> Thus, by <a href="" class="xref" data-knowl="./knowl/xref/prop-order_divides_phi.html" title="Proposition 101: Proposition 5.1">Proposition 5.1</a>, <span class="process-math">\(\ord_p a \mid q^s\)</span> and <span class="process-math">\(\ord_p a\nmid q^{s-1}.\)</span> Since <span class="process-math">\(q\)</span> is prime, <span class="process-math">\(\ord_p a =q^s.\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/thm-phi-prime-power.html" title="Theorem 203: Theorem 3.3">Theorem 3.3</a>, <span class="process-math">\(\phi(q^s)=q^s-q^{s-1}=q^{s-1}(q-1),\)</span> so we have shown there are <span class="process-math">\(\phi(q^s)\)</span> incongruent integers with order <span class="process-math">\(q^s\)</span> modulo <span class="process-math">\(p\text{.}\)</span>
 </div>
 </div> <div class="para logical" id="thm-number-element-order-d-3-3">
 <div class="para">Now we will prove the general case. Let</div>
@@ -495,7 +508,7 @@ d=q_1^{s_1}q_2^{s_2}\cdots q_k^{s_k}
 </h4></summary><article class="activity project-like"><div class="para" id="ch-week9-2-4-5-1">Prove the following statement, which is the converse of <a href="" class="xref" data-knowl="./knowl/xref/read-prop-prime-root-generates.html" title="Proposition 110: Proposition 10.3.2">Proposition 10.3.2</a>: Let <span class="process-math">\(p\)</span> be prime, and let <span class="process-math">\(a\in\Z.\)</span> If every <span class="process-math">\(b\in\Z\)</span> such that <span class="process-math">\(p\nmid b\)</span> is congruent to a power of <span class="process-math">\(a\)</span> modulo <span class="process-math">\(p,\)</span> then <span class="process-math">\({a}\)</span> is a primitive root modulo <span class="process-math">\(p\text{.}\)</span>
 </div></article></details></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="ch-week9.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="hwguide.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ch-week9.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-quadResIntro.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
