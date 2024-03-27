@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">144</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem 4.6.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(p\)</span> be an odd prime number. Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\legendre{-1}{p}=
+\begin{cases}
+1, \amp  p\equiv 1\pmod{4}\\
+-1, \amp  p\equiv 3\pmod{4}
+\end{cases}.
+\end{equation*}
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para">Let <span class="process-math">\(p\)</span> be an odd prime number. Then from <a href="" class="xref" data-knowl="./knowl/xref/thm-euler-quads.html" title="Theorem 141: Euler’s Criterion">Euler’s Criterion</a>, <span class="process-math">\(\legendre{-1}{p}\equiv (-1)^{(p-1)/2}\pmod{p}.\)</span> Since both values are <span class="process-math">\(\pm1,\)</span> we can say <span class="process-math">\(\legendre{-1}{p}=(-1)^{(p-1)/2}.\)</span>
+</div> <div class="para logical">
+<div class="para">If <span class="process-math">\(p\equiv 1\pmod{4},\)</span> then there exists <span class="process-math">\(k\in\Z\)</span> such that <span class="process-math">\(p=4k+1.\)</span> Thus, <span class="process-math">\(\frac{p-1}{2}=2k\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\legendre{-1}{p}=(-1)^{(p-1)/2}=(-1)^{2k}=1.
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">If <span class="process-math">\(p\equiv 3\pmod{4},\)</span> then there exists <span class="process-math">\(k\in\Z\)</span> such that <span class="process-math">\(p=4k+3.\)</span> Thus, <span class="process-math">\(\frac{p-1}{2}=2k+1\)</span> and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\legendre{-1}{p}=(-1)^{(p-1)/2}=(-1)^{2k+1}=-1.
+\end{equation*}
+</div>
+</div></article></details><span class="incontext"><a class="internal" href="sec-EulerCriterion.html#thm-residue-neg1">in-context</a></span>
+</body>
+</html>

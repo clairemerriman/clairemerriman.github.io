@@ -116,6 +116,7 @@ window.MathJax = {
 \newcommand{\nequiv}{\not\equiv}
 \newcommand{\ord}{\operatorname{ord}}
 \newcommand{\ds}{\displaystyle}
+\newcommand{\legendre}[2]{\left(\frac{#1}{#2}\right)}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -390,7 +391,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-week9.html" class="internal"><span class="codenumber">9</span> <span class="title">Week9</span></a></div>
+<div class="toc-title-box"><a href="ch-week9.html" class="internal"><span class="codenumber">9</span> <span class="title">Week 9</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="ch-week9-2.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Monday, March 18: Proof of Primitive Root Theorem</span></a></div>
@@ -408,6 +409,40 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quadResIntro.html#sec-quadResIntro-4" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Finish proof of the existence of primitive roots modulo a prime (10 minutes)</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quadResIntro.html#sec-quadResIntro-5" class="internal"><span class="codenumber">9.2.3</span> <span class="title">Quadratic residues (40 minutes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-LegendreSym.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Friday, March 22: Legendre symbol</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-LegendreSym.html#sec-LegendreSym-3" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-LegendreSym.html#rqs-Mar22" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-LegendreSym.html#sec-LegendreSym-4" class="internal"><span class="codenumber">9.3.2</span> <span class="title">Quiz (15 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-LegendreSym.html#sec-LegendreSym-5" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Legendre symbol (35 minutes)</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-week10.html" class="internal"><span class="codenumber">10</span> <span class="title">Week 10</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-EulerCriterion.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Monday, March 25: Quadratic residue of <span class="process-math">\(-1\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-EulerCriterion.html#sec-EulerCriterion-3" class="internal"><span class="codenumber">10.1.1</span> <span class="title">Proof of Euler’s Criterion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-EulerCriterion.html#sec-EulerCriterion-4" class="internal"><span class="codenumber">10.1.2</span> <span class="title">When is <span class="process-math">\(-1\)</span> a quadratic residue?</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-quadRecIntro.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Wednesday, March 27: Introduction to quadratic reciprocity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-quadRecIntro.html#sec-quadRecIntro-3" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-quadRecIntro.html#rqs-Mar27" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quadRecIntro.html#sec-quadRecIntro-4" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Quadratic reciprocity (20 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-quadRecIntro.html#sec-quadRecIntro-5" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Quadratic reciprocity practice (30 minutes)</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -490,7 +525,7 @@ x^{q^s}\equiv 1\pmod{p}\tag{9.1}
 x^{q^s}\equiv 1\pmod{p}\tag{9.2}
 \end{equation}
 </div>
-<div class="para">Since <span class="process-math">\((x^{q^{s-1}})^q=x^{q^s},\)</span> all solutions to <a href="" class="xref" data-knowl="./knowl/xref/eqn-unity-2b.html" title="Equation 9.2">(9.2)</a> are solutions to <a href="" class="xref" data-knowl="./knowl/xref/eqn-unity-2a.html" title="Equation 9.1">(9.1)</a>. Thus, there are exactly <span class="process-math">\(q^s-q^{s-1}=q^{s-1}(q-1)\)</span> integers <span class="process-math">\(a\)</span> where <span class="process-math">\(a^{q^s}\equiv 1\pmod{p}\)</span> and <span class="process-math">\(a^{q^{s-1}}\not\equiv 1\pmod{p}.\)</span> Thus, by <a href="" class="xref" data-knowl="./knowl/xref/prop-order_divides_phi.html" title="Proposition 101: Proposition 5.1">Proposition 5.1</a>, <span class="process-math">\(\ord_p a \mid q^s\)</span> and <span class="process-math">\(\ord_p a\nmid q^{s-1}.\)</span> Since <span class="process-math">\(q\)</span> is prime, <span class="process-math">\(\ord_p a =q^s.\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/thm-phi-prime-power.html" title="Theorem 203: Theorem 3.3">Theorem 3.3</a>, <span class="process-math">\(\phi(q^s)=q^s-q^{s-1}=q^{s-1}(q-1),\)</span> so we have shown there are <span class="process-math">\(\phi(q^s)\)</span> incongruent integers with order <span class="process-math">\(q^s\)</span> modulo <span class="process-math">\(p\text{.}\)</span>
+<div class="para">Since <span class="process-math">\((x^{q^{s-1}})^q=x^{q^s},\)</span> all solutions to <a href="" class="xref" data-knowl="./knowl/xref/eqn-unity-2b.html" title="Equation 9.2">(9.2)</a> are solutions to <a href="" class="xref" data-knowl="./knowl/xref/eqn-unity-2a.html" title="Equation 9.1">(9.1)</a>. Thus, there are exactly <span class="process-math">\(q^s-q^{s-1}=q^{s-1}(q-1)\)</span> integers <span class="process-math">\(a\)</span> where <span class="process-math">\(a^{q^s}\equiv 1\pmod{p}\)</span> and <span class="process-math">\(a^{q^{s-1}}\not\equiv 1\pmod{p}.\)</span> Thus, by <a href="" class="xref" data-knowl="./knowl/xref/prop-order_divides_phi.html" title="Proposition 101: Proposition 5.1">Proposition 5.1</a>, <span class="process-math">\(\ord_p a \mid q^s\)</span> and <span class="process-math">\(\ord_p a\nmid q^{s-1}.\)</span> Since <span class="process-math">\(q\)</span> is prime, <span class="process-math">\(\ord_p a =q^s.\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/thm-phi-prime-power.html" title="Theorem 213: Theorem 3.3">Theorem 3.3</a>, <span class="process-math">\(\phi(q^s)=q^s-q^{s-1}=q^{s-1}(q-1),\)</span> so we have shown there are <span class="process-math">\(\phi(q^s)\)</span> incongruent integers with order <span class="process-math">\(q^s\)</span> modulo <span class="process-math">\(p\text{.}\)</span>
 </div>
 </div> <div class="para logical" id="thm-number-element-order-d-3-3">
 <div class="para">Now we will prove the general case. Let</div>
