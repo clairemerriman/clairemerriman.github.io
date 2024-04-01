@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Friday, March 15: Lagrange’s Theorem</title>
+<title>Week 11</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -106,7 +106,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-primeRootIntro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week8.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-week9.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-quadRecIntro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="root--1-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-gaussLemIntro.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\C}{\mathbb C}
@@ -348,9 +348,9 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-week8.html" class="internal"><span class="codenumber">8</span> <span class="title">Week 8</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-order.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Monday, March 11: Order of elements modulo <span class="process-math">\(m\)</span></span></a></div>
 <ul class="structural toc-item-list">
@@ -377,7 +377,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-primeRootIntro.html#sec-primeRootIntro-4" class="internal"><span class="codenumber">8.3.2</span> <span class="title">Primitive roots and comparing Strayer to the reading</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-LagrangeThem.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Friday, March 15: Lagrange’s Theorem</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-reading-questions">
@@ -447,7 +447,7 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter active">
 <div class="toc-title-box"><a href="ch-week11.html" class="internal"><span class="codenumber">11</span> <span class="title">Week 11</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gaussLemIntro.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Monday, April 1: Gauss’s Lemma and Practice</span></a></div>
@@ -490,178 +490,12 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">D</span> <span class="title">Notation list</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-LagrangeThem"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">8.4</span><span class="space"> </span><span class="title">Friday, March 15: Lagrange’s Theorem</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-week11"><h2 class="heading">
+<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">11</span><span class="space"> </span><span class="title">Week 11</span>
 </h2>
-<article class="objectives goal-like" id="sec-LagrangeThem-2"><h3 class="heading"><span class="type">Objectives</span></h3>
-<ul class="disc"><li id="sec-LagrangeThem-2-1-1"><div class="para" id="p-derived-sec-LagrangeThem-2-1-1">Prove Lagrange’s Theorem <span class="process-math">\(m\)</span>
-</div></li></ul></article><section class="reading-questions" id="sec-LagrangeThem-3"><h3 class="heading hide-type">
-<span class="type">Reading Questions</span><span class="space"> </span><span class="codenumber">8.4.1</span><span class="space"> </span><span class="title">Reading Questions</span>
-</h3>
-<section class="introduction" id="sec-LagrangeThem-3-1"><div class="para" id="sec-LagrangeThem-3-1-1">Section 5.3</div></section><section class="exercises" id="rqs-Mar15"><h4 class="heading hide-type">
-<span class="type">Turn In</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Turn In</span>
-</h4>
-<details id="rqs-Mar15-1" class="exercise exercise-like born-hidden-knowl"><summary><h5 class="heading">
-<span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">Exercise 10a.</span>
-</h5></summary><article class="exercise exercise-like"><div class="para" id="rqs-Mar15-1-2-1">Determine the number of incongruent primitive roots modulo <span class="process-math">\(41\)</span>
-</div>
-<div class="solutions"><details id="rqs-Mar15-1-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="rqs-Mar15-1-3-1">Since <span class="process-math">\(41\)</span> is prime, <a href="" class="xref" data-knowl="./knowl/xref/read-thm-number-prime-roots.html" title="Theorem 118: Theorem 10.3.7">Theorem 118</a> says there are <span class="process-math">\(\phi(41)=40\)</span> primitive roots modulo <span class="process-math">\(41.\)</span>
-</div></div></details></div></article></details><details id="rqs-Mar15-2" class="exercise exercise-like born-hidden-knowl"><summary><h5 class="heading">
-<span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Exercise 11a.</span>
-</h5></summary><article class="exercise exercise-like"><div class="para" id="rqs-Mar15-2-2-1">Find all incongruent integers having order <span class="process-math">\(6\)</span> modulo <span class="process-math">\(31.\)</span>
-</div>
-<div class="solutions"><details id="rqs-Mar15-2-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
-<div class="para logical" id="rqs-Mar15-2-3-1">
-<div class="para">From Appendix E, Table 3, <span class="process-math">\(3\)</span> is a primitive root modulo <span class="process-math">\(31.\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/prop-compare-order.html" title="Proposition 126: Proposition 5.4">Proposition 5.4</a>, the elements of order <span class="process-math">\(6\)</span> modulo <span class="process-math">\(31\)</span> are those where</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-compare-order.html">
-\begin{equation*}
-6=\ord_{31}(3^i)=\frac{\phi(31)}{(\phi(31),i)}=\frac{30}{5}.
-\end{equation*}
-</div>
-<div class="para">The positive integers less than <span class="process-math">\(31\)</span> where <span class="process-math">\((30,i)=5\)</span> are <span class="process-math">\(i=5,25.\)</span> So the elements of order <span class="process-math">\(6\)</span> are <span class="process-math">\(3^5, 3^{25}.\)</span>
-</div>
-</div> <div class="para logical" id="rqs-Mar15-2-3-2">
-<div class="para">The problem does not ask for the least nonnegative residues. However, we can also find those:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-3^5\equiv (-4)(9)\equiv -5\equiv 26\pmod{31}
-\end{equation*}
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-3^{25}\equiv (-5)^{5}\equiv (-6)^2(-5)\equiv -25\equiv 6\pmod{31}
-\end{equation*}
-</div>
-</div>
-</div></details></div></article></details></section></section><section class="subsection" id="sec-LagrangeThem-4"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.4.2</span><span class="space"> </span><span class="title">Quiz (10 minutes)</span>
-</h3></section><section class="subsection" id="sec-LagrangeThem-5"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">8.4.3</span><span class="space"> </span><span class="title">Lagrange’s Theorem</span>
-</h3>
-<div class="para" id="sec-LagrangeThem-5-2">The goal is to finish proving the <a href="" class="xref" data-knowl="./knowl/xref/thm-prime-roots.html" title="Theorem 112: Primitive Root Theorem">Primitive Root Theorem</a> with a look at polynomials.</div>
-<article class="theorem theorem-like" id="thm-lagrange"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">129</span><span class="space"> </span><span class="creator">(Lagrange)</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem 5.7.</span>
-</h4>
-<div class="para logical" id="thm-lagrange-3-1">
-<div class="para">Let <span class="process-math">\(p\)</span> be a prime number and let</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f(x)=a_n x^n +a_{n-1} x^{n-1}+\cdots +a_1 x+a_0
-\end{equation*}
-</div>
-<div class="para">for integers <span class="process-math">\(a_0,a_1,\dots,a_n.\)</span> Let <span class="process-math">\(d\)</span> be the greatest integer such that <span class="process-math">\(a_d\not\equiv 0\pmod{p}t\)</span> then <span class="process-math">\(d\)</span> is the <dfn class="terminology">degree of <span class="process-math">\(f(x)\)</span> modulo <span class="process-math">\(p.\)</span></dfn> Then the congruence</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f(x)\equiv 0\pmod{p}
-\end{equation*}
-</div>
-<div class="para">has at most <span class="process-math">\(d\)</span> incongruent solutions. We call these solutions <dfn class="terminology">roots of <span class="process-math">\(f(x)\)</span> modulo <span class="process-math">\(p.\)</span></dfn>
-</div>
-</div></article><details id="thm-lagrange-4" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof from class.</span></h4></summary><article class="hiddenproof"> <div class="para" id="thm-lagrange-4-2">We proceed by induction on the degree <span class="process-math">\(d.\)</span>
-</div> <div class="para" id="thm-lagrange-4-3">First, for degree <span class="process-math">\(d=0,\)</span> note that <span class="process-math">\(f(x)\equiv a_0\not\equiv 0\pmod{p}\)</span> by assumption, so <span class="process-math">\(f(x)\equiv 0\pmod{p}\)</span> for <span class="process-math">\(0\)</span> integers.</div> <div class="para" id="thm-lagrange-4-4">
-<em class="emphasis">Base Case: <span class="process-math">\(d=1\text{.}\)</span></em> Then <span class="process-math">\(f(x)\equiv a_1 x+a_0\pmod{p}\text{.}\)</span> Since <span class="process-math">\(a_1\not\equiv 0\pmod{p}\)</span> by assumption, <span class="process-math">\(p\nmid a_1.\)</span> Since <span class="process-math">\(p\)</span> is prime, <span class="process-math">\((a_1,p)=1.\)</span> Thus, by <a href="" class="xref" data-knowl="./knowl/xref/cor-condition-invertible.html" title="Corollary 64: Corollary 2.8">Corollary 2.8</a>, there is a unique solution modulo <span class="process-math">\(p\)</span> to <span class="process-math">\(a_1\not\equiv 0\pmod{p}.\)</span>
-</div> <div class="para logical" id="thm-lagrange-4-5">
-<div class="para">
-<em class="emphasis">Induction Hypothesis:</em> Assume that for all <span class="process-math">\(k\lt d,\)</span> if <span class="process-math">\(f(x)\)</span> has degree <span class="process-math">\(k\)</span> modulo <span class="process-math">\(p,\)</span> then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f(x)\equiv a_k x^k +a_{k-1}x^{k-1}+\cdots+a_1x+a_0\equiv 0 \pmod{p}
-\end{equation*}
-</div>
-<div class="para">has at most <span class="process-math">\(k\)</span> incongruent solutions.</div>
-</div> <div class="para logical" id="thm-lagrange-4-6">
-<div class="para">We will proceed by contradiction. That is, assume that there exists <span class="process-math">\(f(x)\)</span> with degree <span class="process-math">\(d\)</span> modulo <span class="process-math">\(p\)</span> and at least <span class="process-math">\(d+1\)</span> roots modulo <span class="process-math">\(p.\)</span> Call these roots <span class="process-math">\(r_1,r_2,\dots,r_d,r_{d+1}.\)</span> Consider the polynomial</div>
-<div class="displaymath process-math">
-\begin{equation*}
-g(x)=a_d(x-r_1)(x-r_2)\cdots (x-r_d).
-\end{equation*}
-</div>
-<div class="para">Then <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> have the same leading term modulo <span class="process-math">\(p.\)</span> The polynomial <span class="process-math">\(h(x)=f(x)-g(x)\)</span> is either the <span class="process-math">\(0\)</span> polynomial or it has degree less than <span class="process-math">\(d\)</span> modulo <span class="process-math">\(p.\)</span>
-</div>
-</div> <div class="para logical" id="thm-lagrange-4-7">
-<div class="para">If <span class="process-math">\(h(x)\)</span> is the <span class="process-math">\(0\)</span> polynomial, then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-h(r_{1})\equiv h(r_2)\equiv\cdots\equiv h(r_{d+1})\equiv 0\pmod{p}
-\end{equation*}
-</div>
-<div class="para">and</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f(r_{1})\equiv f(r_2)\equiv\cdots\equiv f(r_{d+1})\equiv 0\pmod{p}
-\end{equation*}
-</div>
-<div class="para">implies</div>
-<div class="displaymath process-math">
-\begin{equation*}
-g(r_{1})\equiv g(r_2)\equiv\cdots\equiv g(r_{d+1})\equiv 0\pmod{p}.
-\end{equation*}
-</div>
-<div class="para">That is,</div>
-<div class="displaymath process-math">
-\begin{equation*}
-a_d(r_{d+1}-r_1)(r_{d+1}-r_2)\cdots(r_{d+1}-r_d)\equiv 0\pmod{p}.
-\end{equation*}
-</div>
-<div class="para">Since <span class="process-math">\(p\)</span> is prime, repeated applications of Homework 4, Problem 9a gives that one of <span class="process-math">\(a_d,r_{d+1}-r_1,r_{d+1}-r_2,\dots,r_{d+1}-r_d\)</span> is <span class="process-math">\(0\)</span> modulo <span class="process-math">\(p.\)</span> Now, <span class="process-math">\(a_d\not\equiv0\pmod{p}\)</span> by assumption, and the <span class="process-math">\(r_i\)</span> are distinct modulo <span class="process-math">\(p,\)</span> so we have a contradiction. Thus, <span class="process-math">\(h(x)\)</span> is not the <span class="process-math">\(0\)</span> polynomial.</div>
-</div> <div class="para" id="thm-lagrange-4-8">Since <span class="process-math">\(r_1,r_2,\dots,r_d\)</span> are roots of both <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x),\)</span> they are also roots of <span class="process-math">\(h(x).\)</span> This contradicts the induction hypothesis, since <span class="process-math">\(h(x)\)</span> has degree less than <span class="process-math">\(d\)</span> by construction.</div> <div class="para" id="thm-lagrange-4-9">Thus, <span class="process-math">\(f(x)\)</span> has at most <span class="process-math">\(d\)</span> incongruent solution modulo <span class="process-math">\(p.\)</span>
-</div></article></details><details id="thm-lagrange-5" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Modified proof from Strayer.</span></h4></summary><article class="hiddenproof"> <div class="para" id="thm-lagrange-5-2">We proceed by induction on the degree <span class="process-math">\(d.\)</span>
-</div> <div class="para" id="thm-lagrange-5-3">First, for degree <span class="process-math">\(d=0,\)</span> note that <span class="process-math">\(f(x)\equiv a_0\not\equiv 0\pmod{p}\)</span> by assumption, so <span class="process-math">\(f(x)\equiv 0\pmod{p}\)</span> for <span class="process-math">\(0\)</span> integers.</div> <div class="para" id="thm-lagrange-5-4">
-<em class="emphasis">Base Case: <span class="process-math">\(d=1\text{.}\)</span></em> Then <span class="process-math">\(f(x)\equiv a_1 x+a_0\pmod{p}\text{.}\)</span> Since <span class="process-math">\(a_1\not\equiv 0\pmod{p}\)</span> by assumption, <span class="process-math">\(p\nmid a_1.\)</span> Since <span class="process-math">\(p\)</span> is prime, <span class="process-math">\((a_1,p)=1.\)</span> Thus, by <a href="" class="xref" data-knowl="./knowl/xref/cor-condition-invertible.html" title="Corollary 64: Corollary 2.8">Corollary 2.8</a>, there is a unique solution modulo <span class="process-math">\(p\)</span> to <span class="process-math">\(a_1\not\equiv 0\pmod{p}.\)</span>
-</div> <div class="para logical" id="thm-lagrange-5-5">
-<div class="para">
-<em class="emphasis">Induction Hypothesis:</em> Assume that for all <span class="process-math">\(k\lt d,\)</span> if <span class="process-math">\(f(x)\)</span> has degree <span class="process-math">\(k\)</span> modulo <span class="process-math">\(p,\)</span> then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f(x)\equiv a_k x^k +a_{k-1}x^{k-1}+\cdots+a_1x+a_0\equiv 0 \pmod{p}
-\end{equation*}
-</div>
-<div class="para">has at most <span class="process-math">\(k\)</span> incongruent solutions.</div>
-</div> <div class="para logical" id="thm-lagrange-5-6">
-<div class="para">If the congruence <span class="process-math">\(f(x)\equiv 0\pmod{p}\)</span> has no solutions we are done. Otherwise, assume that there exists at least one solution, say <span class="process-math">\(a.\)</span> Dividing <span class="process-math">\(f(x)\)</span> by <span class="process-math">\((x-a)\)</span> gives</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f(x)\equiv (x-a)q(x)\pmod{p}
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\(q(x)\)</span> is a polynomial of degree <span class="process-math">\(d-1\)</span> modulo <span class="process-math">\(p.\)</span> Since <span class="process-math">\(q(x)\)</span> has at most <span class="process-math">\(d-1\)</span> roots modulo <span class="process-math">\(p\)</span> by the induction hypothesis, there are at most <span class="process-math">\(d-1\)</span> incongruent additional roots of <span class="process-math">\(f(x)\)</span> modulo <span class="process-math">\(p\text{.}\)</span> Thus, there are a total of at most <span class="process-math">\(d\)</span> incongruent roots modulo <span class="process-math">\(p.\)</span>
-</div>
-</div></article></details><article class="proposition theorem-like" id="prop-roots-unity"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">130</span><span class="period">.</span><span class="space"> </span><span class="title">Proposition 5.8.</span>
-</h4>
-<div class="para logical" id="prop-roots-unity-2-1">
-<div class="para">Let <span class="process-math">\(p\)</span> be prime and <span class="process-math">\(m\)</span> a positive integer where <span class="process-math">\(m\mid p-1\text{.}\)</span> Then</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x^m\equiv 1\pmod{p}
-\end{equation*}
-</div>
-<div class="para">has <span class="process-math">\(m\)</span> incongruent solutions modulo <span class="process-math">\(p.\)</span>
-</div>
-</div></article><details id="prop-roots-unity-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical" id="prop-roots-unity-3-1">
-<div class="para">Let <span class="process-math">\(p\)</span> be prime and <span class="process-math">\(m\)</span> a positive integer where <span class="process-math">\(m\mid p-1\text{.}\)</span> Then there exists <span class="process-math">\(k\in\Z\)</span> such that <span class="process-math">\(mk=p-1.\)</span> Then</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/FlT.html">
-\begin{equation*}
-x^{p-1}=(x^m-1)(x^{(k-1)m}+x^{(k-2)m}+\cdots+x^{2m}+x^m+1)
-\end{equation*}
-</div>
-<div class="para">By <a href="" class="xref" data-knowl="./knowl/xref/FlT.html" title="Corollary 82: Fermat’s Little Theorem">Fermat’s Little Theorem</a>, there are <span class="process-math">\(p-1\)</span> incongruent solutions to <span class="process-math">\(x^{p-1}-1\equiv0\pmod{p},\)</span> namely <span class="process-math">\(1,2,\dots,p-1.\)</span> We will show that <span class="process-math">\(m\)</span> of these are solutions to <span class="process-math">\(x^m-1\equiv 0\pmod{p}\)</span> and the rest are solutions to <span class="process-math">\(x^{(k-1)m}+x^{(k-2)m}+\cdots+x^{2m}+x^m+1\equiv 0\pmod{p}.\)</span>
-</div>
-</div> <div class="para" id="prop-roots-unity-3-2">By <a href="" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" title="Theorem 129: Theorem 5.7">Theorem 5.7</a>, there are at most <span class="process-math">\((k-1)m\)</span> solutions to <span class="process-math">\(x^{(k-1)m}+x^{(k-2)m}+\cdots+x^{2m}+x^m+1\equiv 0\pmod{p}.\)</span> Thus, there are at least <span class="process-math">\(p-1-(k-1)m=m\)</span> incongruent solutions to <span class="process-math">\(x^m-1\equiv 0\pmod{p}.\)</span> Since there are also at least <span class="process-math">\(m\)</span> incongruent solutions to <span class="process-math">\(x^m-1\equiv 0\pmod{p}\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" title="Theorem 129: Theorem 5.7">Theorem 5.7</a>, there are exactly <span class="process-math">\(m\)</span> incongruent solutions to <span class="process-math">\(x^m-1\equiv 0\pmod{p}\)</span> and thus <span class="process-math">\(x^m\equiv 1\pmod{p}.\)</span>
-</div></article></details><article class="definition definition-like" id="def-root-unity"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">131</span><span class="period">.</span><span class="space"> </span><span class="title">Roots of unity.</span>
-</h4> <div class="para logical" id="def-root-unity-2-1">
-<div class="para">Let <span class="process-math">\(p\)</span> be prime and <span class="process-math">\(m\)</span> a positive integer. We call the solutions to</div>
-<div class="displaymath process-math">
-\begin{equation*}
-x^m\equiv 1\pmod{p}
-\end{equation*}
-</div>
-<div class="para">the <dfn class="terminology"><span class="process-math">\(m^{th}\)</span> roots of unity modulo <span class="process-math">\(p.\)</span></dfn>
-</div>
-</div></article></section></section></div>
+<nav class="summary-links"><ul><li><a href="sec-gaussLemIntro.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Monday, April 1: Gauss’s Lemma and Practice</span></a></li></ul></nav></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-primeRootIntro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-week9.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-quadRecIntro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-gaussLemIntro.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
