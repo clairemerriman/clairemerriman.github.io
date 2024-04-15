@@ -116,6 +116,7 @@ window.MathJax = {
 \newcommand{\nequiv}{\not\equiv}
 \newcommand{\ord}{\operatorname{ord}}
 \newcommand{\ds}{\displaystyle}
+\newcommand{\floor}[1]{\left\lfloor{#1}\right\rfloor}
 \newcommand{\legendre}[2]{\left(\frac{#1}{#2}\right)}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -449,13 +450,32 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-week11.html" class="internal"><span class="codenumber">11</span> <span class="title">Week 11</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gaussLemIntro.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Monday, April 1: Gauss’s Lemma and Practice</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gaussLemIntro.html#sec-gaussLemIntro-3" class="internal"><span class="codenumber">11.1.1</span> <span class="title">Statement of Guass’s Lemma (20 minutes)</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gaussLemIntro.html#sec-gaussLemIntro-4" class="internal"><span class="codenumber">11.1.2</span> <span class="title">Practice Problems (30 minutes)</span></a></div></li>
 </ul>
-</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gaussLem.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Wednesday, April 3: Proving Gauss’s Lemma and the Quadratic Residue of <span class="process-math">\(2\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-gaussLem.html#sec-gaussLem-3" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gaussLem.html#rqs-Apr3" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gaussLem.html#sec-gaussLem-4" class="internal"><span class="codenumber">11.2.2</span> <span class="title">Proof of Guass’s Lemma (30 minutes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-proveQR.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Friday, April 5: Geometric Lemma for Quadratic reciprocity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-proveQR.html#sec-proveQR-3" class="internal"><span class="codenumber">11.3.1</span> <span class="title">Quiz (10 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-proveQR.html#sec-proveQR-4" class="internal"><span class="codenumber">11.3.2</span> <span class="title">Proof of quadratic reciprocity (40 minutes)</span></a></div></li>
+</ul>
+</li>
+</ul>
 </li>
 <li class="toc-item toc-appendix">
 <div class="toc-title-box"><a href="hwguide.html" class="internal"><span class="codenumber">A</span> <span class="title">Homework Guide</span></a></div>
@@ -494,15 +514,15 @@ window.MathJax = {
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">C.2</span><span class="space"> </span><span class="title">Prime facts</span>
 </h2>
 <article class="lemma theorem-like" id="lem-irreducible-prime"><h3 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">206</span><span class="space"> </span><span class="creator">(Euclid)</span><span class="period">.</span><span class="space"> </span><span class="title">Lemma 1.14.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">212</span><span class="space"> </span><span class="creator">(Euclid)</span><span class="period">.</span><span class="space"> </span><span class="title">Lemma 1.14.</span>
 </h3>
 <div class="para" id="lem-irreducible-prime-3-1">Let <span class="process-math">\(a,b,p\in\Z\)</span> with <span class="process-math">\(p\)</span> prime. If <span class="process-math">\(p\mid ab,\)</span> then <span class="process-math">\(p\mid a\)</span> or <span class="process-math">\(p\mid b.\)</span>
 </div></article><article class="corollary theorem-like" id="cor-irreducible-prime"><h3 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">207</span><span class="period">.</span><span class="space"> </span><span class="title">Corollary 1.15.</span>
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">213</span><span class="period">.</span><span class="space"> </span><span class="title">Corollary 1.15.</span>
 </h3>
 <div class="para" id="cor-irreducible-prime-2-1">Let <span class="process-math">\(a_1,a_2,\dots,a_n,p\in\Z\)</span> with <span class="process-math">\(p\)</span> prime. If <span class="process-math">\(p\mid a_1a_2\cdots a_n,\)</span> then <span class="process-math">\(p\mid a_i\)</span> for some <span class="process-math">\(i.\)</span>
 </div></article><article class="proposition theorem-like" id="prop-form-lcm-gcd"><h3 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">208</span><span class="period">.</span><span class="space"> </span><span class="title">Proposition 1.17.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">214</span><span class="period">.</span><span class="space"> </span><span class="title">Proposition 1.17.</span>
 </h3>
 <div class="para logical" id="prop-form-lcm-gcd-2-1">
 <div class="para">Let <span class="process-math">\(a,b\in\Z\)</span> with <span class="process-math">\(a,b\gt 1.\)</span> Write <span class="process-math">\(a=p_1^{a_1}p_2^{a_2}\cdots  p_n^{a_n}\)</span> and <span class="process-math">\(b=p_1^{b_1}p_2^{b_2}\cdots p_n^{b_n}\)</span> where <span class="process-math">\(p_1,p_2,\dots,p_n\)</span> are distinct primes and <span class="process-math">\({a_1},{a_2}\cdots,{a_n},{b_1},{b_2},\cdots,{b_n}\)</span> are nonnegative integers (possibly zero). Then</div>
@@ -518,11 +538,11 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div></article><article class="theorem theorem-like" id="thm-prod-lcm-gcd"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">209</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem 1.19.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">215</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem 1.19.</span>
 </h3>
 <div class="para" id="thm-prod-lcm-gcd-2-1">Let <span class="process-math">\(a,b\in\Z\)</span> with <span class="process-math">\(a,b\gt 0.\)</span> Then <span class="process-math">\((a,b)[a,b]=ab.\)</span>
 </div></article><article class="definition definition-like" id="def-lcm"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">210</span><span class="period">.</span><span class="space"> </span><span class="title">Least common multiple.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">216</span><span class="period">.</span><span class="space"> </span><span class="title">Least common multiple.</span>
 </h3>  <div class="para" id="def-lcm-4">If <span class="process-math">\(a\mid c\)</span> and <span class="process-math">\(b\mid c\)</span> then <span class="process-math">\(c\)</span> is a <dfn class="terminology">common multiple</dfn> of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>
 </div> <div class="para" id="def-lcm-5">The least positive common multiple of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> is called the <dfn class="terminology">least common multiple of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span></dfn> and is denoted <span class="process-math">\(\lcm[a,b]\)</span> or just <span class="process-math">\([a,b]\text{.}\)</span>
 </div> <div class="para" id="def-lcm-6">If we want the least common multiple of several integers at once we denote that by <span class="process-math">\(\lcm[b_1,b_2,b_3,\dots,b_n]\)</span> or <span class="process-math">\([b_1,b_2,b_3,\dots,b_n]\text{.}\)</span>

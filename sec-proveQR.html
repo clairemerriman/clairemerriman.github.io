@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Wednesday, February 14: More congruence facts</title>
+<title>Friday, April 5: Geometric Lemma for Quadratic reciprocity</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -106,7 +106,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-modIntro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-week5-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-gaussLem.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-week11.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="hwguide.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\C}{\mathbb C}
@@ -266,9 +266,9 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-week5.html" class="internal"><span class="codenumber">5</span> <span class="title">Week 5</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-modIntro.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Monday, February 12: Peer review and introduction to congruences</span></a></div>
 <ul class="structural toc-item-list">
@@ -276,7 +276,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-modIntro.html#sec-modIntro-4" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Peer review Chapter 1 Exercise 83 (20 minutes)</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="ch-week5-3.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Wednesday, February 14: More congruence facts</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch-week5-3.html#ch-week5-3-3" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Basic facts of working modulo <span class="process-math">\(m\)</span></span></a></div></li></ul>
 </li>
@@ -448,9 +448,9 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-week11.html" class="internal"><span class="codenumber">11</span> <span class="title">Week 11</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gaussLemIntro.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Monday, April 1: Gauss’s Lemma and Practice</span></a></div>
 <ul class="structural toc-item-list">
@@ -468,7 +468,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gaussLem.html#sec-gaussLem-4" class="internal"><span class="codenumber">11.2.2</span> <span class="title">Proof of Guass’s Lemma (30 minutes)</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
+<li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="sec-proveQR.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Friday, April 5: Geometric Lemma for Quadratic reciprocity</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-proveQR.html#sec-proveQR-3" class="internal"><span class="codenumber">11.3.1</span> <span class="title">Quiz (10 minutes)</span></a></div></li>
@@ -510,1017 +510,104 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">D</span> <span class="title">Notation list</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="ch-week5-3"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">5.2</span><span class="space"> </span><span class="title">Wednesday, February 14: More congruence facts</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-proveQR"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">11.3</span><span class="space"> </span><span class="title">Friday, April 5: Geometric Lemma for Quadratic reciprocity</span>
 </h2>
-<article class="objectives goal-like" id="ch-week5-3-2"><h3 class="heading"><span class="type">Objectives</span></h3>
-<ul class="disc"><li id="ch-week5-3-2-1-1"><div class="para" id="p-derived-ch-week5-3-2-1-1">Prove that <span class="process-math">\(\{0,1,\dots,m-1\}\)</span> is a complete residue system modulo <span class="process-math">\(m\text{.}\)</span>
-</div></li></ul></article><section class="subsection" id="ch-week5-3-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="space"> </span><span class="title">Basic facts of working modulo <span class="process-math">\(m\)</span></span>
+<article class="objectives goal-like" id="sec-proveQR-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ul class="disc">
+<li id="sec-proveQR-2-1-1"><div class="para" id="p-derived-sec-proveQR-2-1-1">Count lattice point in a rectangle with side lengths <span class="process-math">\(\frac{p-1}{2}\)</span> and <span class="process-math">\(\frac{q-1}{2}\)</span> two different ways</div></li>
+<li id="sec-proveQR-2-1-2"><div class="para" id="p-derived-sec-proveQR-2-1-2">Use the two counting methods to prove quadratic reciprocity</div></li>
+</ul></article><section class="subsection" id="sec-proveQR-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">11.3.1</span><span class="space"> </span><span class="title">Quiz (10 minutes)</span>
+</h3></section><section class="subsection" id="sec-proveQR-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">11.3.2</span><span class="space"> </span><span class="title">Proof of quadratic reciprocity (40 minutes)</span>
 </h3>
-<article class="definition definition-like" id="def-comp-res-sys"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">57</span><span class="period">.</span><span class="space"> </span><span class="title">complete residue system.</span>
-</h4> <div class="para" id="def-comp-res-sys-2-1">Let <span class="process-math">\(a,m\in\Z\)</span> with <span class="process-math">\(m\gt 0\text{.}\)</span> We call the set of all <span class="process-math">\(b\in\Z\)</span> such that <span class="process-math">\(a\equiv b \pmod{m}\)</span> the <em class="emphasis">equivalence class of <span class="process-math">\(a\text{.}\)</span></em> A set of integers such that every integer is congruent modulo <span class="process-math">\(m\)</span> is called a <em class="emphasis">complete residue system modulo <span class="process-math">\(m\text{.}\)</span></em>
-</div></article><article class="corollary theorem-like" id="cor-mod-partition"><h4 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">58</span><span class="period">.</span><span class="space"> </span><span class="title">Consequence 2.2.</span>
-</h4>
-<div class="para" id="cor-mod-partition-2-1">Let <span class="process-math">\(m\)</span> be a positive integer. Then equivalence modulo <span class="process-math">\(m\)</span> partition the integers. That is, every integer is in exactly one equivalence class modulo <span class="process-math">\(m\text{.}\)</span>
-</div></article><details id="cor-mod-partition-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="cor-mod-partition-3-1">This is an immediate consequence of the fact that equivalence modulo <span class="process-math">\(m\)</span> is an equivalence relation.</div></article></details><div class="para" id="ch-week5-3-3-4">Notice that this arguments also simplifies the proof the <span class="process-math">\(\{0,1,\dots,m-1\}\)</span> is a complete residue system modulo <span class="process-math">\(m\text{.}\)</span>
+<div class="para" id="sec-proveQR-4-2">We will finally do (most of) the proof of <a href="" class="xref" data-knowl="./knowl/xref/quad-rec-standard-form.html" title="Theorem 146: Law of Quadratic Reciprocity">Law of Quadratic Reciprocity</a>
 </div>
-<article class="proposition theorem-like" id="prop-complete-residue"><h4 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">59</span><span class="period">.</span><span class="space"> </span><span class="title">Strayer, Proposition 2.3.</span>
+<article class="definition definition-like" id="sec-proveQR-4-3"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">156</span><span class="period">.</span>
 </h4>
-<div class="para" id="prop-complete-residue-2-1">The set <span class="process-math">\(\{0,1,\dots,m-1\}\)</span> is a complete residue system modulo <span class="process-math">\(m\text{.}\)</span>
-</div></article><details id="prop-complete-residue-3" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para" id="prop-complete-residue-3-1">Let <span class="process-math">\(a,m\in\Z\)</span> with <span class="process-math">\(m\gt 0\text{.}\)</span> By the <a href="" class="xref" data-knowl="./knowl/xref/div-alg.html" title="Theorem 12: Division Algorithm">Division Algorithm</a>, there exist unique <span class="process-math">\(q,r\in\Z\)</span> such that <span class="process-math">\(a=qm+r\)</span> with <span class="process-math">\(0\leq r \lt m\text{.}\)</span> In fact, since <span class="process-math">\(0\leq r\lt m,\)</span> we know <span class="process-math">\(r=0,1,\dots, m-2,\)</span> or <span class="process-math">\(m-1\text{.}\)</span> Therefore, every integer is in the equivalence class of <span class="process-math">\(0,1,\dots, m-2\)</span> or <span class="process-math">\(m-1\)</span> modulo <span class="process-math">\(m\text{.}\)</span> Since every integer is in exactly one equivalence class modulo <span class="process-math">\(m\text{,}\)</span> and the remainder from the <a href="" class="xref" data-knowl="./knowl/xref/div-alg.html" title="Theorem 12: Division Algorithm">Division Algorithm</a> is unique, it is not possible for <span class="process-math">\(a\)</span> to be equivalent to any other element of <span class="process-math">\(\{0,1,\dots,m-1\}\text{.}\)</span>
-</div></article></details><details id="ch-week5-3-3-6" class="activity project-like born-hidden-knowl"><summary><h4 class="heading">
-<span class="type">In Class Activity</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span>
-</h4></summary><article class="activity project-like"><div class="para logical" id="ch-week5-3-3-6-1">
-<div class="para">Practice: addition and multiplication tabulars modulo <span class="process-math">\(3,4,5,6,7\text{.}\)</span> I am adding <span class="process-math">\(9\)</span> to include an odd composite.</div>
-<dl class="description-list">
-<dt id="ch-week5-3-3-6-1-3-1">Modulo <span class="process-math">\(3\)</span>
-</dt>
-<dd> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">+</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-</tr>
-</table></div> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ast\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-</tr>
-</table></div>
-</dd>
-<dt id="ch-week5-3-3-6-1-3-2">Modulo <span class="process-math">\(4\)</span>
-</dt>
-<dd> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">+</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-</tr>
-</table></div> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ast\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-</tr>
-</table></div>
-</dd>
-<dt id="ch-week5-3-3-6-1-3-3">Modulo <span class="process-math">\(5\)</span>
-</dt>
-<dd> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">+</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-</tr>
-</table></div> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ast\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-</tr>
-</table></div>
-</dd>
-<dt id="ch-week5-3-3-6-1-3-4">Modulo <span class="process-math">\(6\)</span>
-</dt>
-<dd> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">+</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-</tr>
-</table></div> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ast\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-</tr>
-</table></div>
-</dd>
-<dt id="ch-week5-3-3-6-1-3-5">Modulo <span class="process-math">\(7\)</span>
-</dt>
-<dd> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">+</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-</tr>
-</table></div> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ast\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-</tr>
-</table></div>
-</dd>
-<dt id="ch-week5-3-3-6-1-3-6">Modulo <span class="process-math">\(8\)</span>
-</dt>
-<dd> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">+</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-</tr>
-</table></div> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ast\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-</tr>
-</table></div>
-</dd>
-<dt id="ch-week5-3-3-6-1-3-7">Modulo <span class="process-math">\(9\)</span>
-</dt>
-<dd> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines">+</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-</tr>
-</table></div> <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ast\)</span></td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-<td class="l m b0 r0 l0 t0 lines">[0]</td>
-<td class="l m b0 r0 l0 t0 lines">[8]</td>
-<td class="l m b0 r0 l0 t0 lines">[7]</td>
-<td class="l m b0 r0 l0 t0 lines">[6]</td>
-<td class="l m b0 r0 l0 t0 lines">[5]</td>
-<td class="l m b0 r0 l0 t0 lines">[4]</td>
-<td class="l m b0 r0 l0 t0 lines">[3]</td>
-<td class="l m b0 r0 l0 t0 lines">[2]</td>
-<td class="l m b0 r0 l0 t0 lines">[1]</td>
-</tr>
-</table></div>
-</dd>
-</dl>
+<div class="para" id="sec-proveQR-4-3-1-1">A <dfn class="terminology">lattice point</dfn> is a point <span class="process-math">\((x,y)\in\mathbb{R}^2\)</span> where <span class="process-math">\(x,y\in\mathbb{Z}\text{.}\)</span> We can write this as <span class="process-math">\((x,y)\in\mathbb{Z}^2\text{.}\)</span>
+</div></article><div class="para" id="sec-proveQR-4-4">We will use two different methods to count the number of lattice points in the rectangle with vertices <span class="process-math">\((0,0), \left(\tfrac{p-1}{2}\right),\left(\tfrac{p-1}{2},\tfrac{q-1}{2}\right), \left(0,\tfrac{q-1}{2}\right)\)</span> other than the axes.  The easy method is multiplication: there are <span class="process-math">\(\left(\tfrac{p-1}{2}\right)\left(\tfrac{q-1}{2}\right)\)</span> lattice points. The other method involves counting the lattice points (in the same rectangle) with <span class="process-math">\(y\gt \tfrac{q}{p},\)</span> call this number <span class="process-math">\(N_1,\)</span> and those with <span class="process-math">\(y\lt \tfrac{q}{p},\)</span> call this number <span class="process-math">\(N_2.\)</span> Then there are a total of <span class="process-math">\(N_1+N_2\)</span> lattice points.</div>
+<div class="para logical" id="sec-proveQR-4-5">
+<div class="para">This changes the statement of quadratic reciprocity to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\legendre{p}{q}\legendre{q}{p}=(-1)^{N_1}(-1)^{N_2}
+\end{equation*}
+</div>
+</div>
+<iframe src="https://www.geogebra.org/material/iframe/id/tuf7y6sh/width/800/height/800/border/888888/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" id="sec-proveQR-4-6" width="600" height="600"></iframe><article class="example example-like" id="sec-proveQR-4-7"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">157</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="sec-proveQR-4-7-1">
+<div class="para">The steps below outline the proof in the general case, when <span class="process-math">\(p=7\)</span> and <span class="process-math">\(q=5\text{.}\)</span>  Move the sliders to <span class="process-math">\(p=7\)</span> and <span class="process-math">\(q=5.\)</span>
+</div>
+<ol class="decimal">
+<li id="sec-proveQR-4-7-1-5-1"><div class="para" id="p-derived-sec-proveQR-4-7-1-5-1">The line segment between the origin and <span class="process-math">\((7,5)\)</span> has slope <span class="process-math">\(\tfrac{5}{7}\text{.}\)</span> Since <span class="process-math">\(p=7\)</span> and <span class="process-math">\(q=5\)</span> are distinct primes, there are no lattice points on line segment except the endpoints.</div></li>
+<li id="sec-proveQR-4-7-1-5-2"><div class="para" id="p-derived-sec-proveQR-4-7-1-5-2">
+<span class="process-math">\(N_1\)</span><span class="process-math">\(\tfrac{5-1}{2}\geq y\gt \tfrac{5}{7}x\gt 0.\)</span><span class="process-math">\(j=1,2.\)</span><ul class="disc">
+<li id="sec-proveQR-4-7-1-5-2-4-1"><div class="para" id="p-derived-sec-proveQR-4-7-1-5-2-4-1">When <span class="process-math">\(j=1,\)</span> there are <span class="process-math">\(1\)</span> lattice points.</div></li>
+<li id="sec-proveQR-4-7-1-5-2-4-2"><div class="para" id="p-derived-sec-proveQR-4-7-1-5-2-4-2">When <span class="process-math">\(j=2,\)</span> there are <span class="process-math">\(2\)</span> lattice points.</div></li>
+</ul>
+<span class="process-math">\(j\text{,}\)</span><span class="process-math">\(x\lt {\tfrac{7}{5}}j.\)</span><span class="process-math">\(\floor{\frac{7j}{5}}\text{.}\)</span><span class="process-math">\(N_1,\)</span><span class="process-math">\(N_1=\sum_{j=1}^{2}\floor{\frac{7j}{5}}\)</span>
+</div></li>
+<li id="sec-proveQR-4-7-1-5-3">
+<div class="para" id="sec-proveQR-4-7-1-5-3-1">Next we will count the rest of the lattice points in the rectangle, the blue region in the GeoGebra. We willl call this number <span class="process-math">\(N_2\text{.}\)</span>
+</div>
+<div class="para" id="sec-proveQR-4-7-1-5-3-2">The region is bounded by <span class="process-math">\(0\lt x\leq \tfrac{7-1}{2},\)</span> <span class="process-math">\(0\lt y\lt \tfrac{5}{7}x,\)</span> and <span class="process-math">\(y\leq \tfrac{5-1}{2}.\)</span> Now, the point <span class="process-math">\(A\)</span> where <span class="process-math">\(y=\tfrac{5}{7}x\)</span> intersects <span class="process-math">\(y=\tfrac{5-1}{2}\)</span> is between two consecutive lattice points, with coordinates  <span class="process-math">\(x=2, y=2\)</span> and <span class="process-math">\(x=3, y=2.\)</span> Similarly, the point <span class="process-math">\(B\)</span> where <span class="process-math">\(y=\tfrac{5}{7}x\)</span> intersects <span class="process-math">\(x=\tfrac{7-1}{2}\)</span> is between two consecutive lattice points, with coordinates  <span class="process-math">\(x=3, y=2\)</span> and <span class="process-math">\(x=3, y=3.\)</span> Thus, the only lattice point in the triangle <span class="process-math">\(A,B\)</span> and <span class="process-math">\(\left(\tfrac{7-1}{2},\tfrac{5-1}{2}\right)\)</span> is <span class="process-math">\(\left(\tfrac{7-1}{2},\tfrac{5-1}{2}\right)\text{.}\)</span> Therefore, there are also <span class="process-math">\(N_2\)</span> lattice points in the triangle with vertices <span class="process-math">\((0,0), \left(\tfrac{7-1}{2},0\right), \left(\tfrac{7-1}{2},\tfrac{5-1}{2}\right).\)</span>
+</div>
+</li>
+<li id="sec-proveQR-4-7-1-5-4"><div class="para" id="p-derived-sec-proveQR-4-7-1-5-4">
+<span class="process-math">\(N_1\)</span><span class="process-math">\(N_2.\)</span><span class="process-math">\(k=1,2,3.\)</span><ul class="disc">
+<li id="sec-proveQR-4-7-1-5-4-4-1"><div class="para" id="p-derived-sec-proveQR-4-7-1-5-4-4-1">When <span class="process-math">\(k=1,\)</span> there are <span class="process-math">\(0\)</span> lattice points.</div></li>
+<li id="sec-proveQR-4-7-1-5-4-4-2"><div class="para" id="p-derived-sec-proveQR-4-7-1-5-4-4-2">When <span class="process-math">\(k=2,\)</span> there are <span class="process-math">\(1\)</span> lattice points.</div></li>
+<li id="sec-proveQR-4-7-1-5-4-4-3"><div class="para" id="p-derived-sec-proveQR-4-7-1-5-4-4-3">When <span class="process-math">\(k=3,\)</span> there are <span class="process-math">\(2\)</span> lattice points.</div></li>
+</ul>
+<span class="process-math">\(k\text{,}\)</span><span class="process-math">\(y\lt {\tfrac{5}{7}}k.\)</span><span class="process-math">\(\floor{\frac{5j}{7}}\text{.}\)</span><span class="process-math">\(N_2=\sum_{k=1}^{3}\floor{\frac{5k}{7}}\text{.}\)</span>
+</div></li>
+</ol>
+<div class="para">Thus, the total number of lattice points is <span class="process-math">\(N_1+N_2=(3)(2).\)</span>
+</div>
+</div></article><article class="lemma theorem-like" id="lem-count-points-qr"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">158</span><span class="period">.</span><span class="space"> </span><span class="title">Lemma 4.10.</span>
+</h4>
+<div class="para logical" id="lem-count-points-qr-2-1">
+<div class="para">Let <span class="process-math">\(p\)</span> be an odd prime number and let <span class="process-math">\(a\in\mathbb{Z}\)</span> with <span class="process-math">\(p\nmid a\)</span> and <span class="process-math">\(a\)</span> odd. If</div>
+<div class="displaymath process-math">
+\begin{equation*}
+N=\sum_{j=1}^{\frac{p-1}{2}}\floor{\frac{ja}{p}},
+\end{equation*}
+</div>
+<div class="para">then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left(\frac{a}{p}\right)=(-1)^N.
+\end{equation*}
+</div>
+</div></article><details id="sec-proveQR-4-9" class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="title">Proof of Law of Quadratic Reciprocity.</span></h4></summary><article class="hiddenproof"> <div class="para logical" id="sec-proveQR-4-9-2">
+<div class="para">Let <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> be distinct odd primes. Then from <a href="" class="xref" data-knowl="./knowl/xref/lem-count-points-qr.html" title="Lemma 158: Lemma 4.10">Lemma 4.10</a>,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-count-points-qr.html">
+\begin{equation*}
+\legendre{p}{q}=(-1)^{N_1},\quad \legendre{q}{p}=(-1)^{N_2}
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-count-points-qr.html">
+\begin{equation*}
+N_1=\sum_{j=1}^{\frac{q-1}{2}}
+\floor{\frac{p}{q}j}
+\text{ and }
+N_2=\sum_{j=1}^{\frac{p-1}{2}}\floor{\frac{q}{p}j}.
+\end{equation*}
+</div>
+<div class="para">Thus, <span class="process-math">\(\legendre{p}{q}\legendre{q}{p}=(-1)^{N_1+N_2}.\)</span> It remains to show that <span class="process-math">\(N_1+N_2=\left(\frac{p-1}{2}\right)\left(\frac{q-1}{2}\right).\)</span>
+</div>
+</div> <div class="para" id="sec-proveQR-4-9-3">Without loss of generality, assume that <span class="process-math">\(p\gt q\text{.}\)</span> We draw the rectangle <span class="process-math">\((0,0), \left(\tfrac{p-1}{2},0\right), \left(\tfrac{p-1}{2},\tfrac{q-1}{2}\right),\)</span> and <span class="process-math">\(\left(0,\tfrac{q-1}{2}\right)\text{,}\)</span> as in the GeoGebra example. Then there are <span class="process-math">\(\left(\frac{p-1}{2}\right)\left(\frac{q-1}{2}\right)\)</span> lattice points in this rectangle, excluding the axes.</div> <div class="para" id="sec-proveQR-4-9-4">The line segment between the origin and <span class="process-math">\((p,q)\)</span> has slope <span class="process-math">\(\tfrac{q}{p}\text{.}\)</span> Since <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are distinct primes, there are no lattice points on line segment except the endpoints.</div> <div class="para" id="sec-proveQR-4-9-5">For each <span class="process-math">\(j\text{,}\)</span> we are counting positive integers <span class="process-math">\(x\lt {\tfrac{p}{q}}j.\)</span> Which is,<span class="process-math">\(\floor{\frac{pj}{q}}\text{.}\)</span> Thus, the total number of lattice points in this triangle is <span class="process-math">\(N_1=\sum_{j=1}^{(q-1)/2}\floor{\frac{pj}{q}}\text{.}\)</span> Next we will count the rest of the lattice points in the rectangle, the blue region in the GeoGebra. We willl call this number <span class="process-math">\(N_2\text{.}\)</span> The region is bounded by <span class="process-math">\(0\lt x\leq \tfrac{p-1}{2},\)</span> <span class="process-math">\(0\lt y\lt \tfrac{q}{p}x,\)</span> and <span class="process-math">\(y\leq \tfrac{q-1}{2}.\)</span> Now, the point <span class="process-math">\(A\)</span> where <span class="process-math">\(y=\tfrac{q}{p}x\)</span> intersects <span class="process-math">\(y=\tfrac{q-1}{2}\)</span> is between two consecutive lattice points, with coordinates  <span class="process-math">\(x={10}, y={(q-1)/2}\)</span> and <span class="process-math">\(x={(p-1)/2}, y={(q-1)/2}.\)</span> 	Similarly, the point <span class="process-math">\(B\)</span> where <span class="process-math">\(y=\tfrac{q}{p}x\)</span> intersects <span class="process-math">\(x=\tfrac{p-1}{2}\)</span> is between two consecutive lattice points, with coordinates  <span class="process-math">\(x={(p-1)/2}, y={(q-1)/2}\)</span> and <span class="process-math">\(x={(p-1)/2}, y={7}.\)</span> 	Thus, the only lattice point in the triangle <span class="process-math">\(A,B\)</span> and <span class="process-math">\(\left(\tfrac{p-1}{2},\tfrac{q-1}{2}\right)\)</span> is <span class="process-math">\(\left(\tfrac{p-1}{2},\tfrac{q-1}{2}\right)\text{.}\)</span> Therefore, there are also <span class="process-math">\(N_2\)</span> lattice points in the triangle with vertices <span class="process-math">\((0,0), \left(\tfrac{p-1}{2},0\right), \left(\tfrac{p-1}{2},\tfrac{q-1}{2}\right).\)</span>
+</div> <div class="para" id="sec-proveQR-4-9-6">We use the same method as <span class="process-math">\(N_1\)</span> to find <span class="process-math">\(N_2.\)</span> We will count how many lattice points on each vertical lines <span class="process-math">\(k=1,2,\dots,{\frac{p-1}{2}}.\)</span> For each <span class="process-math">\(k\text{,}\)</span> we are counting positive integers <span class="process-math">\(y\lt {\tfrac{q}{p}}k.\)</span> Which is,<span class="process-math">\(\floor{\frac{qj}{p}}\text{.}\)</span> Thus, the total number of lattice points in this triangle is <span class="process-math">\(N_2=\sum_{k=1}^{(p-1)/2}\floor{\frac{qk}{p}}\text{.}\)</span> Thus, the total number of lattice points is <span class="process-math">\(N_1+N_2=\sum_{k=1}^{(q-1)/2}\floor{\frac{pk}{q}}+\sum_{k=1}^{(p-1)/2}\floor{\frac{qk}{p}}=\left(\frac{p-1}{2}\right)\left(\frac{q-1}{2}\right)\)</span>
 </div></article></details></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-modIntro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-week5-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-gaussLem.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="hwguide.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

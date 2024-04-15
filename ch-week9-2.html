@@ -116,6 +116,7 @@ window.MathJax = {
 \newcommand{\nequiv}{\not\equiv}
 \newcommand{\ord}{\operatorname{ord}}
 \newcommand{\ds}{\displaystyle}
+\newcommand{\floor}[1]{\left\lfloor{#1}\right\rfloor}
 \newcommand{\legendre}[2]{\left(\frac{#1}{#2}\right)}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -449,13 +450,32 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-week11.html" class="internal"><span class="codenumber">11</span> <span class="title">Week 11</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gaussLemIntro.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Monday, April 1: Gauss’s Lemma and Practice</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gaussLemIntro.html#sec-gaussLemIntro-3" class="internal"><span class="codenumber">11.1.1</span> <span class="title">Statement of Guass’s Lemma (20 minutes)</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gaussLemIntro.html#sec-gaussLemIntro-4" class="internal"><span class="codenumber">11.1.2</span> <span class="title">Practice Problems (30 minutes)</span></a></div></li>
 </ul>
-</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gaussLem.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Wednesday, April 3: Proving Gauss’s Lemma and the Quadratic Residue of <span class="process-math">\(2\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-gaussLem.html#sec-gaussLem-3" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gaussLem.html#rqs-Apr3" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gaussLem.html#sec-gaussLem-4" class="internal"><span class="codenumber">11.2.2</span> <span class="title">Proof of Guass’s Lemma (30 minutes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-proveQR.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Friday, April 5: Geometric Lemma for Quadratic reciprocity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-proveQR.html#sec-proveQR-3" class="internal"><span class="codenumber">11.3.1</span> <span class="title">Quiz (10 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-proveQR.html#sec-proveQR-4" class="internal"><span class="codenumber">11.3.2</span> <span class="title">Proof of quadratic reciprocity (40 minutes)</span></a></div></li>
+</ul>
+</li>
+</ul>
 </li>
 <li class="toc-item toc-appendix">
 <div class="toc-title-box"><a href="hwguide.html" class="internal"><span class="codenumber">A</span> <span class="title">Homework Guide</span></a></div>
@@ -535,7 +555,7 @@ x^{q^s}\equiv 1\pmod{p}\tag{9.1}
 x^{q^s}\equiv 1\pmod{p}\tag{9.2}
 \end{equation}
 </div>
-<div class="para">Since <span class="process-math">\((x^{q^{s-1}})^q=x^{q^s},\)</span> all solutions to <a href="" class="xref" data-knowl="./knowl/xref/eqn-unity-2b.html" title="Equation 9.2">(9.2)</a> are solutions to <a href="" class="xref" data-knowl="./knowl/xref/eqn-unity-2a.html" title="Equation 9.1">(9.1)</a>. Thus, there are exactly <span class="process-math">\(q^s-q^{s-1}=q^{s-1}(q-1)\)</span> integers <span class="process-math">\(a\)</span> where <span class="process-math">\(a^{q^s}\equiv 1\pmod{p}\)</span> and <span class="process-math">\(a^{q^{s-1}}\not\equiv 1\pmod{p}.\)</span> Thus, by <a href="" class="xref" data-knowl="./knowl/xref/prop-order_divides_phi.html" title="Proposition 101: Proposition 5.1">Proposition 5.1</a>, <span class="process-math">\(\ord_p a \mid q^s\)</span> and <span class="process-math">\(\ord_p a\nmid q^{s-1}.\)</span> Since <span class="process-math">\(q\)</span> is prime, <span class="process-math">\(\ord_p a =q^s.\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/thm-phi-prime-power.html" title="Theorem 216: Theorem 3.3">Theorem 3.3</a>, <span class="process-math">\(\phi(q^s)=q^s-q^{s-1}=q^{s-1}(q-1),\)</span> so we have shown there are <span class="process-math">\(\phi(q^s)\)</span> incongruent integers with order <span class="process-math">\(q^s\)</span> modulo <span class="process-math">\(p\text{.}\)</span>
+<div class="para">Since <span class="process-math">\((x^{q^{s-1}})^q=x^{q^s},\)</span> all solutions to <a href="" class="xref" data-knowl="./knowl/xref/eqn-unity-2b.html" title="Equation 9.2">(9.2)</a> are solutions to <a href="" class="xref" data-knowl="./knowl/xref/eqn-unity-2a.html" title="Equation 9.1">(9.1)</a>. Thus, there are exactly <span class="process-math">\(q^s-q^{s-1}=q^{s-1}(q-1)\)</span> integers <span class="process-math">\(a\)</span> where <span class="process-math">\(a^{q^s}\equiv 1\pmod{p}\)</span> and <span class="process-math">\(a^{q^{s-1}}\not\equiv 1\pmod{p}.\)</span> Thus, by <a href="" class="xref" data-knowl="./knowl/xref/prop-order_divides_phi.html" title="Proposition 101: Proposition 5.1">Proposition 5.1</a>, <span class="process-math">\(\ord_p a \mid q^s\)</span> and <span class="process-math">\(\ord_p a\nmid q^{s-1}.\)</span> Since <span class="process-math">\(q\)</span> is prime, <span class="process-math">\(\ord_p a =q^s.\)</span> By <a href="" class="xref" data-knowl="./knowl/xref/thm-phi-prime-power.html" title="Theorem 222: Theorem 3.3">Theorem 3.3</a>, <span class="process-math">\(\phi(q^s)=q^s-q^{s-1}=q^{s-1}(q-1),\)</span> so we have shown there are <span class="process-math">\(\phi(q^s)\)</span> incongruent integers with order <span class="process-math">\(q^s\)</span> modulo <span class="process-math">\(p\text{.}\)</span>
 </div>
 </div> <div class="para logical" id="thm-number-element-order-d-3-3">
 <div class="para">Now we will prove the general case. Let</div>

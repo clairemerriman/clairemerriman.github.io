@@ -116,6 +116,7 @@ window.MathJax = {
 \newcommand{\nequiv}{\not\equiv}
 \newcommand{\ord}{\operatorname{ord}}
 \newcommand{\ds}{\displaystyle}
+\newcommand{\floor}[1]{\left\lfloor{#1}\right\rfloor}
 \newcommand{\legendre}[2]{\left(\frac{#1}{#2}\right)}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -449,13 +450,32 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-week11.html" class="internal"><span class="codenumber">11</span> <span class="title">Week 11</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gaussLemIntro.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Monday, April 1: Gauss’s Lemma and Practice</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gaussLemIntro.html#sec-gaussLemIntro-3" class="internal"><span class="codenumber">11.1.1</span> <span class="title">Statement of Guass’s Lemma (20 minutes)</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gaussLemIntro.html#sec-gaussLemIntro-4" class="internal"><span class="codenumber">11.1.2</span> <span class="title">Practice Problems (30 minutes)</span></a></div></li>
 </ul>
-</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gaussLem.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Wednesday, April 3: Proving Gauss’s Lemma and the Quadratic Residue of <span class="process-math">\(2\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-gaussLem.html#sec-gaussLem-3" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gaussLem.html#rqs-Apr3" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gaussLem.html#sec-gaussLem-4" class="internal"><span class="codenumber">11.2.2</span> <span class="title">Proof of Guass’s Lemma (30 minutes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-proveQR.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Friday, April 5: Geometric Lemma for Quadratic reciprocity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-proveQR.html#sec-proveQR-3" class="internal"><span class="codenumber">11.3.1</span> <span class="title">Quiz (10 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-proveQR.html#sec-proveQR-4" class="internal"><span class="codenumber">11.3.2</span> <span class="title">Proof of quadratic reciprocity (40 minutes)</span></a></div></li>
+</ul>
+</li>
+</ul>
 </li>
 <li class="toc-item toc-appendix">
 <div class="toc-title-box"><a href="hwguide.html" class="internal"><span class="codenumber">A</span> <span class="title">Homework Guide</span></a></div>
@@ -543,7 +563,7 @@ window.MathJax = {
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\equiv nm\pmod{m}  \)</span></td>
 </tr>
 </table></div>
-</div> <div class="para" id="thm-phi-multiplicative-3-3">For any <span class="process-math">\(b\)</span> in the range <span class="process-math">\(1,2,\dots,m\text{,}\)</span> define <span class="process-math">\(s_b\)</span> to be the number of integers <span class="process-math">\(a\)</span> in the range <span class="process-math">\(1,2,\dots, mn\)</span> such that <span class="process-math">\(a\equiv b \pmod{m}\)</span> and <span class="process-math">\(\gcd(a,mn)=1\text{.}\)</span> For each equivalence class <span class="process-math">\(b,\)</span> <span class="process-math">\(\gcd(b,m)\mid km +b\)</span> by linear combination. Thus, <span class="process-math">\(s_b={0}\)</span> if <span class="process-math">\((b,m)\gt 1.\)</span> If <span class="process-math">\(\gcd(b,m)=1\text{,}\)</span> the arithmetic progression, <span class="process-math">\(\{b, m + b, 2m + b, \dots, (n-1)m+ b\}\)</span> contains <span class="process-math">\(n\)</span> elements. By <a href="" class="xref" data-knowl="./knowl/xref/ch3-ex11.html" title="Problem 190: Strayer Chapter 3, Exercise 11">Strayer Chapter 3, Exercise 11</a>, the arithmetic progression is a <a href="" class="xref" data-knowl="./knowl/xref/def-comp-res-sys.html" title="Definition 57: complete residue system">complete residue system</a> modulo <span class="process-math">\(n,\)</span> so <span class="process-math">\(\phi(n)\)</span> elements are relatively prime to <span class="process-math">\(n\)</span> and thus <span class="process-math">\(mn.\)</span>
+</div> <div class="para" id="thm-phi-multiplicative-3-3">For any <span class="process-math">\(b\)</span> in the range <span class="process-math">\(1,2,\dots,m\text{,}\)</span> define <span class="process-math">\(s_b\)</span> to be the number of integers <span class="process-math">\(a\)</span> in the range <span class="process-math">\(1,2,\dots, mn\)</span> such that <span class="process-math">\(a\equiv b \pmod{m}\)</span> and <span class="process-math">\(\gcd(a,mn)=1\text{.}\)</span> For each equivalence class <span class="process-math">\(b,\)</span> <span class="process-math">\(\gcd(b,m)\mid km +b\)</span> by linear combination. Thus, <span class="process-math">\(s_b={0}\)</span> if <span class="process-math">\((b,m)\gt 1.\)</span> If <span class="process-math">\(\gcd(b,m)=1\text{,}\)</span> the arithmetic progression, <span class="process-math">\(\{b, m + b, 2m + b, \dots, (n-1)m+ b\}\)</span> contains <span class="process-math">\(n\)</span> elements. By <a href="" class="xref" data-knowl="./knowl/xref/ch3-ex11.html" title="Problem 196: Strayer Chapter 3, Exercise 11">Strayer Chapter 3, Exercise 11</a>, the arithmetic progression is a <a href="" class="xref" data-knowl="./knowl/xref/def-comp-res-sys.html" title="Definition 57: complete residue system">complete residue system</a> modulo <span class="process-math">\(n,\)</span> so <span class="process-math">\(\phi(n)\)</span> elements are relatively prime to <span class="process-math">\(n\)</span> and thus <span class="process-math">\(mn.\)</span>
 </div> <div class="para" id="thm-phi-multiplicative-3-4">Thus, can see that when <span class="process-math">\((b,m)=1\text{,}\)</span> <span class="process-math">\(s_b=\phi(n)\)</span> and when <span class="process-math">\((b,m)\gt 1\text{,}\)</span> <span class="process-math">\(s_b={0}\text{.}\)</span>
 </div> <div class="para" id="thm-phi-multiplicative-3-5">Since all of the positive integers less than or equal to <span class="process-math">\(mn\)</span> is in exactly one of the congruence classes above and t he <span class="process-math">\(s_i\)</span> count how many integers in each congruence class are relatively prime to <span class="process-math">\(mn\text{,}\)</span> <span class="process-math">\(phi(mn)=s_0+s_1+\cdots +s_{m-1}.\)</span>
 </div> <div class="para" id="thm-phi-multiplicative-3-6">Since <span class="process-math">\(\phi(m)\)</span> of the <span class="process-math">\(s_i=\phi(n)\)</span> and the rest are 0, <span class="process-math">\(\phi(mn)=s_0+s_1+\cdots +s_{m-1}=\phi(m)\phi(n).\)</span>

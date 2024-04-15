@@ -2287,6 +2287,132 @@ var ptx_lunr_docs = [
   "body": " Now we will examine the Legendre symbol of using Gauss's Lemma. First, note that are already least nonnegative residues modulo It will be slightly easier to count how many are less than  then subtract from the total number,  Let with Then if and only if Thus, of are greater than ( Hint: The two blanks should be the same, and also go in the blanks below)  Now complete this table. I added a box around the numbers in the fourth column that are greater than                                                                    "
 },
 {
+  "id": "sec-gaussLem",
+  "level": "1",
+  "url": "sec-gaussLem.html",
+  "type": "Section",
+  "number": "11.2",
+  "title": "Wednesday, April 3: Proving Gauss’s Lemma and the Quadratic Residue of <span class=\"process-math\">\\(2\\)<\/span>",
+  "body": "Wednesday, April 3: Proving Gauss's Lemma and the Quadratic Residue of    Prove  Classify when is a quadratic residue modulo a prime.      The remainder of Strayer Section 4.2. For a different approach, see notes on Moodle.    The case of Strayer Theorem 4.8  Mirroring Strayer's argument for  If then there exists such that Then and Thus,     Proof of Guass's Lemma (30 minutes)    is often stated as:  Let be an odd prime number and like with . Let be the number of least absolute residues of the integers modulo that are negative. Then       Let be an odd prime number and like with Consider The least absolute residues of and differ by a negative sign. In other words,   Furthermore, for each the exactly one of and is a least absolute residue of    Let be an odd prime number and let with Then   Then is a reduced residue system modulo by . From Chapter 2, , is a reduced residue system modulo . Thus, every element of is congruent to exactly one of That is, for each both and are least absolute residue of  If is the least absolute remainder of modulo for some then is the absolute least residue of modulo and Thus, is not an absolute least residue of Since there are elements of there must be distinct absolute least residues modulo Thus, for each exactly on of and is an absolute least residue of      Check for                    We now prove .  Proof of  Let be the least nonnegative residues of the integers that are greater than and be the least nonnegative residues that are less that . Note that no or is since does not divide any of . Consider the integers given by We want to show that these integers are the integers from to inclusive, in some order. Since each integer is less than or equal to , it suffices to show that no two of these integers are congruent modulo .  If for some , then , but this implies that there exists some such that with and Since we know that the multiplicative inverse of modulo exists and thus , a contradiction. Thus, no two of the first integers are congruent modulo .  Similarly, no two of the second integers are congruent. Now, if , for some and , then . Thus, there exists such that with and . Since , we know that the multiplicative inverse of modulo exists, and thus , a contradiction. Thus, the integers are the integers in some order.  Then, implies that   By the definition of and , we have   By reordering, we have   Thus, , and . By Euler's criterion, we get that . Since both sides of the congruence must be we have .   We are going to prove a result about before our next technical lemma.  Theorem 4.8   Let be an odd prime. Then     By Gauss's Lemma, we have that where is the number of least positive residues of the integers that are greater than . Let with . Then if and only if so of the integers that are less than , where is the floor function. So, of these integers are greater than , from which by Gauss's Lemma. For the first equality, it suffices to show that   If , the for some . That gives us and Thus, the theorem holds when . The rest of the cases are part of Homework 8.     "
+},
+{
+  "id": "sec-gaussLem-2",
+  "level": "2",
+  "url": "sec-gaussLem.html#sec-gaussLem-2",
+  "type": "Objectives",
+  "number": "11.2",
+  "title": "",
+  "body": "  Prove  Classify when is a quadratic residue modulo a prime.   "
+},
+{
+  "id": "rqs-Apr3-1",
+  "level": "2",
+  "url": "sec-gaussLem.html#rqs-Apr3-1",
+  "type": "Reading Question",
+  "number": "11.2.111.2.1.1",
+  "title": "The <span class=\"process-math\">\\(p\\equiv 3\\pmod{9}\\)<\/span> case of Strayer Theorem 4.8.",
+  "body": "The case of Strayer Theorem 4.8  Mirroring Strayer's argument for  If then there exists such that Then and Thus,  "
+},
+{
+  "id": "sec-gaussLem-4-2",
+  "level": "2",
+  "url": "sec-gaussLem.html#sec-gaussLem-4-2",
+  "type": "Remark",
+  "number": "153",
+  "title": "",
+  "body": "  is often stated as:  Let be an odd prime number and like with . Let be the number of least absolute residues of the integers modulo that are negative. Then    "
+},
+{
+  "id": "lem-residues-gauss-lem",
+  "level": "2",
+  "url": "sec-gaussLem.html#lem-residues-gauss-lem",
+  "type": "Lemma",
+  "number": "154",
+  "title": "",
+  "body": "  Let be an odd prime number and like with Consider The least absolute residues of and differ by a negative sign. In other words,   Furthermore, for each the exactly one of and is a least absolute residue of    Let be an odd prime number and let with Then   Then is a reduced residue system modulo by . From Chapter 2, , is a reduced residue system modulo . Thus, every element of is congruent to exactly one of That is, for each both and are least absolute residue of  If is the least absolute remainder of modulo for some then is the absolute least residue of modulo and Thus, is not an absolute least residue of Since there are elements of there must be distinct absolute least residues modulo Thus, for each exactly on of and is an absolute least residue of   "
+},
+{
+  "id": "sec-gaussLem-4-4",
+  "level": "2",
+  "url": "sec-gaussLem.html#sec-gaussLem-4-4",
+  "type": "In Class Activity",
+  "number": "26",
+  "title": "",
+  "body": "  Check for                   "
+},
+{
+  "id": "sec-gaussLem-4-6",
+  "level": "2",
+  "url": "sec-gaussLem.html#sec-gaussLem-4-6",
+  "type": "Proof",
+  "number": "11.2.2.1",
+  "title": "Proof of Lemma 150.",
+  "body": "Proof of  Let be the least nonnegative residues of the integers that are greater than and be the least nonnegative residues that are less that . Note that no or is since does not divide any of . Consider the integers given by We want to show that these integers are the integers from to inclusive, in some order. Since each integer is less than or equal to , it suffices to show that no two of these integers are congruent modulo .  If for some , then , but this implies that there exists some such that with and Since we know that the multiplicative inverse of modulo exists and thus , a contradiction. Thus, no two of the first integers are congruent modulo .  Similarly, no two of the second integers are congruent. Now, if , for some and , then . Thus, there exists such that with and . Since , we know that the multiplicative inverse of modulo exists, and thus , a contradiction. Thus, the integers are the integers in some order.  Then, implies that   By the definition of and , we have   By reordering, we have   Thus, , and . By Euler's criterion, we get that . Since both sides of the congruence must be we have .  "
+},
+{
+  "id": "thm-qr-2",
+  "level": "2",
+  "url": "sec-gaussLem.html#thm-qr-2",
+  "type": "Theorem",
+  "number": "155",
+  "title": "Theorem 4.8.",
+  "body": "Theorem 4.8   Let be an odd prime. Then     By Gauss's Lemma, we have that where is the number of least positive residues of the integers that are greater than . Let with . Then if and only if so of the integers that are less than , where is the floor function. So, of these integers are greater than , from which by Gauss's Lemma. For the first equality, it suffices to show that   If , the for some . That gives us and Thus, the theorem holds when . The rest of the cases are part of Homework 8.   "
+},
+{
+  "id": "sec-proveQR",
+  "level": "1",
+  "url": "sec-proveQR.html",
+  "type": "Section",
+  "number": "11.3",
+  "title": "Friday, April 5: Geometric Lemma for Quadratic reciprocity",
+  "body": "Friday, April 5: Geometric Lemma for Quadratic reciprocity    Count lattice point in a rectangle with side lengths and two different ways  Use the two counting methods to prove quadratic reciprocity    Quiz (10 minutes)   Proof of quadratic reciprocity (40 minutes)  We will finally do (most of) the proof of    A lattice point is a point where . We can write this as .    We will use two different methods to count the number of lattice points in the rectangle with vertices other than the axes. The easy method is multiplication: there are lattice points. The other method involves counting the lattice points (in the same rectangle) with call this number and those with call this number Then there are a total of lattice points.  This changes the statement of quadratic reciprocity to     The steps below outline the proof in the general case, when and .  Move the sliders to and   The line segment between the origin and has slope . Since and are distinct primes, there are no lattice points on line segment except the endpoints.  First, we will count the number of points where This triangle is grey in the GeoGebra. We will count how many lattice points on each horizontal lines Let's just check the numbers we should get:  When there are lattice points.  When there are lattice points.  For each , we are counting positive integers Which is, . Thus, the total number of lattice points in this triangle, is  Next we will count the rest of the lattice points in the rectangle, the blue region in the GeoGebra. We willl call this number .  The region is bounded by  and Now, the point where intersects is between two consecutive lattice points, with coordinates and Similarly, the point where intersects is between two consecutive lattice points, with coordinates and Thus, the only lattice point in the triangle and is . Therefore, there are also lattice points in the triangle with vertices  We use the same method as to find We will count how many lattice points on each vertical lines Let's just check the numbers we should get:  When there are lattice points.  When there are lattice points.  When there are lattice points.  For each , we are counting positive integers Which is, . Thus, the total number of lattice points in this triangle is .  Thus, the total number of lattice points is   Now we will use without proof that Lemma 4.10   Let be an odd prime number and let with and odd. If then     Proof of  Let and be distinct odd primes. Then from , where Thus, It remains to show that  Without loss of generality, assume that . We draw the rectangle and , as in the GeoGebra example. Then there are lattice points in this rectangle, excluding the axes.  The line segment between the origin and has slope . Since and are distinct primes, there are no lattice points on line segment except the endpoints.  For each , we are counting positive integers Which is, . Thus, the total number of lattice points in this triangle is . Next we will count the rest of the lattice points in the rectangle, the blue region in the GeoGebra. We willl call this number . The region is bounded by  and Now, the point where intersects is between two consecutive lattice points, with coordinates and Similarly, the point where intersects is between two consecutive lattice points, with coordinates and Thus, the only lattice point in the triangle and is . Therefore, there are also lattice points in the triangle with vertices  We use the same method as to find We will count how many lattice points on each vertical lines For each , we are counting positive integers Which is, . Thus, the total number of lattice points in this triangle is . Thus, the total number of lattice points is    "
+},
+{
+  "id": "sec-proveQR-2",
+  "level": "2",
+  "url": "sec-proveQR.html#sec-proveQR-2",
+  "type": "Objectives",
+  "number": "11.3",
+  "title": "",
+  "body": "  Count lattice point in a rectangle with side lengths and two different ways  Use the two counting methods to prove quadratic reciprocity   "
+},
+{
+  "id": "sec-proveQR-4-3",
+  "level": "2",
+  "url": "sec-proveQR.html#sec-proveQR-4-3",
+  "type": "Definition",
+  "number": "156",
+  "title": "",
+  "body": "  A lattice point is a point where . We can write this as .   "
+},
+{
+  "id": "sec-proveQR-4-7",
+  "level": "2",
+  "url": "sec-proveQR.html#sec-proveQR-4-7",
+  "type": "Example",
+  "number": "157",
+  "title": "",
+  "body": " The steps below outline the proof in the general case, when and .  Move the sliders to and   The line segment between the origin and has slope . Since and are distinct primes, there are no lattice points on line segment except the endpoints.  First, we will count the number of points where This triangle is grey in the GeoGebra. We will count how many lattice points on each horizontal lines Let's just check the numbers we should get:  When there are lattice points.  When there are lattice points.  For each , we are counting positive integers Which is, . Thus, the total number of lattice points in this triangle, is  Next we will count the rest of the lattice points in the rectangle, the blue region in the GeoGebra. We willl call this number .  The region is bounded by  and Now, the point where intersects is between two consecutive lattice points, with coordinates and Similarly, the point where intersects is between two consecutive lattice points, with coordinates and Thus, the only lattice point in the triangle and is . Therefore, there are also lattice points in the triangle with vertices  We use the same method as to find We will count how many lattice points on each vertical lines Let's just check the numbers we should get:  When there are lattice points.  When there are lattice points.  When there are lattice points.  For each , we are counting positive integers Which is, . Thus, the total number of lattice points in this triangle is .  Thus, the total number of lattice points is  "
+},
+{
+  "id": "lem-count-points-qr",
+  "level": "2",
+  "url": "sec-proveQR.html#lem-count-points-qr",
+  "type": "Lemma",
+  "number": "158",
+  "title": "Lemma 4.10.",
+  "body": "Lemma 4.10   Let be an odd prime number and let with and odd. If then    "
+},
+{
+  "id": "sec-proveQR-4-9",
+  "level": "2",
+  "url": "sec-proveQR.html#sec-proveQR-4-9",
+  "type": "Proof",
+  "number": "11.3.2.1",
+  "title": "Proof of Law of Quadratic Reciprocity.",
+  "body": "Proof of  Let and be distinct odd primes. Then from , where Thus, It remains to show that  Without loss of generality, assume that . We draw the rectangle and , as in the GeoGebra example. Then there are lattice points in this rectangle, excluding the axes.  The line segment between the origin and has slope . Since and are distinct primes, there are no lattice points on line segment except the endpoints.  For each , we are counting positive integers Which is, . Thus, the total number of lattice points in this triangle is . Next we will count the rest of the lattice points in the rectangle, the blue region in the GeoGebra. We willl call this number . The region is bounded by  and Now, the point where intersects is between two consecutive lattice points, with coordinates and Similarly, the point where intersects is between two consecutive lattice points, with coordinates and Thus, the only lattice point in the triangle and is . Therefore, there are also lattice points in the triangle with vertices  We use the same method as to find We will count how many lattice points on each vertical lines For each , we are counting positive integers Which is, . Thus, the total number of lattice points in this triangle is . Thus, the total number of lattice points is  "
+},
+{
   "id": "HWGuide-sec-basic-info",
   "level": "1",
   "url": "HWGuide-sec-basic-info.html",
@@ -2345,7 +2471,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw1.html#ch1-ex5",
   "type": "Problem",
-  "number": "153",
+  "number": "159",
   "title": "Strayer Chapter 1, Exercise 5.",
   "body": "Strayer Chapter 1, Exercise 5  Prove or disprove the following statements.  If and are integers such that and , then .  If and are integers such that and , then .  If and are integers such that and , then .enumerate       False: Let and . Then and . Therefore, .  Let and be integers such that and . Then there exists such that and , by definition of divides . Multiplying these two equations gives \\[ac=(bm)(dn)=(bd)(mn).\\] Therefore, .  False: Let and . Then and .enumerate     Rubric  Does not demonstrate understanding. Contains a reasonable attempt to prove each part, but does not meet the criteria for two points.  Needs revisions. Two parts are mathematically correct, with the third containing major mathematical errors. Or proof has some significant gaps or excess information.  Demonstrates understanding. Two parts are mathematically correct, with minor errors in the third part. Or does not follow the homework guide for mathematical writing.  Exemplary. All three parts are mathematically correct and follows the homework guide for mathematical writing.    "
 },
@@ -2354,7 +2480,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw1.html#ch1-ex10",
   "type": "Problem",
-  "number": "154",
+  "number": "160",
   "title": "Strayer Chapter 1, Exercise 10.",
   "body": "Strayer Chapter 1, Exercise 10    Let . Prove that .  Let . Prove that .  Let . Is it true that ? Provide a proof or counter example.enumerate     There are several ways to do these problems. I used slightly different methods for parts (a) and (b).   Let . Then . By the Division Algorithm, there exists unique such that and . Thus,  If , then , so  If , then , so  If , then , so  Therefore, in all possible cases.    Let . Then . By the Division Algorithm, there exists unique such that and .  If , then If , then . If , then .  If , then and . Therefore, . If , then and . Therefore, . Thus, by transitivity of division, .   False: Let . Then and .     Rubrics:  The hint in the back of the book says to use induction for part (a). That is not necessary and likely harder.  Does not demonstrate understanding. Contains a reasonable attempt to prove each part, but does not meet the criteria for two points.  Needs revisions. Two parts are mathematically correct with some missing details, with the third containing major mathematical errors. Or proof has some significant gaps or excess information.  Demonstrates understanding. Two parts are mathematically correct, with minor errors. Or does not follow the homework guide for mathematical writing.  Exemplary. All three parts are mathematically correct and follows the homework guide for mathematical writing.    "
 },
@@ -2363,7 +2489,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw1.html#def-even-odd",
   "type": "Problem",
-  "number": "155",
+  "number": "161",
   "title": "Strayer Chapter 1, Exercise 11.",
   "body": "Strayer Chapter 1, Exercise 11  Use the definition of even and odd from Strayer and not Ernst.  Let . Prove that is an even integer if and only if with .  Let . Prove that is an odd integer if and only if with .  Prove that the sum and product of two even integers are even.  Prove that the sum of two odd integers is even and that their product is odd.  Prove that the sum of an even integer and an odd integer is odd and that their product is even.    Rubric for parts (a) and (b), graded together:  Does not demonstrate understanding. Contains a reasonable attempt to prove each part, but does not meet the criteria for two points.  Needs revisions. Proof has some significant gaps or excess information. Or does not prove both directions for both parts.  Demonstrates understanding. Contains minor arithmetic, spelling, or grammatical errors. Or uses informal mathematical writing.  Exemplory. Correctly proves both directions of both (a) and (b). Work is easy to follow with formal mathematical writing.    Rubric for parts (c),(d), and (e), graded together:  Does not demonstrate understanding. Contains a reasonable attempt to prove each part, but does not meet the criteria for two points.  Needs revisions. Proof has some significant gaps or excess information. Or missing the proof for either the sum or product in one part.  Demonstrates understanding. Mathematically correct proof for all three parts with minor arithmetic, spelling, or grammatical errors. Or uses informal mathematical writing.  Exemplory. Mathematically correct proof for all three parts. Work is easy to follow with formal mathematical writing.    "
 },
@@ -2372,7 +2498,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw1.html#ernst-prob2.19",
   "type": "Problem",
-  "number": "156",
+  "number": "162",
   "title": "Ernst Problem 2.19.",
   "body": "Ernst Problem 2.19  Let represent ``6 is an even integer” and represent ``4 divides 6.” Express each of the following compound propositions in an ordinary English sentence and then determine its truth value.                           ``6 is an even integer and 4 divides 6\". This is false because 4 does not divide 6.  ``6 is an even integer or 4 divides 6\". This is true because 6 is an even.  ``6 is not an even number\". This is false.  ``6 is not an even number or 4 does not divide 6\". This is true because 4 does not divide 6.  ``6 is not an even number and 4 does not divide 6\". This is false because 6 is an even number.  ``If 6 is an even integer, then 4 divides 6\". This is false because 4 does not divide 6.    Rubrics:  Does not demonstrate understanding. Contains a reasonable attempt to prove each part, but does not meet the criteria for two points.  Needs revisions. Three or four parts are mathematically and grammatically correct sentences.  Demonstrates understanding. Five or six parts are mathematically and grammatically correct sentences.  Exemplary. All parts are mathematically and grammatically correct sentences.    "
 },
@@ -2381,7 +2507,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw1.html#ernst-prob2.37",
   "type": "Problem",
-  "number": "157",
+  "number": "163",
   "title": "Ernst Problem 2.37.",
   "body": "Ernst Problem 2.37  Let and represent the statements from Problem 2.19. Express each of the following in an ordinary English sentence.  The converse of   The contrapositive of      Let represent ``6 is an even integer” and represent ``4 divides 6.”  ``If 4 divides 6, then 6 is an even integer.`` Since 4 does not divide 6, any conclusion is vacuously true.  ``If 4 does not divides 6, then 6 is not an even integer.`` Since 6=2(3), this statement is false.     Rubrics:  Does not demonstrate understanding. Contains a reasonable attempt to prove each part, but does not meet the criteria for two points.  Needs revisions. One part is not mathematically correct. Or both parts are missing the proof or counterexample.  Demonstrates understanding. Both parts correctly translate the statements into grammaticallly correct sentences. One part contains a mathematically correct proof or counterexample. Or does not follow the homework guide for mathematical writing.  Exemplary. Both parts correctly translate the statements into grammaticallly correct sentences with a mathematically correct proof or counterexample.    "
 },
@@ -2390,7 +2516,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw1.html#hw-tf",
   "type": "Problem",
-  "number": "158",
+  "number": "164",
   "title": "",
   "body": " For each of the following equation, find what real numbers make the statement true. Prove your statement.              All of these statements could be stated as ``if and only if.\" The proofs below also work for both directions of the biconditional.   If the decimal part of is less than 0.5, then . In otherwords, if , then .  We will use the characterization . Then we add this inequality to itself to find By , Since the characterizations are the same, it must be that     If , then .  By , for all , and . That is, .    If , then   Since  requires . By part (b), for all .      Rubric  Does not demonstrate understanding. Contains a reasonable attempt to prove each part, but does not meet the criteria for two points.  Needs revisions. Two parts are mathematically correct, with the third containing major mathematical errors. Or proof has some significant gaps or excess information.  Demonstrates understanding. Two parts are mathematically correct, with minor errors in the third part. Or does not follow the homework guide for mathematical writing.  Exemplary. All three parts are mathematically correct and follows the homework guide for mathematical writing.    "
 },
@@ -2408,7 +2534,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw2.html#r-hw2-3",
   "type": "Problem",
-  "number": "159",
+  "number": "165",
   "title": "Strayer Chapter 1, Exercise 7.",
   "body": "Strayer Chapter 1, Exercise 7  Let with . Prove that for every positive integer .   Let with . Then there exists an integer such that By raising both sides of the equation to the power, we get Therefore, for all nonnegative integers    Rubric  Does not demonstrate understanding. Contains a reasonable attempt to prove each part, but does not meet the criteria for two points.  Needs revisions. Proof contains some significant gaps or excess information.  Demonstrates understanding. Mathematically correct proof that there are only finitely many primes of the given form, with minor arithmetic, spelling, or grammatical errors. Or does not follow the Homework Guide for writing.  Exemplary. Mathematically correct proof that there are only finitely many primes of the given form. The proof likely uses the hint from the back, showing the only possible prime of this form is Work is easy to follow with formal mathematical writing.    "
 },
@@ -2417,7 +2543,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw2.html#ch1-ex9",
   "type": "Problem",
-  "number": "160",
+  "number": "166",
   "title": "Strayer Chapter 1, Exercise 9.",
   "body": "Strayer Chapter 1, Exercise 9  Let and be positive integers with . Prove that if and only if ( Hint: For the ``if\" direction, write with a positive integer and use the factorization For the \"only if\" direction, use the Division Algorithm on and then show that the remainder is 0. This will need to be used multiple times.)   Rubric  Does not demonstrate understanding. Contains a reasonable attempt to prove each part, but does not meet the criteria for two points.  Needs revisions. One direction of the proof is mathematically correct, with mathematical errors in the other direction. Or proof has some significant gaps or excess information.  Demonstrates understanding. Mathematically correct proof that if implies likely using the hint. Most of the work for the proof of the other direction is present and clearly presented, but some steps are missing. Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct proof for both directions likely using the hint from the problem and additional hints from Slack. Follows the homework guide for mathematical writing.    "
 },
@@ -2426,7 +2552,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw2.html#ch1-ex15",
   "type": "Problem",
-  "number": "161",
+  "number": "167",
   "title": "Strayer Chapter 1, Exercise 15.",
   "body": "Strayer Chapter 1, Exercise 15  The following exercises present two alternative versions of the division algorithm. Both versions allow negative divisors; as such, they are more general than Theorem 1.4  Let and be nonzero integers. Prove that there exists a unique such that This algorithm is called the absolute least remainders algorithm  Find the unique and guarenteed by the division algorithm of part above with and .  Let and be nonzero integers. Prove that there exist unique such that   Find the unique and guarenteed by the division algorithm of part above with and .enumerate    Rubric for parts (a) and (b):  Does not demonstrate understanding. Contains proofs for existence of or an answer to part (b), but does not reach the level of needs revisions (2 pts). Parts of the proof are not mathematically correct, or the writing requires the reader to infer how the steps are related.  Needs revisions. Missing the case when or the justification of why and are unique. Or the proof has some gaps or unexplained steps.  Demonstrates understanding. Mathematically correct proof for all parts with minor arithmetic, spelling, or grammatical errors. Or correct proof with incorrect solution to part (b). Or does not follow the Homework Guide for writing.  Exemplary. Mathematically correct proof and application of the division algorithm to part (b). The proof can use the Division Algorithm result or another method. Work is easy to follow with formal mathematical writing.    Rubric for parts (c) and (d):  Does not demonstrate understanding. Contains proofs for existence of or an answer to part (d), but does not reach the level of needs revisions (2 pts). Parts of the proof are not mathematically correct, or the writing requires the reader to infer how the steps are related.  Needs revisions. Missing the case when or the justification of why and are unique. Or the proof has some gaps or unexplained steps.  Demonstrates understanding. Mathematically correct proof for all parts with minor arithmetic, spelling, or grammatical errors. Or correct proof with incorrect solution to part (d). Or does not follow the Homework Guide for writing.  Exemplary. Mathematically correct proof and application of the division algorithm to part (d). The proof can use the Division Algorithm result or another method. Work is easy to follow with formal mathematical writing.    "
 },
@@ -2435,7 +2561,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw2.html#ch1-ex23",
   "type": "Problem",
-  "number": "162",
+  "number": "168",
   "title": "Strayer Chapter 1, Exercise 23.",
   "body": "Strayer Chapter 1, Exercise 23  Prove or disprove the following conjecture, which is similar to Conjecture 1:    There are infinitely many prime number for which and are also prime numbers.    Rubric:  Does not demonstrate understanding. Contains a reasonable attempt to prove each part, but does not meet the criteria for two points.  Needs revisions. Proof contains some significant gaps or excess information.  Demonstrates understanding. Mathematically correct proof that there are only finitely many primes of the given form, with minor arithmetic, spelling, or grammatical errors. Or uses informal mathematical writing.Or does not follow the Homework Guide for writing.  Exemplary. Mathematically correct proof that there are only finitely many primes of the given form. The proof likely uses the hint from the back, showing the only possible prime of this form is Work is easy to follow with formal mathematical writing.    "
 },
@@ -2444,7 +2570,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw2.html#ch1-ex25",
   "type": "Problem",
-  "number": "164",
+  "number": "170",
   "title": "Strayer Chapter 1, Exercise 25.",
   "body": "Strayer Chapter 1, Exercise 25    Prove that all odd prime numbers can be expressed as the difference of square of two successive integers.  Prove that no prime numbers can be expressed as the difference of two fourth power integers ( Hint: Use the factorization tool discussed in the final paragraph of this section.)       We will prove that all odd numbers can be written as the difference of squares of two successive integers, therefore all odd prime numbers can be written in this form. Let and consider . Then Since are successive integers, we have the desired form.  Let such that We will show that is either composite or First note that and implies  If then one of and the other is Thus, If then and Therefore, if either factor is  .  If neither is then the product is not prime by definition. Therefore, no prime can be written as the difference if two integers to the fourth power.      Rubric  Does not demonstrate understanding. Contains a reasonable attempt to prove each part, but does not meet the criteria for two points.  Needs revisions. Proof contains some significant gaps or excess information.  Demonstrates understanding. Mathematically correct proof for one part with most of the proof for the other. May contain minor arithmetic, spelling, or grammatical errors. Or does not follow the Homework Guide for writing.  Exemplary. Mathematically correct proof for both parts, likely using factoring and case analysis for part (b). Work is easy to follow with formal mathematical writing.    "
 },
@@ -2453,7 +2579,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw2.html#ernst-prob2.50",
   "type": "Problem",
-  "number": "165",
+  "number": "171",
   "title": "Ernst Problem 2.50.",
   "body": "Ernst Problem 2.50  Consider the following statement: If such that is odd, then is odd. The items below can be assembled to form a proof of this statement, but they are currently out of order. Put them in the proper order.  Assume that is an even integer.  We will utilize a proof by contraposition.  Thus, is twice an integer.  Since , we have that .  Since is an integer, is also an integer.  By the definition of even, there is an integer such that .  We have proved the contrapositive, and hence the desired statement is true.  Assume .  By the definition of even integer, is an even integer.  Notice that .    Rubric  Does not demonstrate understanding. Contains a reasonable attempt to prove each part, but does not meet the criteria for two points.  Exemplary. All steps are in the correct order    "
 },
@@ -2471,7 +2597,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw3.html#ch1-ex36",
   "type": "Problem",
-  "number": "166",
+  "number": "172",
   "title": "Strayer Chapter 1, Exercise 36.",
   "body": "Strayer Chapter 1, Exercise 36    Do there exist integers and such that and ?  Prove that there exist infinitely many pairs of integers and such that and .       If then by linear combination. Since there does not exist integers and such that and .  Let with Let . Then by linear combination. Then since . Thus, there are infinitely many such that and .     Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions.  Needs revisions. Contains correct definition of divisibility, with major algebra errors, such as . Or proof has some significant gaps or excess information.  Demonstrates understanding. Most of the work for the proof is present and clearly presented, but some steps are missing. Or does not follow the homework guide for mathematical writing, including correctly selecting pages for each problem.  Exemplary. Mathematically correct proof using the definition of divides. Follows the homework guide for mathematical writing.    "
 },
@@ -2480,7 +2606,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw3.html#ch1-ex37",
   "type": "Problem",
-  "number": "167",
+  "number": "173",
   "title": "Strayer Chapter 1, Exercise 37.",
   "body": "Strayer Chapter 1, Exercise 37  Let not both zero and let be a nonzero integer. Prove that for all not both  Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions.  Needs revisions. Contains the correct outline of the proof with significant gaps or errors in reasoning. Or only shows one of or but not both  Demonstrates understanding. Correct outline of the proof, with minor gaps or errors in reasoning, such as explaining why we can conclude Or does not follow the homework guide for mathematical writing, including correctly selecting pages for each problem.  Exemplary. Mathematically correct proof using the definition of greatest common divisor and divisibility. Explanations are easy to follow with one reading. Follows the homework guide for mathematical writing.    "
 },
@@ -2489,7 +2615,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw3.html#ch1-ex38-40",
   "type": "Problem",
-  "number": "168",
+  "number": "174",
   "title": "Strayer Chapter 1, Exercises 38-40.",
   "body": "Strayer Chapter 1, Exercises 38-40   Strayer Chapter 1, Exercises 38  Let and be relatively prime integers. Prove that is either or   Let and note that and by linear combination. By , since by assumption. Since is a common divisor of and  by . Thus,     Srayer Chater 1, Exercise 39 Let and be relatively prime integers. Find all values of   Let and note that and by linear combination. By , since by assumption. Since is a common divisor of and  by . Thus,  Note that both and can occur. For example, when we have so When and we have and so    Exercise 40 Let with and . Find and prove that your answer is correct.  Let with and . Then   Since there exists such that and otherwise Similarly, there exists such that and Therefore, are both even. Thus, . By Part d , is even, so Thus,      Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions.  Needs revisions. Correct classification and reasoning for at least two parts. Either incorrect third part, or proofs contain significant gaps, errors, or excess information.  Demonstrates understanding. Correct statement for all parts, but some steps are missing in the proofs of two parts. Or correct statement and proof for three parts. Or does not follow the homework guide for mathematical writing, including correctly selecting pages for each problem.  Exemplary. Mathematically correct proof using the definition of greatest common divisor and divisibility. Likely using linear combinations for most parts. Explanations are easy to follow with one reading. Follows the homework guide for mathematical writing.    "
 },
@@ -2498,7 +2624,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw3.html#hw3-lemma",
   "type": "Problem",
-  "number": "170",
+  "number": "176",
   "title": "Homework 3, Problem 4.",
   "body": "Homework 3, Problem 4  Let with and let Show that is a common divisor of if and only if    We proceed by induction.   Base case, By , if is a common divisor of then By , if then is a common divisor of and    Induction Hypothesis: Assume that for all  is a common divisor of if and only if   ( ) Let is a common divisor of Then by the induction hypothesis, Thus by the base case, and by , Thus,   ( ) Let such that By , Thus by the base case, since  is a common divisor of and Then by the induction hypothesis, is a commom divisor of and thus a common divisor of      Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions.  Needs revisions. Proof uses the result of or for without first proving that the result holds when Or the proof has some gaps or unexplained steps.   Demonstrates understanding. Mathematically correct proof for all parts with minor arithmetic, spelling, or grammatical errors. Or uses informal mathematical writing.  Exemplary. Work contains all necessary steps. Work is easy to follow with formal mathematical writing. Follows the homework guide for mathematical writing.    "
 },
@@ -2507,7 +2633,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw3.html#ch1-ex51",
   "type": "Problem",
-  "number": "171",
+  "number": "177",
   "title": "Strayer Chapter 1, Exercise 51.",
   "body": "Strayer Chapter 1, Exercise 51  Let with . Prove that Use this method to compute the greatest common divisor of each set of integers in Exercise 34.  Exercise 34                                  Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions.  Needs revisions. Proof uses earlier result for without first proving that the result holds when Or the proof has some gaps or unexplained steps.   Demonstrates understanding. Mathematically correct proof for all parts with minor arithmetic, spelling, or grammatical errors. Or uses informal mathematical writing.  Exemplary. Work contains all necessary steps. Work is easy to follow with formal mathematical writing. Follows the homework guide for mathematical writing.    "
 },
@@ -2516,7 +2642,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw3.html#ch1-ex83",
   "type": "Problem",
-  "number": "172",
+  "number": "178",
   "title": "Strayer Chapter 1, Exercise 83.",
   "body": "Strayer Chapter 1, Exercise 83  Let with and . Prove that the arithmetic progression contains infinitely many composite numbers.  Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions.  Needs revisions. Proof uses earlier result for without first proving that the result holds when Or the proof has some gaps or unexplained steps.   Demonstrates understanding. Mathematically correct proof for all parts with minor arithmetic, spelling, or grammatical errors. Or uses informal mathematical writing.  Exemplary. Work contains all necessary steps. Work is easy to follow with formal mathematical writing. Follows the homework guide for mathematical writing.    "
 },
@@ -2534,7 +2660,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw4.html#ch1-ex70",
   "type": "Problem",
-  "number": "173",
+  "number": "179",
   "title": "Strayer Chapter 1, Exercise 70.",
   "body": "Strayer Chapter 1, Exercise 70  Prove or disprove the following statements:  If and then .  If and then .  If  is a prime number and then    Let and and for primes and nonnegative integers The says that the prime factorization is unique.  If we cannot conclude For example, if and then and  If then there exists such that . Substituting in the prime factorizations gives Since is an integer, we can say and for all Thus is an integer and Returning to the nonfactored form, we have and we can square root both sides to get get Thus, by definition .  If  is a prime number and then    Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions. Or writing is difficult to follow, requiring the reader to infer the connections between the steps.  Needs revisions. Proof has some significant gaps or excess information. Or missing the proof for one part.  Demonstrates understanding. Mathematically correct proof for all three parts with minor arithmetic, spelling, or grammatical errors. Or uses informal mathematical writing.  Exemplary. Mathematically correct proof for all three parts. Work is easy to follow with formal mathematical writing. Follows the homework guide for mathematical writing.    "
 },
@@ -2543,7 +2669,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw4.html#ch1-ex79",
   "type": "Problem",
-  "number": "174",
+  "number": "180",
   "title": "Strayer Chapter 1, Exercise 79.",
   "body": "Strayer Chapter 1, Exercise 79  Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions. Or writing is difficult to follow, requiring the reader to infer the connections between the steps.  Needs revisions. Proof has some significant gaps or excess information. Or missing the proof for the statement in part (b).  Demonstrates understanding. Mathematically correct proof for part (a) and one direction of the proof in part (b) with minor arithmetic, spelling, or grammatical errors. Or uses informal mathematical writing.  Exemplary. Mathematically correct proof for all three parts. Work is easy to follow with formal mathematical writing. Follows the homework guide for mathematical writing.    "
 },
@@ -2552,7 +2678,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw4.html#ch2-ex11",
   "type": "Problem",
-  "number": "175",
+  "number": "181",
   "title": "Strayer Chapter 2, Exercise 11.",
   "body": "Strayer Chapter 2, Exercise 11  Let such that Prove that   Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions. Or writing is difficult to follow, requiring the reader to infer the connections between the steps.  Needs revisions. Proof has some significant gaps or excess information. Or missing the proof for the statement in part (b).  Demonstrates understanding. Mathematically correct proof for part (a) and one direction of the proof in part (b) with minor arithmetic, spelling, or grammatical errors. Or uses informal mathematical writing.  Exemplary. Mathematically correct proof for all three parts. Work is easy to follow with formal mathematical writing. Follows the homework guide for mathematical writing.    "
 },
@@ -2561,7 +2687,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw4.html#ch2-ex13",
   "type": "Problem",
-  "number": "176",
+  "number": "182",
   "title": "Strayer Chapter 2, Exercise 13.",
   "body": "Strayer Chapter 2, Exercise 13    Let be an even integer. Prove that  Let be an odd integer. Prove that Deduce that  This means you must use to prove and not another method.  Prove that if is a positive integer such that then cannot be written as the sum of two squares of integers.  Prove or disprove the converse of the statement in part above.      Let be an even integer. Then there exists such that . Thus and Therefore, by .  Let be an odd integer. Then there exists such that . Thus . Since either or is even, and and Therefore, by definition of .  Part c gives that   Since modulo is an equivalence relationship, we only need to check the squares of and modulo Since and the only squares are and  Now we check all possible combinations. Since addition is commutative, we have three options: Since none of these options are we can conclude that if is a positive integer such that then cannot be written as the sum of two squares of integers.  Note that cannot be written as the sum of two squares: and are less than and is too large.     Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions. Or writing is difficult to follow, requiring the reader to infer the connections between the steps.  Needs revisions. Proofs have some significant gaps or excess information. Or missing the proof for two parts.  Demonstrates understanding. Mathematically correct proof for three parts with minor arithmetic, spelling, or grammatical errors. Or uses informal mathematical writing.  Exemplary. Mathematically correct proof for all three parts. Work is easy to follow with formal mathematical writing. Follows the homework guide for mathematical writing.    "
 },
@@ -2570,7 +2696,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw4.html#ch2-ex14",
   "type": "Problem",
-  "number": "177",
+  "number": "183",
   "title": "Strayer Chapter 2, Exercise 14.",
   "body": "Strayer Chapter 2, Exercise 14  Let be an odd integer not divisible by Prove that   Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions. Or writing is difficult to follow, requiring the reader to infer the connections between the steps.  Needs revisions. Work shows partial understanding of the relationship between divisibility and modular arithmetic, but it has significant gaps or errors. Writing may be difficult to follow. It needs further review and significant revisions.  Demonstrates understanding. Mathematically correct proof using the method from class with minor arithmetic, spelling, or grammatical errors. Or uses informal mathematical writing.  Exemplary. Uses the method from class. Work is easy to follow with formal mathematical writing. Follows the homework guide for mathematical writing.    "
 },
@@ -2579,7 +2705,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw4.html#ch2-17",
   "type": "Problem",
-  "number": "178",
+  "number": "184",
   "title": "Strayer Chapter 2, Exercise 17.",
   "body": "Strayer Chapter 2, Exercise 17  Prove that a positive integer is divisible by (respectively ) if and only if the sum of its digits is divisible by (respectively ).   Using the notation from problem 16, we can write the a positive integer and where are the digits of Since and repeated applications of Proposition 2.4 gives and Thus   Thus, if and only if . Since implies by definition , we have if and only if the sum of its digits is divisible by .  Similarly, if and only if . Since implies by definition , we have if and only if the sum of its digits is divisible by .   Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions. Or writing is difficult to follow, requiring the reader to infer the connections between the steps.  Needs revisions. Work shows partial understanding of the relationship between divisibility and modular arithmetic, but it has significant gaps or errors. Writing may be difficult to follow. It needs further review and significant revisions.  Demonstrates understanding. Mathematically correct proof using the method from this section with minor arithmetic, spelling, or grammatical errors. Or uses informal mathematical writing.  Exemplary. Mathematically correct proof for both and . Work is easy to follow with formal mathematical writing. Follows the homework guide for mathematical writing.    "
 },
@@ -2588,7 +2714,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw4.html#ch2-ex32",
   "type": "Problem",
-  "number": "179",
+  "number": "185",
   "title": "Strayer Chapter 2, Exercise 32.",
   "body": "Strayer Chapter 2, Exercise 32  Let be the inverse of modulo and let be the inverse of modulo . Prove that is the inverse of modulo   Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions. Or writing is difficult to follow, requiring the reader to infer the connections between the steps.  Needs revisions. Work shows partial understanding of the relationship between divisibility and modular arithmetic, but it has significant gaps or errors. Writing may be difficult to follow. It needs further review and significant revisions.  Demonstrates understanding. Mathematically correct proof using the method from this section with minor arithmetic, spelling, or grammatical errors. Or uses informal mathematical writing.  Exemplary. Mathematically correct proof for both and . Work is easy to follow with formal mathematical writing. Follows the homework guide for mathematical writing.    "
 },
@@ -2597,7 +2723,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw4.html#ch2-ex38",
   "type": "Problem",
-  "number": "180",
+  "number": "186",
   "title": "Strayer Chapter 2, Exercise 38.",
   "body": "Strayer Chapter 2, Exercise 38  Prove that the system of linear congruences in one variable given by is solvable if and only if In this case, prove that the solution is unique modulo   Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions. Or writing is difficult to follow, requiring the reader to infer the connections between the steps.  Needs revisions. Missing proof of uniqueness or one direction of the if and only if. Or proof contains significant gaps or errors. Writing may be difficult to follow.  Demonstrates understanding. Missing some justification of steps in the proofs. Or minor arithmetic, spelling, or grammatical errors throughout. Or uses informal mathematical writing.  Exemplary. Work contains all necessary steps. Work is easy to follow with formal mathematical writing. Follows the homework guide for mathematical writing.    "
 },
@@ -2606,7 +2732,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw4.html#hw4-ex9",
   "type": "Problem",
-  "number": "181",
+  "number": "187",
   "title": "Homework 4, Problem 9.",
   "body": "Homework 4, Problem 9    Let be prime. Prove that implies or  Give an example to show that (a) is false modulo a composite number.       Let be prime and let . If then and we are done. Otherwise, Then by , there exists a unique solution modulo to the congruence Since is a solution, we can conclude this is the only solution modulo Thus, if then either or  Notes that In fact, if with and then     Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions. Or writing is difficult to follow, requiring the reader to infer the connections between the steps.  Needs revisions. Proof contains significant gaps or errors. Writing may be difficult to follow.  Demonstrates understanding. Mathematically correct proof for part (a) and counter example for part (b) with minor arithmetic, spelling, or grammatical errors. Or uses informal mathematical writing.  Exemplary. Mathematically correct proof for all three parts. Work is easy to follow with formal mathematical writing. Follows the homework guide for mathematical writing.    "
 },
@@ -2624,7 +2750,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw5.html#ch2-ex43",
   "type": "Problem",
-  "number": "182",
+  "number": "188",
   "title": "Strayer Chapter 2, Exercise 43.",
   "body": "Strayer Chapter 2, Exercise 43    Prove that is is an odd prime number, then .  Find the least nonnegative residue of modulo     Rubric  Does not demonstrate understanding. Contains solution for at least one part, but does not reach the level of needs revisions. Or writing is difficult to follow, requiring the reader to infer the connections between the steps.  Needs revisions. Proof for part (a) has some significant gaps or excess information. Or the solution to part (b) is not correct.  Demonstrates understanding. Mathematically correct proof for part (a) with minor arithmetic, spelling, or grammatical errors. Solution to part (b) may be equivalent to but not the least nonnegative residue. Or uses informal mathematical writing.  Exemplary. Mathematically correct proof for part (a) using Wilson's Theorem. Correct least nonnegative residue for part (b), likely using part (a). Work is easy to follow with formal mathematical writing. Follows the homework guide for mathematical writing.    "
 },
@@ -2633,7 +2759,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw5.html#ch2-ex44",
   "type": "Problem",
-  "number": "183",
+  "number": "189",
   "title": "Strayer Chapter 2, Exercise 44.",
   "body": "Strayer Chapter 2, Exercise 44  Let with Prove that is a prime number if and only if    Rubric  Does not demonstrate understanding. Contains parts of the proof using the definition of factorial, but does not reach the level of needs revisions. Or writing is difficult to follow, requiring the reader to infer the connections between the steps.  Needs revisions. Proof for one direction is incorrect or missing, or proof for both part contain significant gaps, errors, or excess information. Or proof that implies is prime relies on while proof of relies on this problem (circular reasoning).  Demonstrates understanding. Mathematically correct proof for both directions with some arithmetic, spelling, or grammatical errors. Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct proof for both directions, using Wilson's Theorem and either its converse or . Follows the homework guide for mathematical writing.    "
 },
@@ -2642,7 +2768,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw5.html#ch2-ex45",
   "type": "Problem",
-  "number": "184",
+  "number": "190",
   "title": "Strayer Chapter 2, Exercise 45.",
   "body": "Strayer Chapter 2, Exercise 45  Let be a composite integer greater than 4. Prove that .  Rubric  Does not demonstrate understanding. Contains parts of the proof using the definition of factorial, but does not reach the level of needs revisions. Or writing is difficult to follow, requiring the reader to infer the connections between the steps.  Needs revisions. Work shows partial understanding of the material, but it has significant gaps, errors, or excess information throughout. Writing may be difficult to follow.  Demonstrates understanding. Mathematically correct proof when can be factored into two distinct factors, possibly with minor arithmetic, spelling, or grammatical errors. Missing or incorrect proof for where is prime. Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct and complete proof using the definition of composite integer and factorial. Likely using the proof of as guide. Work is easy to follow with formal mathematical writing. Follows the homework guide for mathematical writing.    "
 },
@@ -2651,7 +2777,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw5.html#ch2-ex57",
   "type": "Problem",
-  "number": "185",
+  "number": "191",
   "title": "Strayer Chapter 2, Exercise 57.",
   "body": "Strayer Chapter 2, Exercise 57  (Using Fermat's Little Theorem) Let be an integer. Prove each congruence below.    .    See   Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions. Or does not use .  Needs revisions. Two parts correct, with major errors in the third part.  Demonstrates understanding. Mathematically correct proofs that implicitly use either the Chinese Remainder Theorem or divisibility rules, but does not explain why checking modulo the prime factors proves the statements. Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct proof for all three parts using a combination of Fermat's Little Theorem and either the Chinese Remainder Theorem or divisibility rules Follows the homework guide for mathematical writing.    "
 },
@@ -2660,7 +2786,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw5.html#ch2-60",
   "type": "Problem",
-  "number": "186",
+  "number": "192",
   "title": "Strayer Chapter 2, Exercise 60.",
   "body": "Strayer Chapter 2, Exercise 60  Let and be distinct prime numbers with . If with prove that .  See for a similar problem.  Rubric  Does not demonstrate understanding. Proof contains enough of the relevant concepts to provide feedback, but does not reach the level of needs revisions.  Needs revisions. Correctly uses Fermat's Little Theorem for moduli and , but does not correctly explain how this gives the solution modulo .  Demonstrates understanding. Mathematically correct proofs that implicitly use either the Chinese Remainder Theorem or divisibility rules, but does not explain why checking modulo the prime factors proves the statements. Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct proof for all three parts using a combination of Fermat's Little Theorem and either the Chinese Remainder Theorem or divisibility rules Follows the homework guide for mathematical writing.    "
 },
@@ -2669,7 +2795,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw5.html#ch2-ex67",
   "type": "Problem",
-  "number": "187",
+  "number": "193",
   "title": "Strayer Chapter 2, Exercise 67.",
   "body": "Strayer Chapter 2, Exercise 67  Prove that following the steps in the proof of Euler's Theorem (Theorem 2.17)  Rubric  Does not demonstrate understanding. Uses Euler's Theorem or another method other than the one specified instead of following the steps in the proof of Euler's Theorem.  Needs revisions. Proof contains enough of the relevant concepts to provide feedback, but does not reach the level of demonstrates understanding.  Demonstrates understanding. Contains extra details or missing some details, generally would benefit from proofreading. Or does not follow the homework guide for mathematical writing.  Exemplary. Proof closely and correctly follows the proof of Euler's Theorem. Work is easy to follow with formal mathematical writing.    "
 },
@@ -2678,7 +2804,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw5.html#ch2-ex71",
   "type": "Problem",
-  "number": "188",
+  "number": "194",
   "title": "Strayer Chapter 2, Exercise 71.",
   "body": "Strayer Chapter 2, Exercise 71  (Using and )  Let be an integer not divisible by . Prove that .  Let be an integer divisible by . Prove that .    See and accompanying remark.  Rubric  Does not demonstrate understanding. Contains proofs for at least one part, but does not reach the level of needs revisions. Or does not use .  Needs revisions. One parts correct, with major errors in the other part.  Demonstrates understanding. Mathematically correct proofs that implicitly use either the Chinese Remainder Theorem or divisibility rules, but does not explain why checking modulo the prime factors proves the statements. Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct proof for all three parts using a combination of Fermat's Little Theorem and either the Chinese Remainder Theorem or divisibility rules Follows the homework guide for mathematical writing.    "
 },
@@ -2687,7 +2813,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw5.html#ch2-ex74",
   "type": "Problem",
-  "number": "189",
+  "number": "195",
   "title": "Strayer Chapter 2, Exercise 74.",
   "body": "Strayer Chapter 2, Exercise 74  Let be an odd prime number. Prove that is a reduced residue system modulo .   We did not do Chapter 2, Exercise 27, but it might be helpful to prove that first. Either use a similar argument for this problem, or use the result (as long as you also include the proof of Exercise 27 as part of the proof of this problem).    Rubric  Does not demonstrate understanding. Contains enough of the relevant steps to provide feed back, but does not reach the level of needs revisions.  Needs revisions. Only proves that the elements of the list are incongruent modulo without justifying that every integer that is relatively prime to is congruent to an element of the list.  Demonstrates understanding. Mathematically correct proofs that implicitly use that is a reduced residue system without proof. Or contains extra details or missing some details, generally would benefit from proofreading. Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct proof using the definition of . May include minor errors while still demonstrating understanding of the concepts. Writing is easy to follow with only one reading.    "
 },
@@ -2696,7 +2822,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw5.html#ch3-ex11",
   "type": "Problem",
-  "number": "190",
+  "number": "196",
   "title": "Strayer Chapter 3, Exercise 11.",
   "body": "Strayer Chapter 3, Exercise 11  Complete the proof of Theorem 3.2 by proving that if and are positive integers with then the integers form a complete system of residues modulo .   Rubric  Does not demonstrate understanding. Contains enough of the relevant steps to provide feed back, but does not reach the level of needs revisions.  Needs revisions. Only proves that the elements of the list are incongruent modulo without justifying that every integer is congruent to an element of the list.  Demonstrates understanding. Mathematically correct proofs that states it suffices to show the elements of the list are incongruent without justification. Or contains extra details or missing some details, generally would benefit from proofreading. Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct proof using the definition of . May include minor errors while still demonstrating understanding of the concepts. Writing is easy to follow with only one reading.    "
 },
@@ -2705,7 +2831,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw5.html#ch3-ex12",
   "type": "Problem",
-  "number": "191",
+  "number": "197",
   "title": "Strayer Chapter 3, Exercise 12.",
   "body": "Strayer Chapter 3, Exercise 12  Let with If is the prime factorization of prove that   Rubric  Does not demonstrate understanding. Contains enough of the relevant steps to provide feed back, but does not reach the level of needs revisions.  Needs revisions. Proof contains significant gaps, errors, or excess information.  Demonstrates understanding. Mathematically correct proofs that contains extra details or missing some details, generally would benefit from proofreading. Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct proof. May include minor errors while still demonstrating understanding of the concepts. Work is easy to follow with formal mathematical writing.    "
 },
@@ -2723,7 +2849,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw6.html#ch5-ex5",
   "type": "Problem",
-  "number": "192",
+  "number": "198",
   "title": "Chapter 5, Exercise 5.",
   "body": "Chapter 5, Exercise 5    Let be a positive integer and let and be integers relatively prime to with . Prove that .  Show that the hypothesis cannot be eliminated from part (a). What can be said about if ? The hint in the back of the book is wrong  The mistake is a typo: the equal sign in should not be a different symbol. It should not be changed to as this condition is sometimes true, for example, when  To see why the hint is wrong, consider    but   Try showing that when  and a few other scenarios.      Rubric  Does not demonstrate understanding. Contains enough of the relevant steps to provide feed back, but does not reach the level of needs revisions.  Needs revisions. Work shows understanding of the definition of but it has significant gaps or errors. Proves that but not that (or other case), with mathematically correct answer and example for part (b). Or some missing details in proof for part (a) with no example in part (b).  Demonstrates understanding. Mathematically correct proof for part (a) and counter example for part (b), with some errors in the characterization of (b). May contains extra details or missing some details, generally would benefit from proofreading. Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct solutions for both parts, using the definition of and exponent rules. Gives and example for part (b) with an answer related to the results in this section. Follows the homework guide for mathematical writing.    "
 },
@@ -2732,7 +2858,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw6.html#ch5-ex6",
   "type": "Problem",
-  "number": "194",
+  "number": "200",
   "title": "Chapter 5, Exercise 6.",
   "body": "Chapter 5, Exercise 6  Let be a positive integer and let with . Prove or disprove that there exists with .  Rubric  Does not demonstrate understanding. Contains enough of the relevant steps to provide feed back, but does not reach the level of needs revisions.  Needs revisions. Work shows understanding of the relationship between of and but it has significant gaps or errors. Example is incorrect.  Demonstrates understanding. Example of and where there are no elements of order , but no justification for the fact there are no elements of order . Or uses informal mathematical writing.Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct example and explanation. Follows the homework guide for mathematical writing.    "
 },
@@ -2741,7 +2867,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw6.html#ch5-ex7",
   "type": "Problem",
-  "number": "195",
+  "number": "201",
   "title": "Chapter 5, Exercise 7.",
   "body": "Chapter 5, Exercise 7  Let be a positive integer and let with .  Prove that if (with and positive integers), then .  Prove that if , then is a prime number.     Rubric  Does not demonstrate understanding. Contains enough of the relevant steps to provide feed back, but does not reach the level of needs revisions.  Needs revisions. Work shows understanding of the relationship between of and but it has significant gaps or errors. Example is incorrect.  Demonstrates understanding. Example of and where there are no elements of order , but no justification for the fact there are no elements of order . Or uses informal mathematical writing.Or does not follow the homework guide for mathematical writing.  Exemplary. Mathematically correct example and explanation. Follows the homework guide for mathematical writing.    "
 },
@@ -2750,7 +2876,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw6.html#ch5-ex8",
   "type": "Problem",
-  "number": "196",
+  "number": "202",
   "title": "Chapter 5, Exercise 8.",
   "body": "Chapter 5, Exercise 8  Let and be positive integers with . Prove that . ( Hint: Consider ).   "
 },
@@ -2759,7 +2885,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw6.html#pmf-generator-primitive",
   "type": "Problem",
-  "number": "197",
+  "number": "203",
   "title": "",
   "body": " Prove the following statement, which is the converse of (restricted to primes) (which is also ):  Let be prime, and let If every such that is congruent to a power of modulo then is a primitive root modulo .   "
 },
@@ -2768,7 +2894,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw6.html#pmf-order_k_factors",
   "type": "Problem",
-  "number": "198",
+  "number": "204",
   "title": "",
   "body": " Prove the following generalization of Chapter 5, Exercise 5  Let and let be reduced residues modulo . Suppose that for all  and are relatively prime. Then    "
 },
@@ -2777,7 +2903,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw6.html#pmf-neg-prim-root",
   "type": "Problem",
-  "number": "200",
+  "number": "206",
   "title": "",
   "body": " If is a prime and is a primitive root modulo is also a primitive root modulo ? Prove or provide a counter example.  Think about how this question is different from the next question.   "
 },
@@ -2786,7 +2912,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw6.html#pmf-neg-prim-root-good-prime",
   "type": "Problem",
-  "number": "201",
+  "number": "207",
   "title": "",
   "body": " If is a prime with and is a primitive root modulo is also a primitive root modulo ? Prove or provide a counter example.   See Chapter 5, Exercise 13a.    "
 },
@@ -2795,7 +2921,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "r-hw6.html#pmf-order-above-half-mod",
   "type": "Problem",
-  "number": "202",
+  "number": "208",
   "title": "",
   "body": " Let be prime and such that Suppose that Prove that is a primitive root modulo  "
 },
@@ -2813,7 +2939,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-div.html#lem-linear-combo",
   "type": "Lemma",
-  "number": "203",
+  "number": "209",
   "title": "Proposition 1.2.",
   "body": "Proposition 1.2   Let If and then    "
 },
@@ -2822,7 +2948,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-div.html#prop-div-gcd-rel-prime",
   "type": "Proposition",
-  "number": "204",
+  "number": "210",
   "title": "Proposition 1.10.",
   "body": "Proposition 1.10   Let with Then    "
 },
@@ -2831,7 +2957,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-div.html#lem-gcd-remainders",
   "type": "Lemma",
-  "number": "205",
+  "number": "211",
   "title": "Lemma 1.12.",
   "body": "Lemma 1.12   If  and with then    "
 },
@@ -2849,7 +2975,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-primes.html#lem-irreducible-prime",
   "type": "Lemma",
-  "number": "206",
+  "number": "212",
   "title": "Lemma 1.14.",
   "body": "Lemma 1.14 Euclid   Let with prime. If then or    "
 },
@@ -2858,7 +2984,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-primes.html#cor-irreducible-prime",
   "type": "Corollary",
-  "number": "207",
+  "number": "213",
   "title": "Corollary 1.15.",
   "body": "Corollary 1.15   Let with prime. If then for some    "
 },
@@ -2867,7 +2993,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-primes.html#prop-form-lcm-gcd",
   "type": "Proposition",
-  "number": "208",
+  "number": "214",
   "title": "Proposition 1.17.",
   "body": "Proposition 1.17   Let with Write and where are distinct primes and are nonnegative integers (possibly zero). Then and    "
 },
@@ -2876,7 +3002,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-primes.html#thm-prod-lcm-gcd",
   "type": "Theorem",
-  "number": "209",
+  "number": "215",
   "title": "Theorem 1.19.",
   "body": "Theorem 1.19   Let with Then    "
 },
@@ -2885,7 +3011,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-additional-primes.html#def-lcm",
   "type": "Definition",
-  "number": "210",
+  "number": "216",
   "title": "Least common multiple.",
   "body": "Least common multiple    least common multiple of and     least common multiple of and   If and then is a common multiple of and .  The least positive common multiple of and is called the least common multiple of and and is denoted or just .  If we want the least common multiple of several integers at once we denote that by or .  "
 },
@@ -2903,7 +3029,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "forCrossRefrence-4.html#thm-linear-dioph",
   "type": "Theorem",
-  "number": "211",
+  "number": "217",
   "title": "Theorem 6.2.",
   "body": "Theorem 6.2   Let be a linear Diophantine equation in two variables and and let If then the equation has no solutions. If then there are infinitely many solutions of the form    "
 },
@@ -2921,7 +3047,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Congruences.html#thm-mods-equiv-relation",
   "type": "Theorem",
-  "number": "212",
+  "number": "218",
   "title": "Restatement of Strayer Propositions 2.1.",
   "body": "Restatement of Strayer Propositions 2.1   Let with Then:  and implies   implies     "
 },
@@ -2930,7 +3056,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Congruences.html#prop-basic-mod-arith",
   "type": "Theorem",
-  "number": "213",
+  "number": "219",
   "title": "Strayer Propositions 2.4.",
   "body": "Strayer Propositions 2.4   Let with Then:   and implies   and implies .     "
 },
@@ -2939,7 +3065,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Congruences.html#prop-change-modulus",
   "type": "Theorem",
-  "number": "214",
+  "number": "220",
   "title": "Strayer Proposition 2.5.",
   "body": "Strayer Proposition 2.5   Let with Then if and only if .   "
 },
@@ -2948,7 +3074,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Congruences.html#cor-p-power_mod-p",
   "type": "Corollary",
-  "number": "215",
+  "number": "221",
   "title": "Corollary 2.15.",
   "body": "Corollary 2.15   Let be a prime number and let Then    "
 },
@@ -2966,7 +3092,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Phi-Function.html#thm-phi-prime-power",
   "type": "Theorem",
-  "number": "216",
+  "number": "222",
   "title": "Theorem 3.3.",
   "body": "Theorem 3.3   Let be a prime number and a positive integer. Then    "
 },

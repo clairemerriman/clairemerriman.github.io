@@ -116,6 +116,7 @@ window.MathJax = {
 \newcommand{\nequiv}{\not\equiv}
 \newcommand{\ord}{\operatorname{ord}}
 \newcommand{\ds}{\displaystyle}
+\newcommand{\floor}[1]{\left\lfloor{#1}\right\rfloor}
 \newcommand{\legendre}[2]{\left(\frac{#1}{#2}\right)}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -449,13 +450,32 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-week11.html" class="internal"><span class="codenumber">11</span> <span class="title">Week 11</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-gaussLemIntro.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Monday, April 1: Gauss’s Lemma and Practice</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gaussLemIntro.html#sec-gaussLemIntro-3" class="internal"><span class="codenumber">11.1.1</span> <span class="title">Statement of Guass’s Lemma (20 minutes)</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gaussLemIntro.html#sec-gaussLemIntro-4" class="internal"><span class="codenumber">11.1.2</span> <span class="title">Practice Problems (30 minutes)</span></a></div></li>
 </ul>
-</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gaussLem.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Wednesday, April 3: Proving Gauss’s Lemma and the Quadratic Residue of <span class="process-math">\(2\)</span></span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-reading-questions">
+<div class="toc-title-box"><a href="sec-gaussLem.html#sec-gaussLem-3" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Reading Questions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gaussLem.html#rqs-Apr3" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Turn In</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-gaussLem.html#sec-gaussLem-4" class="internal"><span class="codenumber">11.2.2</span> <span class="title">Proof of Guass’s Lemma (30 minutes)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-proveQR.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Friday, April 5: Geometric Lemma for Quadratic reciprocity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-proveQR.html#sec-proveQR-3" class="internal"><span class="codenumber">11.3.1</span> <span class="title">Quiz (10 minutes)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-proveQR.html#sec-proveQR-4" class="internal"><span class="codenumber">11.3.2</span> <span class="title">Proof of quadratic reciprocity (40 minutes)</span></a></div></li>
+</ul>
+</li>
+</ul>
 </li>
 <li class="toc-item toc-appendix">
 <div class="toc-title-box"><a href="hwguide.html" class="internal"><span class="codenumber">A</span> <span class="title">Homework Guide</span></a></div>
@@ -494,7 +514,7 @@ window.MathJax = {
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">C.3</span><span class="space"> </span><span class="title">Diophantine equations</span>
 </h2>
 <article class="theorem theorem-like" id="thm-linear-dioph"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">211</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem 6.2.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">217</span><span class="period">.</span><span class="space"> </span><span class="title">Theorem 6.2.</span>
 </h3>
 <div class="para logical" id="thm-linear-dioph-2-1">
 <div class="para">Let <span class="process-math">\(ax+by=c\)</span> be a linear Diophantine equation in two variables <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> and let <span class="process-math">\(d=(a,b).\)</span> If <span class="process-math">\(d\nmid c,\)</span> then the equation has no solutions. If <span class="process-math">\(d\mid c\)</span> then there are infinitely many solutions of the form</div>
