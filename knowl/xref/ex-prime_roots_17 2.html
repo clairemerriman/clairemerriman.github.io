@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">109</span><span class="period">.</span>
+</h4>
+<div class="para">Find a primitive root in <span class="process-math">\(\Z_{17},\)</span> if one exists.</div> <details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para logical">
+<div class="para">For want of a better strategy, we will check the orders of the elements <span class="process-math">\(\overline{1},\overline{2},\overline{3},\dots,\)</span> until we find an element of order 16.</div>
+<div class="displaymath process-math">
+\begin{align*}
+\amp 1^1 \equiv 1\pmod{17} 
+\amp 2^1 \equiv 2\pmod{17} 
+\amp\amp 3^1 \equiv 3\pmod{17}\\
+\amp\amp 2^2 \equiv 4\pmod{17} 
+\amp\amp 3^2 \equiv 9\pmod{17}\\
+\amp\amp 2^3 \equiv 8\pmod{17} 
+\amp\amp 3^3 \equiv 10\pmod{17}\\
+\amp\amp 2^4 \equiv 16\pmod{17} 
+\amp\amp 3^4 \equiv 13\pmod{17}\\
+\amp\amp 2^5 \equiv 15\pmod{17} 
+\amp\amp 3^5 \equiv 5\pmod{17}\\
+\amp\amp 2^6 \equiv 13\pmod{17} 
+\amp\amp 3^6 \equiv 15\pmod{17}\\
+\amp\amp 2^7 \equiv 9\pmod{17} 
+\amp\amp 3^7 \equiv 11\pmod{17}\\
+\amp\amp 2^8 \equiv 1\pmod{17} 
+\amp\amp 3^8 \equiv 16\pmod{17}\\
+\amp\amp\amp\amp 3^9 \equiv 14\pmod{17}\\
+\amp\amp\amp\amp 3^{10} \equiv 8\pmod{17}\\
+\amp\amp\amp\amp 3^{11}\equiv 7\pmod{17}\\
+\amp\amp\amp\amp 3^{12} \equiv 4\pmod{17}\\
+\amp\amp\amp\amp 3^{13} \equiv 12\pmod{17}\\
+\amp\amp\amp\amp 3^{14} \equiv 2\pmod{17}\\
+\amp\amp\amp\amp 3^{15} \equiv 6\pmod{17}\\
+\amp\amp\amp\amp 3^{16} \equiv 1\pmod{17}
+\end{align*}
+</div>
+<div class="para">From the left column, we see that <span class="process-math">\(1\)</span> has order <span class="process-math">\(1.\)</span>
+</div>
+</div> <div class="para">From the center column, we see that <span class="process-math">\(2\)</span> has order <span class="process-math">\(8.\)</span>
+</div> <div class="para">From the right column, we see that the order of <span class="process-math">\(3\)</span> equals <span class="process-math">\(16,\)</span> and we conclude that <span class="process-math">\(3\)</span> is a primitive root modulo <span class="process-math">\(17.\)</span>
+</div> <div class="para">We did not actually need to compute all of those powers of <span class="process-math">\(3\)</span> to determine that <span class="process-math">\(3\)</span> is a primitive root. We know that <span class="process-math">\(\ord_{17}3\)</span> must be a divisor of <span class="process-math">\(17-1=16,\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/prop-order_divides_phi.html" title="Proposition 101: Proposition 5.1">Proposition 5.1</a>. Once we have computed from <span class="process-math">\(3^1\)</span> to <span class="process-math">\(3^8\)</span> and not yet obtained an answer of <span class="process-math">\(1,\)</span> we know <span class="process-math">\(\ord-{17}3\gt 8.\)</span> Since the only divisor of <span class="process-math">\(16\)</span> that is greater than <span class="process-math">\(8\)</span> is 16 itself, we can then conclude that <span class="process-math">\(\ord_{17}3=16.\)</span> (This observation is generalized in <a href="" class="xref" data-knowl="./knowl/xref/read-ex7.html" title="Exercise 119: Exercise 7">Exercise 7</a>.)</div>
+</div></details></article><span class="incontext"><a class="internal" href="sec-primeRootReading.html#ex-prime_roots_17">in-context</a></span>
+</body>
+</html>

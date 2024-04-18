@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">130</span><span class="period">.</span><span class="space"> </span><span class="title">Proposition 5.8.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(p\)</span> be prime and <span class="process-math">\(m\)</span> a positive integer where <span class="process-math">\(m\mid p-1\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x^m\equiv 1\pmod{p}
+\end{equation*}
+</div>
+<div class="para">has <span class="process-math">\(m\)</span> incongruent solutions modulo <span class="process-math">\(p.\)</span>
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">Let <span class="process-math">\(p\)</span> be prime and <span class="process-math">\(m\)</span> a positive integer where <span class="process-math">\(m\mid p-1\text{.}\)</span> Then there exists <span class="process-math">\(k\in\Z\)</span> such that <span class="process-math">\(mk=p-1.\)</span> Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/FlT.html">
+\begin{equation*}
+x^{p-1}=(x^m-1)(x^{(k-1)m}+x^{(k-2)m}+\cdots+x^{2m}+x^m+1)
+\end{equation*}
+</div>
+<div class="para">By <a href="" class="xref" data-knowl="./knowl/xref/FlT.html" title="Corollary 82: Fermat’s Little Theorem">Fermat’s Little Theorem</a>, there are <span class="process-math">\(p-1\)</span> incongruent solutions to <span class="process-math">\(x^{p-1}-1\equiv0\pmod{p},\)</span> namely <span class="process-math">\(1,2,\dots,p-1.\)</span> We will show that <span class="process-math">\(m\)</span> of these are solutions to <span class="process-math">\(x^m-1\equiv 0\pmod{p}\)</span> and the rest are solutions to <span class="process-math">\(x^{(k-1)m}+x^{(k-2)m}+\cdots+x^{2m}+x^m+1\equiv 0\pmod{p}.\)</span>
+</div>
+</div> <div class="para">By <a href="" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" title="Theorem 129: Theorem 5.7">Theorem 5.7</a>, there are at most <span class="process-math">\((k-1)m\)</span> solutions to <span class="process-math">\(x^{(k-1)m}+x^{(k-2)m}+\cdots+x^{2m}+x^m+1\equiv 0\pmod{p}.\)</span> Thus, there are at least <span class="process-math">\(p-1-(k-1)m=m\)</span> incongruent solutions to <span class="process-math">\(x^m-1\equiv 0\pmod{p}.\)</span> Since there are also at least <span class="process-math">\(m\)</span> incongruent solutions to <span class="process-math">\(x^m-1\equiv 0\pmod{p}\)</span> by <a href="" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" title="Theorem 129: Theorem 5.7">Theorem 5.7</a>, there are exactly <span class="process-math">\(m\)</span> incongruent solutions to <span class="process-math">\(x^m-1\equiv 0\pmod{p}\)</span> and thus <span class="process-math">\(x^m\equiv 1\pmod{p}.\)</span>
+</div></article></details><span class="incontext"><a class="internal" href="sec-LagrangeThem.html#prop-roots-unity">in-context</a></span>
+</body>
+</html>
